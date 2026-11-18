@@ -1,0 +1,6 @@
+{
+  "reason": "record explicit removal choice received after initial model configuration",
+  "previous_model_config_and_freeze_backup": "/Users/lucasmanentti/.codex/backups/citizentech-1_5b-20261117-202447/preparation-amendment",
+  "training_or_generation_before_change": false,
+  "prediction_parameters_changed": false
+}

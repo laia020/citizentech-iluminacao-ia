@@ -1,0 +1,26 @@
+examples/cliente.py:2:1: I001 [*] Import block is un-sorted or un-formatted
+src/citizentech_ia/api.py:1:1: I001 [*] Import block is un-sorted or un-formatted
+src/citizentech_ia/api.py:1:8: F401 [*] `asyncio` imported but unused
+src/citizentech_ia/api.py:77:16: BLE001 Do not catch blind exception: `Exception`
+src/citizentech_ia/build_data.py:2:1: I001 [*] Import block is un-sorted or un-formatted
+src/citizentech_ia/cli.py:1:1: I001 [*] Import block is un-sorted or un-formatted
+src/citizentech_ia/cli.py:3:8: F401 [*] `os` imported but unused
+src/citizentech_ia/cli.py:24:14: RUF017 Avoid quadratic list summation
+src/citizentech_ia/cli.py:39:9: I001 [*] Import block is un-sorted or un-formatted
+src/citizentech_ia/datasets.py:1:1: I001 [*] Import block is un-sorted or un-formatted
+src/citizentech_ia/evaluation.py:2:1: I001 [*] Import block is un-sorted or un-formatted
+src/citizentech_ia/evaluation.py:6:25: F401 [*] `collections.Counter` imported but unused
+src/citizentech_ia/evaluation.py:8:40: F401 [*] `.datasets.write_jsonl` imported but unused
+src/citizentech_ia/inference.py:1:1: I001 [*] Import block is un-sorted or un-formatted
+src/citizentech_ia/pipeline.py:1:1: I001 [*] Import block is un-sorted or un-formatted
+src/citizentech_ia/retrieval.py:1:1: I001 [*] Import block is un-sorted or un-formatted
+src/citizentech_ia/schemas.py:1:1: I001 [*] Import block is un-sorted or un-formatted
+src/citizentech_ia/training.py:2:1: I001 [*] Import block is un-sorted or un-formatted
+src/citizentech_ia/training.py:9:8: PLR0402 [*] Use `from importlib import metadata` in lieu of alias
+src/citizentech_ia/training.py:59:5: I001 [*] Import block is un-sorted or un-formatted
+src/citizentech_ia/training.py:60:12: PLR0402 [*] Use `from mlx import nn` in lieu of alias
+src/citizentech_ia/training.py:60:22: F401 [*] `mlx.nn` imported but unused
+tests/test_principais.py:2:1: I001 [*] Import block is un-sorted or un-formatted
+tests/test_principais.py:8:48: F401 [*] `citizentech_ia.schemas.Analysis` imported but unused
+Found 24 errors.
+[*] 22 fixable with `--fix` (1 unsafe fix available with `--fix --unsafe-fixes`).

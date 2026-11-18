@@ -1,0 +1,11 @@
+{
+  "activated": false,
+  "reason": "new b4 has incomplete JSON: candidate schema11/12 vs baseline12/12; source relevance improves casesb2/b3 but does not satisfy activation criteria",
+  "schema_count": {
+    "v5_original": 12,
+    "v6b_candidate": 11
+  },
+  "weights_and_old_benchmark_unchanged": true,
+  "all_outputs_retained": true,
+  "scope": "does not establish general hallucination improvement"
+}

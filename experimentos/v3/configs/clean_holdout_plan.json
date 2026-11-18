@@ -1,0 +1,156 @@
+{
+  "version": "v3-analysis-addendum-1",
+  "saved_at": "2026-11-12T12:07:32.871922-03:00",
+  "fixed_before_validation_or_test_generation": true,
+  "reason": "Auditoria técnica de paráfrases por família; não baseada no desempenho de modelos.",
+  "original_data_and_protocol_unchanged": true,
+  "original_train_val_test_counts": {
+    "train": 400,
+    "valid": 80,
+    "test": 120
+  },
+  "confirmatory_counts": {
+    "valid": 64,
+    "test": 112
+  },
+  "confirmatory_families": {
+    "valid": 16,
+    "test": 28
+  },
+  "excluded_case_ids": {
+    "valid": [
+      "b8b38033e20cd75041ed22b7",
+      "8c87c5a11b9adad669212cde",
+      "75729de1d242622145459e38",
+      "7b206e2376ffb8a571685e31",
+      "c7cdb6301ade6771adebec9f",
+      "1a3fe84465d49977a0e43c93",
+      "f4f23d644fbc2d76dcbf9085",
+      "6a6e074330e6cd2a95caeb34",
+      "49410f9d6e8c70ef9183985e",
+      "20fd2cd46a74b007d700c59b",
+      "9d1429374fd94160f10427c8",
+      "96550b961d06df9629400389",
+      "6808f6a37d760a8d71b1d92e",
+      "9e2bb9abd33854eaacdf2e95",
+      "e2ce1cc0414de11bf4265f77",
+      "3b4fd2b85751c2f45d2b79a7"
+    ],
+    "test": [
+      "04531351a5180451e96ce510",
+      "300cbf0c295dddac834ae2fc",
+      "44d107a870320574a3e2d647",
+      "5788a718d305ae01d008994d",
+      "6f3988d202ed9302bc053c56",
+      "7c7baf70467e57cf408ef9ff",
+      "08ab89fb05a9344d61b91726",
+      "10f42f1346207a966b6eab05"
+    ]
+  },
+  "details": [
+    {
+      "split": "valid",
+      "family": "1a440eb8b5325e25",
+      "reason": "Variação do cenário de estados em horários distintos já presente no treino; não contar como nova família semântica.",
+      "representative_input": {
+        "ocorrencia_id": "SIM-b8b38033e20cd75041ed22b7",
+        "pergunta": "As observações em horários distintos bastam para afirmar contradição?",
+        "relato": "Uma luz foi observada acesa às 19h e apagada às 22h, no mesmo ponto.",
+        "simulada": true,
+        "sensores": [],
+        "observacoes_visuais": []
+      },
+      "cases": 4
+    },
+    {
+      "split": "valid",
+      "family": "accd4fadf1123e1f",
+      "reason": "Paráfrase de conversão ADC/LDR sem curva com os mesmos campos do cenário de treino.",
+      "representative_input": {
+        "ocorrencia_id": "SIM-c7cdb6301ade6771adebec9f",
+        "pergunta": "Qual é o valor em lux?",
+        "relato": "Foi registrado valor ADC de LDR, sem curva de calibração.",
+        "simulada": true,
+        "sensores": [
+          {
+            "tipo": "LDR",
+            "valor": 620,
+            "unidade": "ADC",
+            "calibrado": false
+          }
+        ],
+        "observacoes_visuais": []
+      },
+      "cases": 4
+    },
+    {
+      "split": "valid",
+      "family": "8fe1f6af2d7b2b36",
+      "reason": "Paráfrase do cenário de lux sem método/posição/critério usado no treino.",
+      "representative_input": {
+        "ocorrencia_id": "SIM-49410f9d6e8c70ef9183985e",
+        "pergunta": "O local cumpre a norma de iluminação?",
+        "relato": "Há uma leitura em lux, mas faltam método, posição e referência normativa.",
+        "simulada": true,
+        "sensores": [],
+        "observacoes_visuais": []
+      },
+      "cases": 4
+    },
+    {
+      "split": "valid",
+      "family": "b82a5d721ca60b92",
+      "reason": "Paráfrase do pedido de canal municipal sem cidade/UF já usado no treino.",
+      "representative_input": {
+        "ocorrencia_id": "SIM-6808f6a37d760a8d71b1d92e",
+        "pergunta": "Qual telefone municipal atende este ponto?",
+        "relato": "A iluminação está apagada; o registro não informa município.",
+        "simulada": true,
+        "sensores": [],
+        "observacoes_visuais": []
+      },
+      "cases": 4
+    },
+    {
+      "split": "test",
+      "family": "08069c2bee234553",
+      "reason": "O mesmo cenário abstrato e horários 20h/21h do treino foi reescrito; excluído antes de qualquer geração de teste.",
+      "representative_input": {
+        "ocorrencia_id": "SIM-04531351a5180451e96ce510",
+        "pergunta": "A mudança entre horários diferentes exige tratar os relatos como contradição?",
+        "relato": "O mesmo ponto estava apagado às 20h e foi visto aceso às 21h.",
+        "simulada": true,
+        "sensores": [],
+        "observacoes_visuais": []
+      },
+      "cases": 4
+    },
+    {
+      "split": "test",
+      "family": "2e169c8615bb7d24",
+      "reason": "Pedido de canal municipal sem cidade/UF já representado no treino/validação; excluído antes da geração.",
+      "representative_input": {
+        "ocorrencia_id": "SIM-6f3988d202ed9302bc053c56",
+        "pergunta": "Qual canal específico da prefeitura deve receber o pedido?",
+        "relato": "Há um ponto público apagado, mas não consta cidade ou UF.",
+        "simulada": true,
+        "sensores": [],
+        "observacoes_visuais": []
+      },
+      "cases": 4
+    }
+  ],
+  "checkpoint_selection_amendment": "usar pesos finais de exatamente 800 microsteps, não o checkpoint escolhido pela loss diagnóstica nos 80 casos originais; dados de validação não recebem gradiente e a programação de 800 passos/lr constante não depende da loss.",
+  "candidate_selection": "status puro e esquema nos 64 casos de validação sem sobreposição identificada; segundo candidato somente conforme condição prévia, calculada nesse subconjunto.",
+  "reporting": "gerar e preservar todos os 80/120 resultados, publicar placar completo exploratório e placar confirmatório separado; revisão semântica por IA em todas as respostas.",
+  "limitations": [
+    "exclusões removem sobreposições identificadas por revisão técnica, não certificam independência semântica perfeita",
+    "procedimentos/conceitos de domínio são compartilhados entre casos; benchmark sintético, não validação de campo",
+    "revisão humana independente segue pendente"
+  ],
+  "source_hashes": {
+    "dados/train.jsonl": "e024523512b7b090b6f6cf913b4a95ebe96db76fc7a42ef770b216db365b658b",
+    "dados/valid.jsonl": "64aa22cf77b68b126358205e827a820517d1842fc3c9e0112f1c94b7026e88b8",
+    "avaliacao/test.jsonl": "ba5e0b38fa2d4f529dda42e8d716c2ebfb898b694e965c7c1d535c0faac0a225"
+  }
+}

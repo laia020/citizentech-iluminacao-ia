@@ -1,0 +1,63 @@
+{
+  "version": "v5-1.5b",
+  "mode": "rag_finetuning",
+  "split": "valid",
+  "n": 80,
+  "json_syntax_valid_rate": 1.0,
+  "schema_valid_rate": 1.0,
+  "valid_json_and_refs_rate": 1.0,
+  "status_only_match_rate": 0.9375,
+  "status_match_rate": 0.9375,
+  "median_seconds": 1.6457528335013194,
+  "p95_seconds": 1.9287682877991754,
+  "peak_memory_gb": 3.782575304,
+  "model": {
+    "modelo": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revisao_modelo": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "adaptador": "af5d521760fbfcd5ca74a0cad4022aba6d9a6bccb7bfe0992638d4527ffc316e"
+  },
+  "frozen_manifest_sha": "55bf41e850563d66aa971f88365d1c0b276d49bce1ebfdcc59211c7d4b4fbfa6",
+  "test_file_sha": "64aa22cf77b68b126358205e827a820517d1842fc3c9e0112f1c94b7026e88b8",
+  "semantic_accuracy": "pending; structure/status do not establish factual correctness",
+  "hallucination_rate": "pending; never inferred solely from JSON or status",
+  "by_category": {
+    "contradicao": {
+      "n": 12,
+      "status_only_match_rate": 1.0,
+      "schema_rate": 1.0
+    },
+    "fora_escopo": {
+      "n": 8,
+      "status_only_match_rate": 1.0,
+      "schema_rate": 1.0
+    },
+    "inducao": {
+      "n": 8,
+      "status_only_match_rate": 1.0,
+      "schema_rate": 1.0
+    },
+    "insuficiente": {
+      "n": 16,
+      "status_only_match_rate": 1.0,
+      "schema_rate": 1.0
+    },
+    "nao_consta": {
+      "n": 16,
+      "status_only_match_rate": 0.9375,
+      "schema_rate": 1.0
+    },
+    "respondivel": {
+      "n": 20,
+      "status_only_match_rate": 0.8,
+      "schema_rate": 1.0
+    }
+  },
+  "retrieval_all": {
+    "recall@1": 0.8,
+    "recall@3": 0.95
+  },
+  "retrieval_respondible": {
+    "recall@1": 0.5,
+    "recall@3": 0.925
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "activated": false,
+  "reason": "additional new case a3 loses required JSON schema; stronger prompt creates incomplete output; developmentd1 adds unsupported inability-to-request statement",
+  "schema_failures": [
+    {
+      "id": "a3",
+      "mode": "v6_candidate",
+      "raw": "{\"status\": \"informacao_insuficiente\", \"resumo\": \"A designação do profissional não pode ser informado sem documento verificável.\"}"
+    }
+  ],
+  "old_v5_metrics_unchanged": true,
+  "not_used_to_claim_quality_improvement": true,
+  "all_outputs_preserved": true
+}

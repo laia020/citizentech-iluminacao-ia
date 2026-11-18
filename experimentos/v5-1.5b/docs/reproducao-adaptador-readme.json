@@ -1,0 +1,9 @@
+{
+  "scope": "actual selected adapter restored into isolated temporary project; no model execution/download/install/training",
+  "restored": "imported_verified",
+  "repeated": "existing_identical",
+  "adapter_sha": "c905fee58cb4c0c44baeb9ac14dd9e9b7e412f280b3024c825441d018d573dce",
+  "link_relative": "../../models",
+  "link_correct": true,
+  "base_reconversion_on_fresh_machine": "not executed; existing canonical base SHA checked separately"
+}

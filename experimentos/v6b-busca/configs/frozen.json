@@ -1,0 +1,10 @@
+{
+  "files": {
+    "base/chunks.jsonl": "6fbf718b2266438a09edaf233dcd0a6fe8b21d22beb4b13b1fc7feed554be8f5",
+    "base/PROCEDENCIA.md": "22488f3b3d620064b1baa3133549b95f9ad9112771150206fb629ef2bf519fc7",
+    "configs/protocol.json": "07cac487049fd837e836da30c5d820a28a9e2359406539a1f07415e803e5bd68",
+    "avaliacao/adicional.jsonl": "367d1c19ff370ccab3696f5e5c712b60cfee82f2a7765005b13a5350cdf049cc",
+    "dados/desenvolvimento.jsonl": "5dbe86824d1da5f1b798e5d9945886bf21cfd99d653fd7f49dda50fc6c2729a1"
+  },
+  "fix_before_generations": true
+}

@@ -1,0 +1,34 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+____________ test_congelamento_confere_dados_originais_do_manifesto ____________
+
+tmp_path = PosixPath('/private/var/folders/n2/mqjcvz3x7ngg8rkcdzjc9h1m0000gn/T/pytest-of-lucasmanentti/pytest-9/test_congelamento_confere_dado0')
+
+    def test_congelamento_confere_dados_originais_do_manifesto(tmp_path):
+        import hashlib
+    
+        from citizentech_ia.datasets import sha, verify_freeze
+        from citizentech_ia.inference import SYSTEM
+    
+        (tmp_path / "configs").mkdir()
+        (tmp_path / "dados").mkdir()
+        (tmp_path / "dados/valid.jsonl").write_text("conteudo alterado")
+        (tmp_path / "dados/manifest.json").write_text(
+            json.dumps({"hashes": {"dados/valid.jsonl": "hash-original"}})
+        )
+        (tmp_path / "configs/frozen_manifest.json").write_text(
+            json.dumps(
+                {
+                    "artifacts": {"dados/manifest.json": sha(tmp_path / "dados/manifest.json")},
+                    "system_sha": hashlib.sha256(SYSTEM.encode()).hexdigest(),
+                }
+            )
+        )
+>       with pytest.raises(ValueError, match="dados/valid.jsonl"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_principais.py:296: Failed
+=========================== short test summary info ============================
+FAILED tests/test_principais.py::test_congelamento_confere_dados_originais_do_manifesto
+1 failed, 23 deselected in 1.07s

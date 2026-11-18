@@ -1,0 +1,31 @@
+..F                                                                      [100%]
+=================================== FAILURES ===================================
+___ test_comando_antigo_nao_inicia_treinamento_historico_sem_opcao_explicita ___
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x1157afb90>
+
+    def test_comando_antigo_nao_inicia_treinamento_historico_sem_opcao_explicita(monkeypatch):
+        from citizentech_ia import cli, training
+    
+        monkeypatch.setattr(training, "run_training", forbidden)
+        monkeypatch.setattr("sys.argv", ["citizentech", "train", "--name", "unexpected", "--lr", "0.0001"])
+        with pytest.raises(SystemExit) as result:
+>           cli.main()
+
+tests/test_preparacao_1_5b.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/citizentech_ia/cli.py:54: in main
+    run_training(root, args.name, args.lr, args.microsteps, args.smoke)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (PosixPath('/Users/lucasmanentti/Projects/citizentech-iluminacao-ia'), 'unexpected', 0.0001, 800, False)
+kwargs = {}
+
+    def forbidden(*args, **kwargs):
+>       raise AssertionError("Preparação não pode carregar ou executar o modelo.")
+E       AssertionError: Preparação não pode carregar ou executar o modelo.
+
+tests/test_preparacao_1_5b.py:10: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_preparacao_1_5b.py::test_comando_antigo_nao_inicia_treinamento_historico_sem_opcao_explicita
+1 failed, 2 passed in 1.07s

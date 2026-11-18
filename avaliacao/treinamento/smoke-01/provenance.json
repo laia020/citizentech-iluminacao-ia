@@ -1,0 +1,87 @@
+{
+  "settings": {
+    "model": "/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/models/qwen-7b-4bit",
+    "train": true,
+    "fine_tune_type": "lora",
+    "optimizer": "adamw",
+    "optimizer_config": {
+      "adamw": {
+        "weight_decay": 0.01
+      }
+    },
+    "data": "/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/dados/mlx",
+    "seed": 42,
+    "num_layers": 16,
+    "batch_size": 1,
+    "iters": 40,
+    "val_batches": -1,
+    "learning_rate": 1e-05,
+    "steps_per_report": 4,
+    "steps_per_eval": 100,
+    "resume_adapter_file": null,
+    "adapter_path": "/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/adapters/smoke-01",
+    "save_every": 100,
+    "test": false,
+    "test_batches": 500,
+    "max_seq_length": 2048,
+    "config": null,
+    "grad_checkpoint": false,
+    "grad_accumulation_steps": 4,
+    "clear_cache_threshold": 0,
+    "lr_schedule": null,
+    "lora_parameters": {
+      "rank": 16,
+      "scale": 2.0,
+      "dropout": 0.05,
+      "keys": [
+        "self_attn.q_proj",
+        "self_attn.v_proj"
+      ]
+    },
+    "mask_prompt": true,
+    "report_to": null,
+    "project_name": null,
+    "trust_remote_code": false
+  },
+  "started_at": 1794465643.033979,
+  "smoke": true,
+  "python": "3.12.16",
+  "machine": "arm64",
+  "versions": {
+    "mlx": "0.32.4",
+    "mlx-lm": "0.32.2",
+    "transformers": "5.22.2",
+    "numpy": "2.5.4"
+  },
+  "dataset_manifest_sha": "519f1502dd0e84ad5775352a63fbefee7dd88228d1d8d97f2dc0dcbbe9b3244d",
+  "frozen_manifest_sha": "5b50fc7d6da54a148c86841d75ce8dcd8839871b643c91caf05b31dd23d80891",
+  "prepared_data_manifest": {
+    "train": {
+      "n": 400,
+      "max_tokens": 805,
+      "mean_tokens": 646.0625,
+      "oracle_support_insertions": 225,
+      "sha": "cc2326a27d1d8fcfc4e8f3a5a4c5109c2c513e834719ad0c186821ae616b9f0a"
+    },
+    "valid": {
+      "n": 80,
+      "max_tokens": 770,
+      "mean_tokens": 636.425,
+      "oracle_support_insertions": 40,
+      "sha": "5fc43e05278439dbf8f0cb4755bde591a09b5ce3fd80a1a82eb673392ab9ed85"
+    }
+  },
+  "prompt_version": "v2-no-identifiers",
+  "model_provenance": {
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "files": {
+      "model.safetensors": "a7a9fe268352aed9cf26e31f6bdf8f8df26ca63589861dd92f94456ab8554318"
+    },
+    "quantization": {
+      "bits": 4,
+      "group_size": 64,
+      "dtype": "float16"
+    }
+  }
+}

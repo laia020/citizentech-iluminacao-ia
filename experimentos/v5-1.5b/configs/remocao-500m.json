@@ -1,0 +1,78 @@
+{
+  "authorized_by_user": "Apagar também os artefatos de500M",
+  "date": "2026-11-17",
+  "targets": [
+    {
+      "path": "/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/models/qwen-0.5b-original",
+      "kind": "directory",
+      "bytes_regular_files": 999605536
+    },
+    {
+      "path": "/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/models/qwen-0.5b-fp16",
+      "kind": "directory",
+      "bytes_regular_files": 999544912
+    },
+    {
+      "path": "/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/experimentos/v4-leve",
+      "kind": "directory",
+      "bytes_regular_files": 77778486
+    },
+    {
+      "path": "/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/src/citizentech_ia/light",
+      "kind": "directory",
+      "bytes_regular_files": 93194
+    },
+    {
+      "path": "/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/scripts/conferir_leve.py",
+      "kind": "file",
+      "bytes_regular_files": 5425
+    },
+    {
+      "path": "/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/scripts/experimento_leve.py",
+      "kind": "file",
+      "bytes_regular_files": 1425
+    },
+    {
+      "path": "/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/scripts/notebook_leve.py",
+      "kind": "file",
+      "bytes_regular_files": 7758
+    },
+    {
+      "path": "/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/scripts/pacotes_leve.py",
+      "kind": "file",
+      "bytes_regular_files": 4353
+    },
+    {
+      "path": "/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/scripts/pacotes_validacao_leve.py",
+      "kind": "file",
+      "bytes_regular_files": 2301
+    },
+    {
+      "path": "/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/scripts/regressao_api_leve.py",
+      "kind": "file",
+      "bytes_regular_files": 4324
+    },
+    {
+      "path": "/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/scripts/relatorio_leve.py",
+      "kind": "file",
+      "bytes_regular_files": 18392
+    },
+    {
+      "path": "/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/scripts/selecionar_leve.py",
+      "kind": "file",
+      "bytes_regular_files": 4262
+    },
+    {
+      "path": "/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/scripts/servir_leve.py",
+      "kind": "file",
+      "bytes_regular_files": 553
+    }
+  ],
+  "other_model_versions_preserved": [
+    "7B",
+    "1.5B"
+  ],
+  "global_dependencies_changed": false,
+  "completed": true,
+  "bytes_regular_files_removed": 2077070921
+}

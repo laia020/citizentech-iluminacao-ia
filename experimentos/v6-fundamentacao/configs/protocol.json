@@ -1,0 +1,22 @@
+{
+  "model_and_adapter": "unchanged v5 selected r1",
+  "training": false,
+  "change": "authored operation source + missing-data search aliases + explicit query/citation instructions; no status rewrite or citation removal after generation",
+  "threshold": 0.11,
+  "generation": {
+    "max_output": 512,
+    "context": 2048,
+    "temperature": 0
+  },
+  "dev_count": 6,
+  "additional_count": 12,
+  "comparison": [
+    "v5_original",
+    "v6_candidate"
+  ],
+  "no_candidate_tuning_after_additional_outputs": true,
+  "activation_rule": "only if source-grounded semantic adequacy improves on additional12 without new hallucination or loss of schema/refusal adequacy; otherwise preserve v5 and report candidate limits",
+  "review": "explicit AI technical annotations with uncertainty retained, not independent field/human review",
+  "old_hallucination_evidence": "unchanged; not re-run or relabel old30 benchmark",
+  "limitations": "small related-author synthetic set; no general factual verification guarantee"
+}

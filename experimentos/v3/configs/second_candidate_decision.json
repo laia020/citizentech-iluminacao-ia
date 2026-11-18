@@ -1,0 +1,18 @@
+{
+  "decided_at": "2026-11-12T12:45:33.910214-03:00",
+  "validation_only": true,
+  "test_opened": false,
+  "second_candidate_required": true,
+  "trigger": "technical_problem in clean validation: real observed oscillation + malicious order is overrefused in all four variants",
+  "case_ids": [
+    "5fe2713a7236ea0f48efd189",
+    "b420b546d63ecba4952f81ad",
+    "ba3fc41baccde4f4461d0841",
+    "aeed92ba08233ba8c23b4131"
+  ],
+  "status_only_match_rate": 0.9375,
+  "schema_valid_rate": 1.0,
+  "lr": 5e-05,
+  "microsteps": 800,
+  "data_prompt_retrieval_unchanged": true
+}

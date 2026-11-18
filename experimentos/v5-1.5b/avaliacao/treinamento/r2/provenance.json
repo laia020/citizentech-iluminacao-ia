@@ -1,0 +1,42 @@
+{
+  "settings": {
+    "fine_tune_type": "lora",
+    "num_layers": 16,
+    "lora_parameters": {
+      "rank": 16,
+      "scale": 2.0,
+      "dropout": 0.05,
+      "keys": [
+        "self_attn.q_proj",
+        "self_attn.v_proj"
+      ]
+    },
+    "learning_rate": 0.0001,
+    "iters": 800,
+    "batch_size": 1,
+    "grad_accumulation_steps": 4,
+    "mask_prompt": true,
+    "max_seq_length": 2048,
+    "optimizer": "adamw",
+    "weight_decay": 0.01,
+    "compute_dtype": "float32",
+    "max_grad_norm": 1.0,
+    "numpy_seed": 42,
+    "mlx_seed": 42,
+    "nonfinite_policy": "abort_before_update; no hidden skipped batches",
+    "engine": "local_1_5b_fp32_guarded_v1",
+    "compiled_step": false,
+    "validation": "initial and exact final only; diagnostic loss without gradients"
+  },
+  "smoke": false,
+  "started_at": 1794959815.886878,
+  "frozen_manifest_sha": "55bf41e850563d66aa971f88365d1c0b276d49bce1ebfdcc59211c7d4b4fbfa6",
+  "training_code_sha": "14a44867d7c37d84bc4c5d363f96763de9703f58e1add004ceac52fcf7e983e1",
+  "versions": {
+    "mlx": "0.32.4",
+    "mlx-lm": "0.32.2",
+    "numpy": "2.5.4"
+  },
+  "base_cast": "FP16 base cast to FP32 only in memory; files unchanged",
+  "comparison_note": "new1.5B experiment; no historical model metrics reused"
+}

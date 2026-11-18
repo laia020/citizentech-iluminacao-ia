@@ -1,0 +1,21 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+________________ test_congelamento_rejeita_alteracao_do_prompt _________________
+
+tmp_path = PosixPath('/private/var/folders/n2/mqjcvz3x7ngg8rkcdzjc9h1m0000gn/T/pytest-of-lucasmanentti/pytest-7/test_congelamento_rejeita_alte0')
+
+    def test_congelamento_rejeita_alteracao_do_prompt(tmp_path):
+        from citizentech_ia.datasets import verify_freeze
+    
+        (tmp_path / "configs").mkdir()
+        (tmp_path / "configs/frozen_manifest.json").write_text(
+            json.dumps({"artifacts": {}, "system_sha": "prompt-diferente"})
+        )
+>       with pytest.raises(ValueError, match="Prompt"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_principais.py:272: Failed
+=========================== short test summary info ============================
+FAILED tests/test_principais.py::test_congelamento_rejeita_alteracao_do_prompt
+1 failed, 22 deselected in 1.07s

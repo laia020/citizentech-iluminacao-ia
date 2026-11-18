@@ -1,0 +1,16 @@
+{
+  "microsteps": 400,
+  "optimizer_updates": 100,
+  "elapsed_s": 515.9857544580009,
+  "peak_memory_gb": 12.233677284,
+  "adapters_changed": true,
+  "adapter_sha": "c905fee58cb4c0c44baeb9ac14dd9e9b7e412f280b3024c825441d018d573dce",
+  "best_validation_loss": 0.15051424503326416,
+  "best_iteration": 400,
+  "final_validation_loss": 0.15051424503326416,
+  "clipped_updates": 15,
+  "skipped_updates": 0,
+  "compute_dtype": "float32",
+  "numpy_seed": 42,
+  "mlx_seed": 42
+}

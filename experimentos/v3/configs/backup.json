@@ -1,0 +1,6 @@
+{
+  "backup_v2": "/Users/lucasmanentti/.codex/backups/citizentech-revisao-v3-20261112-110809",
+  "v2_unchanged_at_start": true,
+  "venv_reused": "/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/.venv",
+  "base_model_reused_read_only": "/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/models/qwen-7b-4bit"
+}

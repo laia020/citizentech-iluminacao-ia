@@ -1,0 +1,89 @@
+{
+  "train": {
+    "n": 400,
+    "n_municipality": 0,
+    "expected_chunk_occurrences": {
+      "registro:1": 112,
+      "evidencia:1": 152,
+      "lacuna:1": 64,
+      "ldr:1": 32,
+      "calibracao:1": 40,
+      "dados:1": 16,
+      "municipio:1": 8,
+      "conflito:1": 72,
+      "escopo:1": 40,
+      "contexto:1": 40
+    },
+    "retrieved_chunk_occurrences": {
+      "registro:1": 154,
+      "evidencia:1": 134,
+      "contexto:1": 180,
+      "calibracao:1": 81,
+      "conflito:1": 92,
+      "lacuna:1": 71,
+      "dados:1": 21,
+      "ldr:1": 48,
+      "municipio:1": 8,
+      "escopo:1": 48
+    },
+    "all_empty_target_hypotheses": true
+  },
+  "valid": {
+    "n": 80,
+    "n_municipality": 0,
+    "expected_chunk_occurrences": {
+      "registro:1": 24,
+      "evidencia:1": 24,
+      "conflito:1": 16,
+      "lacuna:1": 16,
+      "ldr:1": 4,
+      "calibracao:1": 8,
+      "municipio:1": 4,
+      "escopo:1": 8,
+      "contexto:1": 8
+    },
+    "retrieved_chunk_occurrences": {
+      "evidencia:1": 24,
+      "registro:1": 32,
+      "contexto:1": 34,
+      "dados:1": 14,
+      "escopo:1": 11,
+      "conflito:1": 20,
+      "lacuna:1": 17,
+      "ldr:1": 4,
+      "calibracao:1": 8,
+      "municipio:1": 4
+    },
+    "all_empty_target_hypotheses": true
+  },
+  "test": {
+    "n": 120,
+    "n_municipality": 0,
+    "expected_chunk_occurrences": {
+      "registro:1": 36,
+      "evidencia:1": 36,
+      "conflito:1": 24,
+      "lacuna:1": 24,
+      "calibracao:1": 8,
+      "ldr:1": 8,
+      "municipio:1": 4,
+      "dados:1": 4,
+      "escopo:1": 16,
+      "contexto:1": 12
+    },
+    "retrieved_chunk_occurrences": {
+      "evidencia:1": 36,
+      "registro:1": 43,
+      "conflito:1": 42,
+      "dados:1": 14,
+      "contexto:1": 52,
+      "escopo:1": 18,
+      "calibracao:1": 17,
+      "ldr:1": 16,
+      "cpfl-reparos:1": 2,
+      "lacuna:1": 23,
+      "municipio:1": 7
+    },
+    "all_empty_target_hypotheses": true
+  }
+}

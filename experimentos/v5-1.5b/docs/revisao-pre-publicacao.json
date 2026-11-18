@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/laia020/citizentech-iluminacao-ia",
+  "publication_authorized": true,
+  "candidate_files": 390,
+  "candidate_bytes": 19076948,
+  "ignored_heavy_runtime_absent": true,
+  "common_credential_patterns_detected": false,
+  "credential_scan_limits": "pattern scan is not a guarantee of absence",
+  "selected_adapter_archive_verified": true,
+  "documentation_links_verified": true,
+  "software_tests": "47 passed in 1.22s",
+  "ruff": "passed",
+  "video": "group video; URL pending",
+  "deployment": "not included"
+}

@@ -1,0 +1,26 @@
+{
+  "new_training": false,
+  "old_weights_prompt_retrieval_data_evidence_preserved": true,
+  "old_hallucination_result_not_changed": true,
+  "old_v5_frozen_prediction_sources_unchanged": true,
+  "activated_component": "limited_citation_guard_only",
+  "new_pipeline_candidates_not_activated": [
+    "v6-fundamentacao",
+    "v6b-busca"
+  ],
+  "software_tests": "44 passed in1.17s",
+  "ruff": "All checks passed!",
+  "actual_model_api_cases": {
+    "blocked_incompatible_source": 1,
+    "accepted_controls": 3
+  },
+  "not_quality_rate_or_hallucination_measurement": true,
+  "browser_visual_review": "not performed; previous local browser unavailable",
+  "files_sha": {
+    "src/citizentech_ia/citation_guard.py": "938ec131add74bc341bd3277f3ef551796432c18ce3aa6db10e075a87d1b9d1c",
+    "scripts/servir_poc_validada.py": "36708c4f261e1261935ee36a6491e2eba5d9e0ff480ecd393a0eba400c158df2",
+    "tests/test_guarda_fontes.py": "b8f8de3d6fd72bae70e2b8aa4ed06f7c7a92b3bdf80b059674f09952cf0ddc10",
+    "experimentos/v6c-validacao/configs/protocol.json": "9629317345877c1ac7c68c9ecbe4284dc24359c13ad62d150c6ac7eec4a5542e",
+    "experimentos/v6c-validacao/docs/api-real.json": "48413d7743a0ae3236acb7ad13215b4d5ddebd00882098c0b6edb399c5ecd762"
+  }
+}

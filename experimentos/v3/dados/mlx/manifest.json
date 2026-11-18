@@ -1,0 +1,20 @@
+{
+  "train": {
+    "n": 400,
+    "max_tokens": 1142,
+    "mean_tokens": 987.7175,
+    "retrieval_misses_recorded": 5,
+    "targets_without_citations": 5,
+    "oracle_support_insertions": 0,
+    "sha": "77cd0af3c628087405ae417cd7bb404c937ae495bcb2f212237fb03ec98b149f"
+  },
+  "valid": {
+    "n": 80,
+    "max_tokens": 1127,
+    "mean_tokens": 983.9625,
+    "retrieval_misses_recorded": 0,
+    "targets_without_citations": 0,
+    "oracle_support_insertions": 0,
+    "sha": "57764f9910436c0fd99a5415222be4093c3baea183aae933c6addfda05f03824"
+  }
+}

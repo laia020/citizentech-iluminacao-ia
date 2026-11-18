@@ -1,0 +1,60 @@
+{
+  "frozen_artifacts_valid": true,
+  "checks": {
+    "final-A": {
+      "cases": 120,
+      "prompts_without_identifiers": true,
+      "responses_sha": "c940990e5c09bfb3b936147ed9f4f45d3c92b39837964ca10b15be99abe11d23",
+      "structural_failures": 65,
+      "status_mismatches": 92
+    },
+    "final-B": {
+      "cases": 120,
+      "prompts_without_identifiers": true,
+      "responses_sha": "5039de18a8f750fec0127d232dfe594f6fba3b0c4a38f02e66dec359031b0676",
+      "structural_failures": 31,
+      "status_mismatches": 61
+    },
+    "final-C": {
+      "cases": 120,
+      "prompts_without_identifiers": true,
+      "responses_sha": "95144e8c8daadacafef2c1a6ef4e1e63b5b11c2d7966628fd97292f469b633ce",
+      "structural_failures": 8,
+      "status_mismatches": 42
+    }
+  },
+  "scientific_review": "pending",
+  "selected_adapter_sha": "066c7d9bc409e2adcd5cae1072ee05f03d73cd17f9008c4f5871ad178c99a38c",
+  "retrieved_contexts_equal_B_C": true,
+  "base_weight_sha": {
+    "model.safetensors": "a7a9fe268352aed9cf26e31f6bdf8f8df26ca63589861dd92f94456ab8554318"
+  },
+  "source_sha": {
+    "pyproject.toml": "30a2b7dada91dbf6180f0c013b9770fe1812a584fe3fa44e28fb248bc7c3594a",
+    "scripts/auditar_similaridade.py": "8db7346555b82ec7b55eceb4b07a6cc7e158e1db930f2d172f9af9def9ec6ce1",
+    "scripts/executar_experimentos.py": "bfd3ee36120bc33773669069c36baae5ec44494735fdc2041ce705ba54ee6a1b",
+    "scripts/gerar_documentacao.py": "d31448b8aa94ef8c52e95b75beb01ce6a8d6a66854a5a9cf937eabb1720bf457",
+    "scripts/modelo.py": "bce5ed48e5da7fbbb98ba848d53cef61c51a19eafa8d60a04f3ddb3b3a610a70",
+    "scripts/validar_api_real.py": "ddd3bf16f5843a05f84b7671eed7306356bf29fb4569f2066269c3d029c1dd6f",
+    "scripts/validar_smoke.py": "3cb7ecccad7d88bece4db9ddfb6d65a5b28c49bb75b54ea27b83d1bd8d3edbe5",
+    "scripts/verificar_entrega.py": "d12f2e9174eafa1787c2c1ccc2bc6d769d3f8702c052dd4e2a635753453a6359",
+    "src/citizentech_ia/__init__.py": "d15c6be94ef926bb853d072108b1ce75a635acc6cb830906ae44a45f6cd02976",
+    "src/citizentech_ia/api.py": "c84195409de5c46eb70cb3b052005030b40b7f9e4cf1adaa41e6146451f5e24a",
+    "src/citizentech_ia/build_data.py": "936500729f52781634e7d1b9258d2bfceff706e792aa3f707437051fbb49009f",
+    "src/citizentech_ia/cli.py": "890b67fc413d6124ad8fee6f042cbccc3c628a0c5e69e702361c43bd50763873",
+    "src/citizentech_ia/datasets.py": "c02c1a8fbc2c5172006518b2869bf0816595cfeb8a3f4e3c0f7924b6f003033e",
+    "src/citizentech_ia/evaluation.py": "4ab730f8544f7d2242aac3973437d1e9e6c55ec2dc3050171059c5d72868feca",
+    "src/citizentech_ia/inference.py": "b39d5b0dc604ead4a8eddce9f829fc8a072a1837eb8f093def498b48c65eb76a",
+    "src/citizentech_ia/pipeline.py": "39d4b54a3dd040b0ef481976f74f25fd75c90e2a52791562da0e8eeeae0d11ae",
+    "src/citizentech_ia/retrieval.py": "d4f1fe750f88c5372df6f3e5021cc399ca6af053e8e63a6cbcc8a72c93c5fc29",
+    "src/citizentech_ia/schemas.py": "b8a4970e64448ae560b952177b0af9ee8c9b85026d3dcc6d06f5652ba127b7de",
+    "src/citizentech_ia/service.py": "d01c7e1542f686225f4bd45fffde0e56e0c8c4959530304ee00292e80257d6d9",
+    "src/citizentech_ia/training.py": "4ac98199414f662b8129adf79d06e969346f2485615fbeb3a9660fbf2ee0f041",
+    "uv.lock": "225aab956fb5f29f6292bfeb0e7bbb9c201cc6be5ee8f31ec4975cdb7485f2b5"
+  },
+  "limitations": [
+    "Revisão semântica humana independente pendente.",
+    "Dados sintéticos; não demonstram desempenho em campo.",
+    "Integração real do grupo e publicação pendentes."
+  ]
+}

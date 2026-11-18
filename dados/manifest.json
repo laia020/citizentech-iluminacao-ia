@@ -1,0 +1,28 @@
+{
+  "counts": {
+    "train": 400,
+    "valid": 80,
+    "test": 120
+  },
+  "families": 72,
+  "test_categories": {
+    "respondivel": 40,
+    "nao_consta": 20,
+    "insuficiente": 20,
+    "contradicao": 15,
+    "fora_escopo": 15,
+    "inducao": 10
+  },
+  "limitations": [
+    "Variantes por família não são observações independentes.",
+    "Mudanças de local e redação não demonstram generalização para novas cidades ou falhas elétricas.",
+    "Revisão humana independente dos gabaritos e fontes ainda necessária antes de alegar acerto/fidelidade final."
+  ],
+  "hashes": {
+    "dados/train.jsonl": "832809ae51af445a67edf861d5c873539aa403e73f9d2608ed878216c79a56af",
+    "dados/valid.jsonl": "d105ace92684a66998c98061bf4fe0be1cfef6cc838b17c60b32df7182eb1435",
+    "avaliacao/test.jsonl": "093b78cf197f11285dab613bbe10cff159c2605f946021f110b59b75f0747b1f",
+    "base/chunks.jsonl": "293f559b96abd075ae50158d866a94e05f6a882a51cb5910544273449212916f",
+    "base/catalogo.jsonl": "ddf01b188c8af1fea1837e1ebbbef8f1268c34e3cbb41d629f7b0c78b071ddbe"
+  }
+}

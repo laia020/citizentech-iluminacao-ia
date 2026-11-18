@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-17",
+  "phase": "local_training_evaluation_and_poc_complete",
+  "selected": "r1",
+  "selected_sha": "c905fee58cb4c0c44baeb9ac14dd9e9b7e412f280b3024c825441d018d573dce",
+  "completed": [
+    "smoke16",
+    "r1_400_training",
+    "r2_800_training",
+    "validation80_each",
+    "technical_review80_each",
+    "selection_before_test",
+    "90_test_generations",
+    "90_technical_AI_annotations",
+    "five_errors_and_proposals",
+    "portable_exports",
+    "real_POC_6_requests",
+    "executed_notebook",
+    "39_software_tests",
+    "final_hash_integrity_checks",
+    "docs_Obsidian_updated"
+  ],
+  "jobs": {
+    "abc_session": 31478,
+    "own_caffeinate_session": 69912,
+    "own_caffeinate_pid": 17185,
+    "prepared_poc_pid": 17067
+  },
+  "pending": [
+    "independent_human_review",
+    "public_deploy_and_group_integration",
+    "members_RMs_territory_video",
+    "visual_browser_review"
+  ],
+  "backup": "/Users/lucasmanentti/.codex/backups/citizentech-treino-1_5b-20261117-204424",
+  "important": "Do not modify frozen prediction code/data or retrain after test. UI-only text update allowed after training, original asset saved in frozen snapshot; final verifier excludes UI from prediction-source hash assertion. No new automatic sleep.",
+  "active_local_server_pid": 18192,
+  "temporary_power_prevention": "own_temporary_caffeinate_stopped",
+  "automatic_sleep_performed": false
+}

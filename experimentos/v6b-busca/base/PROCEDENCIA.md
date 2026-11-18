@@ -1,0 +1,1 @@
+Procedimento autoral lacuna:1 ampliado para declarar ausência de escala/designação de equipe nesta POC e aliases de consulta operacional; não são fatos da prefeitura ouCPFL. Demais11 textos preservados exatamente. Fonte original e direitos:experimentos/v5-1.5b/base/fontes.csv. Não insere citações-gabarito na consulta nem reescreve a saída.

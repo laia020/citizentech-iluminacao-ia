@@ -1,0 +1,22 @@
+.....................F                                                   [100%]
+=================================== FAILURES ===================================
+___________ test_identificador_nao_vaza_rotulo_ou_split_para_modelo ____________
+
+    def test_identificador_nao_vaza_rotulo_ou_split_para_modelo():
+        a=Analyzer(Generator(),Retriever(CHUNKS),threshold=0)
+        inp=Occurrence.model_validate(occurrence(ocorrencia_id='test-respondivel-vazamento'))
+        messages,_,_=a.prepare(inp)
+        text=json.dumps(messages,ensure_ascii=False)
+>       assert 'test-respondivel-vazamento' not in text
+E       assert 'test-respondivel-vazamento' not in '[{"role": "...to.\\"}]}"}]'
+E         
+E         'test-respondivel-vazamento' is contained here:
+E         ?           ^^^^^^^^^^^^^^^^^
+E           a_id\": \"test-respondivel-vazamento\", \"pergunta\": \"Como registrar iluminação apagada?\", \"municipio\": null, \"observado_em\": null, \"simulada\": true, \"relato\": \"Luminária apagada durante a noite.\", \"sensores\": [], \"observacoes_visuais\": []}, \"CONTEXTO\": [{\"chunk_id\": \"geral:1\", \"texto\": \"Iluminação apagada à noite: registrar ocorrência para verificação humana.\"}, {\"chunk_id\": \"ldr:1\", \"texto\": \"Sensor LDR bruto ADC sem calibração não mede lux nem comprova defe...
+E         
+E         ...Full output truncated, use '-vv' to show
+
+tests/test_principais.py:261: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_principais.py::test_identificador_nao_vaza_rotulo_ou_split_para_modelo
+1 failed, 21 passed in 1.31s

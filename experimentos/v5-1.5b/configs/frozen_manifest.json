@@ -1,0 +1,20 @@
+{
+  "artifacts": {
+    "dados/manifest.json": "0fb2af643f3c7fca84e4193a7a123237db3810d95ea42c0415262a19580e74a7",
+    "dados/mlx/train.jsonl": "77cd0af3c628087405ae417cd7bb404c937ae495bcb2f212237fb03ec98b149f",
+    "dados/mlx/valid.jsonl": "57764f9910436c0fd99a5415222be4093c3baea183aae933c6addfda05f03824",
+    "dados/mlx/manifest.json": "15c40441d0d074e1dcdf8420ef2edf989a7b8f64173c17be4b2991d51b180fe0",
+    "dados/train.jsonl": "e024523512b7b090b6f6cf913b4a95ebe96db76fc7a42ef770b216db365b658b",
+    "dados/valid.jsonl": "64aa22cf77b68b126358205e827a820517d1842fc3c9e0112f1c94b7026e88b8",
+    "avaliacao/test.jsonl": "367fd3826b962a95f7dba1832bc2c069fdd8615b7c0885d01b7067278f876261",
+    "base/chunks.jsonl": "c082886334e6c11746ef5f130a866cf84d299c2604ddb715665632dd24e34084",
+    "base/catalogo.jsonl": "f23160cf14e8048c954792676a408931e6543fbaad43d1fb04bbaf14eebf4a09",
+    "configs/retrieval.json": "eb021c643964aba49bf2067df5cb0ed85791af4180168a098f6078cb3cce085d",
+    "configs/protocol.json": "bae599046f5dda64a1a96e85169fdcf43203a32ee4b41532f89fa2e74a320f0d",
+    "configs/model.json": "68cd27956ce2a0ca44c75f53d6de663d778905e1cdf129f3c1d335c0789d2549",
+    "configs/clean_holdout_plan.json": "b319153a57d3f52256ee446e0491583466b3a396739f54a3e4c4b173ec17d0a1",
+    "configs/clean_holdout_freeze.json": "907585540ce51564302c0bcddfa3075c740adf960754f674549933bba8129039"
+  },
+  "prompt_version": "v4-light-same-reviewed-policy-no-oracle",
+  "system_sha": "d50cb5836fdc6e2b4d9a1a15d614b56e26b45060cdb78f7d4710ae2525c647fd"
+}

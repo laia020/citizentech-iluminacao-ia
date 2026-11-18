@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-17",
+  "url": "http://127.0.0.1:8000/demo",
+  "ready_http": 200,
+  "ready": {
+    "pronto": true
+  },
+  "local_only": true,
+  "selected_adapter": "c905fee58cb4c0c44baeb9ac14dd9e9b7e412f280b3024c825441d018d573dce",
+  "source_of_inference_proof": "docs/teste-poc-real.json",
+  "training_complete": true
+}

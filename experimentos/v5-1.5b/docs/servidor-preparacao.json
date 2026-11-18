@@ -1,0 +1,10 @@
+{
+  "pid": 17067,
+  "command": ".venv/bin/python scripts/servir_1_5b.py",
+  "url": "http://127.0.0.1:8000/demo",
+  "state": "prepared_only_no_model_loaded",
+  "training_started": false,
+  "ready_expected": 503,
+  "analysis_enabled": false,
+  "public_exposure": false
+}

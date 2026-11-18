@@ -1,0 +1,16 @@
+{
+  "source": "https://ca-akona-energy-prod.salmoncoast-770d275b.eastus2.azurecontainerapps.io",
+  "purpose": "user requested same visual identity as their DevOps MVP",
+  "read_only_reference": true,
+  "fonts": [
+    "Manrope",
+    "Inter"
+  ],
+  "files": {
+    "inicio.html": "ee8adb300dbdf2f145069a6dab891f935d4fc47719e4056f75eb21c1b99aada9",
+    "inter.woff2": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+    "manrope.woff2": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+    "style.css": "64ed9c89c9c5b79d4ec3860d43270c9e9d783ab75a1921341fe688f4e3be73e6"
+  },
+  "backup": "/Users/lucasmanentti/.codex/backups/citizentech-front-akona-20261117-222515"
+}

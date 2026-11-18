@@ -1,0 +1,14 @@
+{
+  "recorded_at": "2026-11-12T12:49:34.208508-03:00",
+  "event": "CPU source-coverage audit included test retrieval before candidate selection",
+  "artifact": "docs/cobertura-fontes.json",
+  "artifact_sha": "b6db45dcd90d63a7c8bc63c69c1549b48648a99fd7d0168e95ed230eec6bde1c",
+  "test_llm_generation_started": false,
+  "test_candidate_predictions_observed": false,
+  "test_retrieval_coverage_inspected_before_selection": true,
+  "candidate_r2_already_training": true,
+  "candidate_schedule_lr_data_prompt_retrieval_unchanged": true,
+  "selection_rule_already_fixed": "configs/selection_rule.json",
+  "not_used_for_tuning_or_candidate_choice": true,
+  "reporting": "Do not claim the test data/retrieval were wholly uninspected. Distinguish static/source coverage audit from unopened LLM test responses. Source authors and AI reviewer already knew synthetic test content; not independent blind validation."
+}

@@ -1,0 +1,12 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+____________ test_servico_carrega_e_executa_no_mesmo_worker_e_fecha ____________
+
+    def test_servico_carrega_e_executa_no_mesmo_worker_e_fecha():
+>       from citizentech_ia.service import ThreadBoundAnalyzer
+E       ModuleNotFoundError: No module named 'citizentech_ia.service'
+
+tests/test_principais.py:301: ModuleNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_principais.py::test_servico_carrega_e_executa_no_mesmo_worker_e_fecha
+1 failed, 24 deselected in 1.01s

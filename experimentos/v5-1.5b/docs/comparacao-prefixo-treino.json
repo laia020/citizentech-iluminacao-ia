@@ -1,0 +1,7 @@
+{
+  "r1_400_sha": "c905fee58cb4c0c44baeb9ac14dd9e9b7e412f280b3024c825441d018d573dce",
+  "r2_400_sha": "c905fee58cb4c0c44baeb9ac14dd9e9b7e412f280b3024c825441d018d573dce",
+  "same_seed_same_initial_training_budget": true,
+  "exact_match": true,
+  "note": "Budget candidates with the same seed are not independent statistical replications."
+}

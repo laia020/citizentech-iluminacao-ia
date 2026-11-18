@@ -1,0 +1,17 @@
+{
+  "src/citizentech_ia/v3/evaluation.py": "187f885edce3bd9d06bab833dc45204c1c110ede5bb270609397989ef9039270",
+  "src/citizentech_ia/v3/__init__.py": "bab2a566e3849824c83ec4cff0a936951dc9cfd03db2e4e790d72ca68d8e0b4f",
+  "src/citizentech_ia/v3/cases.py": "1463c337045e1a0f1618ec34ac7be8119424a939b116382415ed68fb51e3fe6e",
+  "src/citizentech_ia/v3/review.py": "661719f832160344f7299d2471d9f324f34d4a421905be539a21fd823defb1ad",
+  "src/citizentech_ia/v3/pipeline.py": "d4f79e44f857198145dffa1d8939892df7d69d97c6064a4d9f69b6d828db9749",
+  "src/citizentech_ia/v3/retrieval.py": "4a4b41e0b1279e3fa20f0a0914cb8cc1876655ba7e9944b16f67df1b968fd912",
+  "src/citizentech_ia/v3/inference.py": "f33f76d880b0da52ff0fa14ddb7db973a5e0610191369e43d6f055d7b4a58c82",
+  "src/citizentech_ia/v3/data.py": "bd0c08b9a66dd97ab8f07473899e7088507ef29dc1a30d7745fc011871728089",
+  "src/citizentech_ia/training.py": "955f0d73f088fdfd65c3c08e59dc9b3e36ef798ce998d4f6f97399d3bca0f519",
+  "src/citizentech_ia/datasets.py": "861a0fda3e867ee4acd048d340af7532e93249c1c2153795d5ab755602467798",
+  "src/citizentech_ia/inference.py": "b39d5b0dc604ead4a8eddce9f829fc8a072a1837eb8f093def498b48c65eb76a",
+  "src/citizentech_ia/schemas.py": "b8a4970e64448ae560b952177b0af9ee8c9b85026d3dcc6d06f5652ba127b7de",
+  "scripts/experimento_v3.py": "26b0ee83f460827cbf1de7be8b255f0636388cddabfd3e318cd9d0bfe58c4673",
+  "uv.lock": "225aab956fb5f29f6292bfeb0e7bbb9c201cc6be5ee8f31ec4975cdb7485f2b5",
+  "pyproject.toml": "30a2b7dada91dbf6180f0c013b9770fe1812a584fe3fa44e28fb248bc7c3594a"
+}

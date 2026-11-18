@@ -1,0 +1,8 @@
+{
+  "ready": 200,
+  "demo": 200,
+  "ui_unchanged": true,
+  "local_url": "http://127.0.0.1:8000/demo",
+  "command": "scripts/servir_poc_validada.py",
+  "runtime_guard": "limited citation validation; generative pipeline unchanged"
+}

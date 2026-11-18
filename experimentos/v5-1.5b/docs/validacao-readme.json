@@ -1,0 +1,19 @@
+{
+  "relative_links_valid": true,
+  "json_example_matches_contract": true,
+  "five_members_and_rms_present": true,
+  "frozen_data_and_prompt_verified": true,
+  "software_tests": 47,
+  "pytest_result": "47 passed in 1.19s",
+  "ruff": "All checks passed: src scripts tests examples",
+  "adapter_isolated_restore": "reproducao-adaptador-readme.json",
+  "external_clean_machine_install": "not executed",
+  "links_still_needed": [
+    "public repository",
+    "demonstration video",
+    "public AI URL"
+  ],
+  "readme_lines": 317,
+  "readme_sha256": "55c2b8469f465eae73c8a3a049baffa29f9582c78799c51c40d36ece94c78798",
+  "obsidian_updated": true
+}

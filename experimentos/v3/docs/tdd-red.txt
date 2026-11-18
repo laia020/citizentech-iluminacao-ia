@@ -1,0 +1,36 @@
+FFFF                                                                     [100%]
+=================================== FAILURES ===================================
+____ test_calibracao_v3_mede_relevancia_sem_confundir_com_respondibilidade _____
+
+    def test_calibracao_v3_mede_relevancia_sem_confundir_com_respondibilidade():
+>       from citizentech_ia.v3.retrieval import calibrate_relevance
+E       ModuleNotFoundError: No module named 'citizentech_ia.v3'
+
+tests/test_revisao_v3.py:9: ModuleNotFoundError
+________ test_busca_v3_considera_pergunta_de_custo_e_sinonimos_de_dano _________
+
+    def test_busca_v3_considera_pergunta_de_custo_e_sinonimos_de_dano():
+>       from citizentech_ia.v3.retrieval import ReviewedRetriever, query
+E       ModuleNotFoundError: No module named 'citizentech_ia.v3'
+
+tests/test_revisao_v3.py:22: ModuleNotFoundError
+______ test_prompt_v3_preserva_pergunta_e_observacoes_sem_ids_ou_rotulos _______
+
+    def test_prompt_v3_preserva_pergunta_e_observacoes_sem_ids_ou_rotulos():
+>       from citizentech_ia.v3.inference import ReviewedAnalyzer
+E       ModuleNotFoundError: No module named 'citizentech_ia.v3'
+
+tests/test_revisao_v3.py:37: ModuleNotFoundError
+__________ test_revisao_tecnica_nao_se_apresenta_como_revisao_humana ___________
+
+    def test_revisao_tecnica_nao_se_apresenta_como_revisao_humana():
+>       from citizentech_ia.v3.review import review_manifest
+E       ModuleNotFoundError: No module named 'citizentech_ia.v3'
+
+tests/test_revisao_v3.py:54: ModuleNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_revisao_v3.py::test_calibracao_v3_mede_relevancia_sem_confundir_com_respondibilidade
+FAILED tests/test_revisao_v3.py::test_busca_v3_considera_pergunta_de_custo_e_sinonimos_de_dano
+FAILED tests/test_revisao_v3.py::test_prompt_v3_preserva_pergunta_e_observacoes_sem_ids_ou_rotulos
+FAILED tests/test_revisao_v3.py::test_revisao_tecnica_nao_se_apresenta_como_revisao_humana
+4 failed in 0.06s

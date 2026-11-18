@@ -1,0 +1,9 @@
+{
+  "base_parameters": 1543714304,
+  "trainable_lora_parameters": 1245184,
+  "adapter_tensor_count": 64,
+  "adapter_file_bytes": 4987695,
+  "adapter_dtypes": [
+    "F32"
+  ]
+}

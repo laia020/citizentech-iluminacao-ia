@@ -1,0 +1,20 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+__ test_busca_operacional_devolve_procedimento_em_vez_de_canal_institucional ___
+
+    def test_busca_operacional_devolve_procedimento_em_vez_de_canal_institucional():
+>       from citizentech_ia.v6.inference import retriever
+E       ModuleNotFoundError: No module named 'citizentech_ia.v6'
+
+tests/test_fundamentacao.py:7: ModuleNotFoundError
+_______ test_ajuste_preserva_casos_ids_e_nao_insere_gabarito_na_entrada ________
+
+    def test_ajuste_preserva_casos_ids_e_nao_insere_gabarito_na_entrada():
+>       from citizentech_ia.v6.inference import GroundedAnalyzer, SYSTEM
+E       ModuleNotFoundError: No module named 'citizentech_ia.v6'
+
+tests/test_fundamentacao.py:20: ModuleNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_fundamentacao.py::test_busca_operacional_devolve_procedimento_em_vez_de_canal_institucional
+FAILED tests/test_fundamentacao.py::test_ajuste_preserva_casos_ids_e_nao_insere_gabarito_na_entrada
+2 failed in 0.06s

@@ -1,0 +1,33 @@
+{
+  "model": {
+    "modelo": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revisao_modelo": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "adaptador": "2329645e004e803a5ff169980d9b9e031731929a96f64cd88a8f74462203e81a"
+  },
+  "smoke_summary": {
+    "microsteps": 16,
+    "optimizer_updates": 4,
+    "elapsed_s": 22.60574533399631,
+    "peak_memory_gb": 12.075948004,
+    "adapters_changed": true,
+    "adapter_sha": "2329645e004e803a5ff169980d9b9e031731929a96f64cd88a8f74462203e81a",
+    "best_validation_loss": 0.8281536102294922,
+    "best_iteration": 16,
+    "final_validation_loss": 0.8281536102294922,
+    "clipped_updates": 0,
+    "skipped_updates": 0,
+    "compute_dtype": "float32",
+    "numpy_seed": 42,
+    "mlx_seed": 42
+  },
+  "reload_probe": "OK",
+  "probe_is_not_quality_validation": true,
+  "estimated_r1_minutes": [
+    8,
+    12
+  ],
+  "estimate_basis": "16microsteps, representative lengths near training range;80-example loss validation adds time",
+  "swap_used_gb_after_smoke": 0.0,
+  "own_caffeinate_pid": 17185,
+  "long_training_authorized": true
+}

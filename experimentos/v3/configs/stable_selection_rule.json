@@ -1,0 +1,11 @@
+{
+  "saved_at": "2026-11-12T13:16:22.679507-03:00",
+  "reason": "r2 original disqualified by NaN; accept complete r2s retry instead",
+  "ranking_unchanged": true,
+  "criterion": "status_only DESC, valid_json_refs DESC, schema DESC, median_seconds ASC, on clean64 validation",
+  "no_test_candidate_outcomes_seen": true,
+  "static_test_retrieval_coverage_seen": true,
+  "selector_sha": "54709ac7bfee034633415b313668866d432c8cd4b4ff86840ddc600492f49fff",
+  "original_rule_preserved": "configs/selection_rule.json",
+  "original_selector_preserved": "scripts/selecionar_v3.py"
+}

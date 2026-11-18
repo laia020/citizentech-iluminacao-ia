@@ -1,0 +1,12 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "license": "apache-2.0",
+  "model_path": "models/qwen-1.5b-fp16",
+  "precision": "float16 inference / float32 guarded LoRA training",
+  "quantization": null,
+  "requested_date": "2026-11-17",
+  "reason": "user requested replacing500M with model between1B and2B",
+  "historical_500m_removal_choice": "user explicitly requested deleting weights/adapters/results; deletion manifest will record completion",
+  "target_parameters": 1543714304
+}

@@ -1,0 +1,18 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "base_license": "apache-2.0",
+  "base_license_is_not_an_unrequested_license_for_project_code": true,
+  "selected_candidate": "r1",
+  "adapter_sha": "c905fee58cb4c0c44baeb9ac14dd9e9b7e412f280b3024c825441d018d573dce",
+  "archive": "qwen1.5b-lora-r1.zip",
+  "archive_sha": "a0904e71413aec7475dbfa62b18937cae1dafd833fdd782ed3b376b8014470b9",
+  "files": {
+    "adapter_config.json": "af551af1eb7b80ca68e0889626ae75c2eea2e2ba4028872a00a01e782f9299fc",
+    "adapters.safetensors": "c905fee58cb4c0c44baeb9ac14dd9e9b7e412f280b3024c825441d018d573dce",
+    "BASE-MODEL-LICENSE.txt": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+  },
+  "base_fp16_canonical_sha": "3cc432d5b2553e19b59fb9736b226a103eb4a0cd30be242e9819b51d601ba725",
+  "archive_bytes": 4613465,
+  "project_license": "not yet chosen by titular; repository publication explicitly authorized by user"
+}

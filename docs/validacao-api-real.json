@@ -1,0 +1,242 @@
+{
+  "transport": "ASGI in-process; sem chamada de navegador/rede",
+  "real_model": true,
+  "simulated_occurrences": true,
+  "group_consumer_integrated": false,
+  "semantic_review": "HTTP 200 valida transporte/esquema/referências, não correção semântica; revisão independente pendente.",
+  "model": {
+    "modelo": "Qwen/Qwen2.5-7B-Instruct",
+    "revisao_modelo": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "adaptador": "066c7d9bc409e2adcd5cae1072ee05f03d73cd17f9008c4f5871ad178c99a38c"
+  },
+  "cases": [
+    {
+      "case": "registro_minimo",
+      "input": {
+        "ocorrencia_id": "DEMO-registro_minimo",
+        "pergunta": "Analise as evidências e indique o que falta e o próximo encaminhamento.",
+        "simulada": true,
+        "relato": "Luminária apagada durante a noite em via pública."
+      },
+      "http_status": 200,
+      "body": {
+        "request_id": "379ef0e9-a71c-4200-846f-e599fae2765d",
+        "ocorrencia_id": "DEMO-registro_minimo",
+        "analise": {
+          "status": "analise_preliminar",
+          "resumo": "Há uma observação de iluminação pública a registrar, sem determinação da causa elétrica.",
+          "hipoteses": [],
+          "informacoes_faltantes": [
+            "Verificação humana do ponto e das condições observadas."
+          ],
+          "encaminhamento": "Registrar a ocorrência e encaminhar para verificação humana, sem prazo presumido.",
+          "fontes": [
+            "registro:1"
+          ]
+        },
+        "referencias": [
+          {
+            "chunk_id": "registro:1",
+            "document_id": "registro",
+            "title": "Registro de ocorrência",
+            "url": null
+          }
+        ],
+        "execucao": {
+          "modo": "rag_finetuning",
+          "modelo": "Qwen/Qwen2.5-7B-Instruct",
+          "revisao_modelo": "a09a35458c702b33eeacc393d103063234e8bc28",
+          "adaptador": "066c7d9bc409e2adcd5cae1072ee05f03d73cd17f9008c4f5871ad178c99a38c",
+          "versao_base": "4059317a776788b7018139f9a8dcd6ac34fd847a704ecf5704ecb21ca5be73cf",
+          "duracao_ms": 2562
+        }
+      }
+    },
+    {
+      "case": "observacao",
+      "input": {
+        "ocorrencia_id": "DEMO-observacao",
+        "pergunta": "Analise as evidências e indique o que falta e o próximo encaminhamento.",
+        "simulada": true,
+        "relato": "Luminária observada apagada durante a noite. A causa não foi inspecionada."
+      },
+      "http_status": 200,
+      "body": {
+        "request_id": "5159fe0d-12ff-43b0-a5b6-4187fd2cb2d3",
+        "ocorrencia_id": "DEMO-observacao",
+        "analise": {
+          "status": "informacao_insuficiente",
+          "resumo": "Faltam evidências verificáveis da causa da observação, sem município.",
+          "hipoteses": [],
+          "informacoes_faltantes": [
+            "Verificação humana e documentação das evidências observadas."
+          ],
+          "encaminhamento": "Registrar a ocorrência e encaminhar para inspeção humana, sem prazo presumido.",
+          "fontes": [
+            "evidencia:1"
+          ]
+        },
+        "referencias": [
+          {
+            "chunk_id": "evidencia:1",
+            "document_id": "evidencia",
+            "title": "Causa não determinada",
+            "url": null
+          }
+        ],
+        "execucao": {
+          "modo": "rag_finetuning",
+          "modelo": "Qwen/Qwen2.5-7B-Instruct",
+          "revisao_modelo": "a09a35458c702b33eeacc393d103063234e8bc28",
+          "adaptador": "066c7d9bc409e2adcd5cae1072ee05f03d73cd17f9008c4f5871ad178c99a38c",
+          "versao_base": "4059317a776788b7018139f9a8dcd6ac34fd847a704ecf5704ecb21ca5be73cf",
+          "duracao_ms": 2640
+        }
+      }
+    },
+    {
+      "case": "sensor",
+      "input": {
+        "ocorrencia_id": "DEMO-sensor",
+        "pergunta": "Analise as evidências e indique o que falta e o próximo encaminhamento.",
+        "simulada": true,
+        "relato": "LDR sem calibração mede 120 ADC. É possível afirmar o nível em lux e determinar defeito?",
+        "sensores": [
+          {
+            "tipo": "LDR",
+            "valor": 120,
+            "unidade": "ADC",
+            "calibrado": false
+          }
+        ]
+      },
+      "http_status": 200,
+      "body": {
+        "request_id": "3f1e50be-93c8-4963-aab0-02195ec45489",
+        "ocorrencia_id": "DEMO-sensor",
+        "analise": {
+          "status": "informacao_insuficiente",
+          "resumo": "A leitura isolada não autoriza a determinação de lux, conformidade ou defeito sem documentação e condições verificáveis.",
+          "hipoteses": [],
+          "informacoes_faltantes": [
+            "Curva e unidade de medida do sensor LDR."
+          ],
+          "encaminhamento": "Completar e verificar as informações antes de concluir, sem realizar reparos.",
+          "fontes": [
+            "ldr:1"
+          ]
+        },
+        "referencias": [
+          {
+            "chunk_id": "ldr:1",
+            "document_id": "ldr",
+            "title": "Limites de sensor LDR",
+            "url": null
+          }
+        ],
+        "execucao": {
+          "modo": "rag_finetuning",
+          "modelo": "Qwen/Qwen2.5-7B-Instruct",
+          "revisao_modelo": "a09a35458c702b33eeacc393d103063234e8bc28",
+          "adaptador": "066c7d9bc409e2adcd5cae1072ee05f03d73cd17f9008c4f5871ad178c99a38c",
+          "versao_base": "4059317a776788b7018139f9a8dcd6ac34fd847a704ecf5704ecb21ca5be73cf",
+          "duracao_ms": 2677
+        }
+      }
+    },
+    {
+      "case": "nao_consta",
+      "input": {
+        "ocorrencia_id": "DEMO-nao_consta",
+        "pergunta": "Analise as evidências e indique o que falta e o próximo encaminhamento.",
+        "simulada": true,
+        "relato": "Qual é o preço do reparo e o prazo exato de atendimento desta ocorrência?"
+      },
+      "http_status": 200,
+      "body": {
+        "request_id": "f215ede8-89ba-41fc-a320-8db47b478e9f",
+        "ocorrencia_id": "DEMO-nao_consta",
+        "analise": {
+          "status": "informacao_insuficiente",
+          "resumo": "Falta uma observação de iluminação pública a registrar, sem calibração da causa elétrica.",
+          "hipoteses": [],
+          "informacoes_faltantes": [
+            "Observação de iluminação pública a registrar."
+          ],
+          "encaminhamento": "Registrar a ocorrência e solicitar verificação humana, sem prazo presumido.",
+          "fontes": [
+            "registro:1"
+          ]
+        },
+        "referencias": [
+          {
+            "chunk_id": "registro:1",
+            "document_id": "registro",
+            "title": "Registro de ocorrência",
+            "url": null
+          }
+        ],
+        "execucao": {
+          "modo": "rag_finetuning",
+          "modelo": "Qwen/Qwen2.5-7B-Instruct",
+          "revisao_modelo": "a09a35458c702b33eeacc393d103063234e8bc28",
+          "adaptador": "066c7d9bc409e2adcd5cae1072ee05f03d73cd17f9008c4f5871ad178c99a38c",
+          "versao_base": "4059317a776788b7018139f9a8dcd6ac34fd847a704ecf5704ecb21ca5be73cf",
+          "duracao_ms": 2593
+        }
+      }
+    },
+    {
+      "case": "conflito",
+      "input": {
+        "ocorrencia_id": "DEMO-conflito",
+        "pergunta": "Analise as evidências e indique o que falta e o próximo encaminhamento.",
+        "simulada": true,
+        "relato": "Mesmo instante e ponto: observação visual afirma luz acesa, outro registro comparável afirma apagada.",
+        "observacoes_visuais": [
+          {
+            "descricao": "Luz acesa no mesmo instante e ponto."
+          },
+          {
+            "descricao": "Luz apagada no mesmo instante e ponto."
+          }
+        ]
+      },
+      "http_status": 200,
+      "body": {
+        "request_id": "6a6dff4c-a7a1-4e4b-b288-12abb8a98c85",
+        "ocorrencia_id": "DEMO-conflito",
+        "analise": {
+          "status": "analise_preliminar",
+          "resumo": "Há uma observação de iluminação pública a registrar, sem determinação da causa elétrica.",
+          "hipoteses": [],
+          "informacoes_faltantes": [
+            "Verificação humana do ponto e das condições observadas."
+          ],
+          "encaminhamento": "Registrar a ocorrência e encaminhar para verificação humana, sem prazo presumido.",
+          "fontes": [
+            "registro:1"
+          ]
+        },
+        "referencias": [
+          {
+            "chunk_id": "registro:1",
+            "document_id": "registro",
+            "title": "Registro de ocorrência",
+            "url": null
+          }
+        ],
+        "execucao": {
+          "modo": "rag_finetuning",
+          "modelo": "Qwen/Qwen2.5-7B-Instruct",
+          "revisao_modelo": "a09a35458c702b33eeacc393d103063234e8bc28",
+          "adaptador": "066c7d9bc409e2adcd5cae1072ee05f03d73cd17f9008c4f5871ad178c99a38c",
+          "versao_base": "4059317a776788b7018139f9a8dcd6ac34fd847a704ecf5704ecb21ca5be73cf",
+          "duracao_ms": 2572
+        }
+      }
+    }
+  ],
+  "health": 200,
+  "ready": 200
+}

@@ -1,0 +1,22 @@
+...................FF                                                    [100%]
+=================================== FAILURES ===================================
+____________ test_metricas_separam_json_classificacao_e_referencia _____________
+
+    def test_metricas_separam_json_classificacao_e_referencia():
+>       from citizentech_ia.evaluation import grade_structure
+E       ImportError: cannot import name 'grade_structure' from 'citizentech_ia.evaluation' (/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/src/citizentech_ia/evaluation.py)
+
+tests/test_principais.py:239: ImportError
+__________________ test_chaves_json_duplicadas_sao_rejeitadas __________________
+
+    def test_chaves_json_duplicadas_sao_rejeitadas():
+        a=Analyzer(Generator('{"status":"fora_escopo",'+json.dumps(answer())[1:]),Retriever(CHUNKS),threshold=0)
+>       with pytest.raises(InvalidGeneration): a.analyze(Occurrence.model_validate(occurrence()))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE InvalidGeneration
+
+tests/test_principais.py:249: Failed
+=========================== short test summary info ============================
+FAILED tests/test_principais.py::test_metricas_separam_json_classificacao_e_referencia
+FAILED tests/test_principais.py::test_chaves_json_duplicadas_sao_rejeitadas
+2 failed, 19 passed in 1.16s

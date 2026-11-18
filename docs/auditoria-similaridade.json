@@ -1,0 +1,192 @@
+{
+  "method": "TF-IDF char_wb 3–5; cosine; relato+pergunta; no gold labels; descriptive audit only",
+  "limitation": "Semelhança textual não certifica independência semântica. Nenhum dado ou hiperparâmetro foi alterado com este relatório.",
+  "comparisons": {
+    "valid_vs_train": {
+      "n_left": 80,
+      "max_cosine": 0.6801812227211066,
+      "mean_nearest_cosine": 0.529349235732864,
+      "left_cases_above": {
+        "0.8": 0,
+        "0.9": 0,
+        "0.95": 0
+      },
+      "top_10_pairs": [
+        {
+          "left_case": "valid-respondivel-00-v09",
+          "right_case": "train-respondivel-00-v09",
+          "cosine": 0.6801812227211066
+        },
+        {
+          "left_case": "valid-respondivel-00-v05",
+          "right_case": "train-respondivel-00-v05",
+          "cosine": 0.678538102736333
+        },
+        {
+          "left_case": "valid-respondivel-00-v07",
+          "right_case": "train-respondivel-00-v07",
+          "cosine": 0.6657965840544613
+        },
+        {
+          "left_case": "valid-contradicao-00-v05",
+          "right_case": "train-contradicao-05-v05",
+          "cosine": 0.6575638650680864
+        },
+        {
+          "left_case": "valid-respondivel-00-v08",
+          "right_case": "train-respondivel-00-v08",
+          "cosine": 0.6564105588260228
+        },
+        {
+          "left_case": "valid-respondivel-00-v00",
+          "right_case": "train-respondivel-00-v00",
+          "cosine": 0.6542509015461621
+        },
+        {
+          "left_case": "valid-contradicao-00-v03",
+          "right_case": "train-contradicao-05-v03",
+          "cosine": 0.6521206309412853
+        },
+        {
+          "left_case": "valid-contradicao-00-v09",
+          "right_case": "train-contradicao-05-v09",
+          "cosine": 0.6516699593814562
+        },
+        {
+          "left_case": "valid-respondivel-00-v06",
+          "right_case": "train-respondivel-00-v06",
+          "cosine": 0.6512870247160449
+        },
+        {
+          "left_case": "valid-contradicao-00-v07",
+          "right_case": "train-contradicao-05-v07",
+          "cosine": 0.6510616855614734
+        }
+      ]
+    },
+    "test_vs_train": {
+      "n_left": 120,
+      "max_cosine": 0.6842179007220912,
+      "mean_nearest_cosine": 0.5024720235758526,
+      "left_cases_above": {
+        "0.8": 0,
+        "0.9": 0,
+        "0.95": 0
+      },
+      "top_10_pairs": [
+        {
+          "left_case": "test-contradicao-02-v00",
+          "right_case": "train-respondivel-07-v00",
+          "cosine": 0.6842179007220912
+        },
+        {
+          "left_case": "test-contradicao-02-v02",
+          "right_case": "train-respondivel-07-v02",
+          "cosine": 0.6623609506677428
+        },
+        {
+          "left_case": "test-contradicao-02-v03",
+          "right_case": "train-respondivel-07-v03",
+          "cosine": 0.6584837659045705
+        },
+        {
+          "left_case": "test-contradicao-02-v04",
+          "right_case": "train-respondivel-07-v04",
+          "cosine": 0.6448742826987945
+        },
+        {
+          "left_case": "test-contradicao-02-v01",
+          "right_case": "train-respondivel-07-v01",
+          "cosine": 0.6301914226124934
+        },
+        {
+          "left_case": "test-respondivel-07-v00",
+          "right_case": "train-respondivel-03-v00",
+          "cosine": 0.624901042793126
+        },
+        {
+          "left_case": "test-contradicao-00-v00",
+          "right_case": "train-contradicao-00-v00",
+          "cosine": 0.6195578705407274
+        },
+        {
+          "left_case": "test-respondivel-01-v00",
+          "right_case": "train-respondivel-02-v00",
+          "cosine": 0.617163907531916
+        },
+        {
+          "left_case": "test-contradicao-00-v02",
+          "right_case": "train-contradicao-00-v02",
+          "cosine": 0.6125586207673231
+        },
+        {
+          "left_case": "test-respondivel-07-v02",
+          "right_case": "train-respondivel-03-v02",
+          "cosine": 0.6061702285079623
+        }
+      ]
+    },
+    "test_vs_valid": {
+      "n_left": 120,
+      "max_cosine": 0.7052069675905474,
+      "mean_nearest_cosine": 0.42564272251163376,
+      "left_cases_above": {
+        "0.8": 0,
+        "0.9": 0,
+        "0.95": 0
+      },
+      "top_10_pairs": [
+        {
+          "left_case": "test-respondivel-02-v00",
+          "right_case": "valid-respondivel-00-v00",
+          "cosine": 0.7052069675905474
+        },
+        {
+          "left_case": "test-respondivel-02-v02",
+          "right_case": "valid-respondivel-00-v02",
+          "cosine": 0.6878227941449675
+        },
+        {
+          "left_case": "test-respondivel-02-v03",
+          "right_case": "valid-respondivel-00-v03",
+          "cosine": 0.6841218931676106
+        },
+        {
+          "left_case": "test-respondivel-02-v04",
+          "right_case": "valid-respondivel-00-v04",
+          "cosine": 0.6708069165873576
+        },
+        {
+          "left_case": "test-respondivel-02-v01",
+          "right_case": "valid-respondivel-00-v01",
+          "cosine": 0.6625875695580395
+        },
+        {
+          "left_case": "test-respondivel-01-v00",
+          "right_case": "valid-respondivel-01-v00",
+          "cosine": 0.6295570676139347
+        },
+        {
+          "left_case": "test-respondivel-01-v02",
+          "right_case": "valid-respondivel-01-v02",
+          "cosine": 0.6129928062107008
+        },
+        {
+          "left_case": "test-respondivel-01-v03",
+          "right_case": "valid-respondivel-01-v03",
+          "cosine": 0.6124559809760143
+        },
+        {
+          "left_case": "test-respondivel-01-v04",
+          "right_case": "valid-respondivel-01-v04",
+          "cosine": 0.5907815413789176
+        },
+        {
+          "left_case": "test-respondivel-01-v01",
+          "right_case": "valid-respondivel-01-v01",
+          "cosine": 0.5777669407449745
+        }
+      ]
+    }
+  }
+}

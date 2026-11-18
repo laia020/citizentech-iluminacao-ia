@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-17",
+  "reference": "https://ca-akona-energy-prod.salmoncoast-770d275b.eastus2.azurecontainerapps.io",
+  "backup": "/Users/lucasmanentti/.codex/backups/citizentech-front-akona-20261117-222515",
+  "ui_sha": "ae6d52cea6b63f9f6697dc666eec31b3048a9e2f68096730b946cda72226cb27",
+  "javascript_identical_to_previous_ui": true,
+  "model_pipeline_data_and_frozen_sources_unchanged": true,
+  "reference_palette": [
+    "#0f3d2e",
+    "#1b6b4a",
+    "#3fa66b",
+    "#8fd3a8",
+    "#f4f7f5"
+  ],
+  "fonts_embedded": [
+    "Manrope",
+    "Inter"
+  ],
+  "remote_requests_at_page_load": false,
+  "html_unique_ids_and_anchors_valid": true,
+  "node_syntax": "passed",
+  "simulated_dom_workflows": "Ready/unready, same-origin payload, result rendering, error, clear and custom scenario passed.",
+  "simulated_dom_is_not_browser_visual_review": true,
+  "served_html_matches_file": true,
+  "http_status": 200,
+  "browser_visual_review": "unavailable in current chat; no alternative browser bypass",
+  "remote_devops_modified": false,
+  "remote_integration_implemented": false
+}

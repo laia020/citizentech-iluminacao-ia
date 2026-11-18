@@ -1,0 +1,14 @@
+{
+  "fixed_at": "2026-11-12T12:21:02.125754-03:00",
+  "before_validation_generation": true,
+  "lexicographic_order": [
+    "status_only_match_rate DESC",
+    "valid_json_and_refs_rate DESC",
+    "schema_valid_rate DESC",
+    "median_seconds ASC"
+  ],
+  "set": "clean validation64; raw80 preserved",
+  "checkpoint": "final800",
+  "second_if": "r1 purestatus<.90 or schema<.95 or validation technical_problem",
+  "selection_script_sha": "dd39555963da7b22248031581f1175a87c7a6c1184a444df277f1c32c6d83f35"
+}

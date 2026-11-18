@@ -1,0 +1,43 @@
+{
+  "version": "v5-1.5b",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "state": "prepared_only_training_not_authorized_now",
+  "training": {
+    "r1": {
+      "lr": 0.0001,
+      "microsteps": 400,
+      "optimizer_updates": 100
+    },
+    "conditional_r2": {
+      "lr": 0.0001,
+      "microsteps": 800,
+      "optimizer_updates": 200
+    },
+    "condition": "validation64 schema<.95 or status<.90 or substantive technical review issue; never test outcomes",
+    "smoke_microsteps": 16,
+    "requires_charger_and_resource_check": true,
+    "compute": "FP32 guarded LoRA, accumulation4, norm1, seedsNumPy/MLX42",
+    "checkpoint": "exact final weights, not best loss"
+  },
+  "selection": "same predefined lexicographic order as previous cycle: valid64 pure status, valid references/schema, schema, generation median",
+  "generation": {
+    "temperature": 0,
+    "max_output_tokens": 512,
+    "context_limit": 2048,
+    "top_k": 3,
+    "json_repair": false,
+    "hidden_retries": false
+  },
+  "test": "30 new compositional synthetic cases,5 per category; same cases A/B/C; frozen before training",
+  "legacy_test": "120 previously observed cases retained as known regression; not confirmatory",
+  "semantic_review": "technical AI review declared, unknown labels retained in denominator; independent human validation pending",
+  "hardware_estimate_before_smoke": {
+    "base_FP16_GB": 3.087428608,
+    "base_training_FP32_GB": 6.174857216,
+    "estimated_total_training_GB_range": [
+      12,
+      25
+    ],
+    "note": "LoRA, not full gradient training; system/apps share64GB; actual measurement required before long run; no throughput/time measurement yet"
+  }
+}

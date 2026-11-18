@@ -1,0 +1,20 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+____ test_pagina_institucional_generica_nao_comprova_designacao_operacional ____
+
+    def test_pagina_institucional_generica_nao_comprova_designacao_operacional():
+>       from citizentech_ia.citation_guard import incompatible_citations
+E       ModuleNotFoundError: No module named 'citizentech_ia.citation_guard'
+
+tests/test_guarda_fontes.py:9: ModuleNotFoundError
+___ test_guarda_rejeita_saida_com_fonte_incompativel_sem_reescrever_resposta ___
+
+    def test_guarda_rejeita_saida_com_fonte_incompativel_sem_reescrever_resposta():
+>       from citizentech_ia.citation_guard import attach_guard
+E       ModuleNotFoundError: No module named 'citizentech_ia.citation_guard'
+
+tests/test_guarda_fontes.py:19: ModuleNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_guarda_fontes.py::test_pagina_institucional_generica_nao_comprova_designacao_operacional
+FAILED tests/test_guarda_fontes.py::test_guarda_rejeita_saida_com_fonte_incompativel_sem_reescrever_resposta
+2 failed in 0.14s

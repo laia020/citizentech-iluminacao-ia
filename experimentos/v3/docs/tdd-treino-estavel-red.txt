@@ -1,0 +1,16 @@
+
+==================================== ERRORS ====================================
+________________ ERROR collecting tests/test_treino_estavel.py _________________
+ImportError while importing test module '/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/tests/test_treino_estavel.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../.local/share/uv/python/cpython-3.12.16-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_treino_estavel.py:6: in <module>
+    from citizentech_ia.v3.training_stable import guarded_update
+E   ModuleNotFoundError: No module named 'citizentech_ia.v3.training_stable'
+=========================== short test summary info ============================
+ERROR tests/test_treino_estavel.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.09s

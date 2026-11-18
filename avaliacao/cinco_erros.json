@@ -1,0 +1,182 @@
+[
+  {
+    "case_id": "test-respondivel-00-v01",
+    "run_id": "final-A",
+    "mode": "base_sem_contexto",
+    "raw": "{\n  \"status\": \"informacao_insuficiente\",\n  \"resumo\": \"A ocorrência descreve um ponto de luz apagado junto a um ponto de ônibus à noite, mas não fornece detalhes suficientes para formular conclusões ou hipóteses.\",\n  \"hipoteses\": [],\n  \"informacoes_faltantes\": [\"local exato da ocorrência\", \"tempo exato em que o problema foi notado\", \"condições ambientais no momento do ocorrido\", \"informações sobre a manutenção recente da iluminação\"],\n  \"encaminhamento\": \"Para obter uma resposta mais precisa, é necessário fornecer mais detalhes sobre o local, o horário exato e quaisquer condições ambientais relevantes.\",\n  \"fontes\": []\n}",
+    "expected_status": "analise_preliminar",
+    "input": {
+      "ocorrencia_id": "test-respondivel-00-v01",
+      "pergunta": "Que conclusão é sustentada e o que falta?",
+      "simulada": true,
+      "relato": "Ponto de luz apagado junto a ponto de ônibus à noite.",
+      "sensores": [],
+      "observacoes_visuais": []
+    },
+    "expected_analysis": {
+      "status": "analise_preliminar",
+      "resumo": "Há uma observação de iluminação pública a registrar, sem determinação da causa elétrica.",
+      "hipoteses": [],
+      "informacoes_faltantes": [
+        "Verificação humana do ponto e das condições observadas."
+      ],
+      "encaminhamento": "Registrar a ocorrência e encaminhar para verificação humana, sem prazo presumido.",
+      "fontes": [
+        "registro:1"
+      ]
+    },
+    "retrieved_chunks": [],
+    "observed_status": "informacao_insuficiente",
+    "error": "status_mismatch",
+    "cause_hypothesis": "Status gerado diverge do gabarito na categoria respondivel; pode haver ambiguidade ou generalização inadequada.",
+    "proposed_correction": "Revisar evidências e gabarito; ampliar cenários da categoria somente em novo ciclo de treino/validação e medir em avaliação separada."
+  },
+  {
+    "case_id": "test-respondivel-01-v01",
+    "run_id": "final-B",
+    "mode": "rag_simples",
+    "raw": "{\n  \"status\": \"informacao_insuficiente\",\n  \"resumo\": \"A ocorrência descreve uma luminária acesa durante a tarde clara, o que pode ser normal. Não há evidências claras de problema.\",\n  \"hipoteses\": [],\n  \"informacoes_faltantes\": [\"hora exata da observação\", \"local exato da luminária\", \"condições ambientais no momento da observação\"],\n  \"encaminhamento\": \"Registrar a ocorrência conforme instruções, mas não há evidências suficientes para indicar um problema.\",\n  \"fontes\": [\"registro:1\"]\n}",
+    "expected_status": "analise_preliminar",
+    "input": {
+      "ocorrencia_id": "test-respondivel-01-v01",
+      "pergunta": "Que conclusão é sustentada e o que falta?",
+      "simulada": true,
+      "relato": "Luminária acesa em praça durante tarde clara.",
+      "sensores": [],
+      "observacoes_visuais": []
+    },
+    "expected_analysis": {
+      "status": "analise_preliminar",
+      "resumo": "Há uma observação de iluminação pública a registrar, sem determinação da causa elétrica.",
+      "hipoteses": [],
+      "informacoes_faltantes": [
+        "Verificação humana do ponto e das condições observadas."
+      ],
+      "encaminhamento": "Registrar a ocorrência e encaminhar para verificação humana, sem prazo presumido.",
+      "fontes": [
+        "registro:1"
+      ]
+    },
+    "retrieved_chunks": [
+      {
+        "chunk_id": "registro:1",
+        "document_id": "registro",
+        "title": "Registro de ocorrência",
+        "text": "Registre uma ocorrência de iluminação pública quando houver observação de luminária apagada à noite, acesa durante o dia, oscilação ou dano aparente. Descreva o que foi observado e solicite verificação humana. O registro não comprova causa elétrica. Não invente prazo de reparo.",
+        "jurisdiction": null,
+        "url": null,
+        "score": 0.26156601953616077
+      }
+    ],
+    "observed_status": "informacao_insuficiente",
+    "error": "status_mismatch",
+    "cause_hypothesis": "Status gerado diverge do gabarito na categoria respondivel; pode haver ambiguidade ou generalização inadequada.",
+    "proposed_correction": "Revisar evidências e gabarito; ampliar cenários da categoria somente em novo ciclo de treino/validação e medir em avaliação separada."
+  },
+  {
+    "case_id": "test-respondivel-03-v01",
+    "run_id": "final-C",
+    "mode": "rag_finetuning",
+    "raw": "{\"status\": \"informacao_insuficiente\", \"resumo\": \"Sem documentação, não é possível verificar a conclusão e as evidências.\", \"hipoteses\": [], \"informacoes_faltantes\": [\"Documentação da ocorrência e procedimentos\"], \"encaminhamento\": \"Completar e verificar as informações antes de concluir.\", \"fontes\": []}",
+    "expected_status": "analise_preliminar",
+    "input": {
+      "ocorrencia_id": "test-respondivel-03-v01",
+      "pergunta": "Que conclusão é sustentada e o que falta?",
+      "simulada": true,
+      "relato": "Suporte luminoso aparentemente danificado em parque municipal.",
+      "sensores": [],
+      "observacoes_visuais": []
+    },
+    "expected_analysis": {
+      "status": "analise_preliminar",
+      "resumo": "Há uma observação de iluminação pública a registrar, sem determinação da causa elétrica.",
+      "hipoteses": [],
+      "informacoes_faltantes": [
+        "Verificação humana do ponto e das condições observadas."
+      ],
+      "encaminhamento": "Registrar a ocorrência e encaminhar para verificação humana, sem prazo presumido.",
+      "fontes": [
+        "registro:1"
+      ]
+    },
+    "retrieved_chunks": [],
+    "observed_status": "informacao_insuficiente",
+    "error": "status_mismatch",
+    "cause_hypothesis": "Status gerado diverge do gabarito na categoria respondivel; pode haver ambiguidade ou generalização inadequada.",
+    "proposed_correction": "Revisar evidências e gabarito; ampliar cenários da categoria somente em novo ciclo de treino/validação e medir em avaliação separada."
+  },
+  {
+    "case_id": "test-respondivel-02-v01",
+    "run_id": "final-A",
+    "mode": "base_sem_contexto",
+    "raw": "{\n  \"status\": \"informacao_insuficiente\",\n  \"resumo\": \"A ocorrência descreve uma iluminação intermitente em uma travessia pública, mas não fornece detalhes suficientes para formular conclusões ou hipóteses.\",\n  \"hipoteses\": [],\n  \"informacoes_faltantes\": [\"local exato da ocorrência\", \"período do dia em que ocorreu\", \"durabilidade da iluminação\", \"qualquer alteração recente no local\"],\n  \"encaminhamento\": \"Mais detalhes sobre a localização, o horário e quaisquer alterações recentes podem ajudar a investigar a causa da intermitência.\",\n  \"fontes\": []\n}",
+    "expected_status": "analise_preliminar",
+    "input": {
+      "ocorrencia_id": "test-respondivel-02-v01",
+      "pergunta": "Que conclusão é sustentada e o que falta?",
+      "simulada": true,
+      "relato": "Iluminação intermitente em travessia pública.",
+      "sensores": [],
+      "observacoes_visuais": []
+    },
+    "expected_analysis": {
+      "status": "analise_preliminar",
+      "resumo": "Há uma observação de iluminação pública a registrar, sem determinação da causa elétrica.",
+      "hipoteses": [],
+      "informacoes_faltantes": [
+        "Verificação humana do ponto e das condições observadas."
+      ],
+      "encaminhamento": "Registrar a ocorrência e encaminhar para verificação humana, sem prazo presumido.",
+      "fontes": [
+        "registro:1"
+      ]
+    },
+    "retrieved_chunks": [],
+    "observed_status": "informacao_insuficiente",
+    "error": "status_mismatch",
+    "cause_hypothesis": "Status gerado diverge do gabarito na categoria respondivel; pode haver ambiguidade ou generalização inadequada.",
+    "proposed_correction": "Revisar evidências e gabarito; ampliar cenários da categoria somente em novo ciclo de treino/validação e medir em avaliação separada."
+  },
+  {
+    "case_id": "test-respondivel-04-v01",
+    "run_id": "final-B",
+    "mode": "rag_simples",
+    "raw": "{\n  \"status\": \"informacao_insuficiente\",\n  \"resumo\": \"A ocorrência descreve uma luminária com feixe obstruído, mas não fornece detalhes suficientes para concluir se há problema elétrico ou se a obstrução é a causa.\",\n  \"hipoteses\": [],\n  \"informacoes_faltantes\": [\"Tipo de obstrução\", \"Estado da luminária (acesa ou apagada)\", \"Horário da observação\", \"Local exato da ocorrência\"],\n  \"encaminhamento\": \"Registrar a ocorrência como observada e solicitar verificação humana.\",\n  \"fontes\": [\"registro:1\"]\n}",
+    "expected_status": "analise_preliminar",
+    "input": {
+      "ocorrencia_id": "test-respondivel-04-v01",
+      "pergunta": "Que conclusão é sustentada e o que falta?",
+      "simulada": true,
+      "relato": "Luminária pública com feixe obstruído em calçada.",
+      "sensores": [],
+      "observacoes_visuais": []
+    },
+    "expected_analysis": {
+      "status": "analise_preliminar",
+      "resumo": "Há uma observação de iluminação pública a registrar, sem determinação da causa elétrica.",
+      "hipoteses": [],
+      "informacoes_faltantes": [
+        "Verificação humana do ponto e das condições observadas."
+      ],
+      "encaminhamento": "Registrar a ocorrência e encaminhar para verificação humana, sem prazo presumido.",
+      "fontes": [
+        "registro:1"
+      ]
+    },
+    "retrieved_chunks": [
+      {
+        "chunk_id": "registro:1",
+        "document_id": "registro",
+        "title": "Registro de ocorrência",
+        "text": "Registre uma ocorrência de iluminação pública quando houver observação de luminária apagada à noite, acesa durante o dia, oscilação ou dano aparente. Descreva o que foi observado e solicite verificação humana. O registro não comprova causa elétrica. Não invente prazo de reparo.",
+        "jurisdiction": null,
+        "url": null,
+        "score": 0.21347855691238485
+      }
+    ],
+    "observed_status": "informacao_insuficiente",
+    "error": "status_mismatch",
+    "cause_hypothesis": "Status gerado diverge do gabarito na categoria respondivel; pode haver ambiguidade ou generalização inadequada.",
+    "proposed_correction": "Revisar evidências e gabarito; ampliar cenários da categoria somente em novo ciclo de treino/validação e medir em avaliação separada."
+  }
+]

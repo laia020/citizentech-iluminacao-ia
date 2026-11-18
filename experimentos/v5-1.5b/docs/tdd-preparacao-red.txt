@@ -1,0 +1,16 @@
+
+==================================== ERRORS ====================================
+________________ ERROR collecting tests/test_preparacao_1_5b.py ________________
+ImportError while importing test module '/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/tests/test_preparacao_1_5b.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../.local/share/uv/python/cpython-3.12.16-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_preparacao_1_5b.py:6: in <module>
+    from citizentech_ia.v5 import service
+E   ImportError: cannot import name 'service' from 'citizentech_ia.v5' (/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/src/citizentech_ia/v5/__init__.py)
+=========================== short test summary info ============================
+ERROR tests/test_preparacao_1_5b.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.20s

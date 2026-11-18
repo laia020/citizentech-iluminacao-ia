@@ -1,0 +1,39 @@
+{
+  "version": "v5-1.5b",
+  "source_hashes": {
+    "dados/train.jsonl": "e024523512b7b090b6f6cf913b4a95ebe96db76fc7a42ef770b216db365b658b",
+    "dados/valid.jsonl": "64aa22cf77b68b126358205e827a820517d1842fc3c9e0112f1c94b7026e88b8",
+    "avaliacao/test.jsonl": "367fd3826b962a95f7dba1832bc2c069fdd8615b7c0885d01b7067278f876261"
+  },
+  "excluded_case_ids": {
+    "valid": [
+      "b8b38033e20cd75041ed22b7",
+      "8c87c5a11b9adad669212cde",
+      "75729de1d242622145459e38",
+      "7b206e2376ffb8a571685e31",
+      "c7cdb6301ade6771adebec9f",
+      "1a3fe84465d49977a0e43c93",
+      "f4f23d644fbc2d76dcbf9085",
+      "6a6e074330e6cd2a95caeb34",
+      "49410f9d6e8c70ef9183985e",
+      "20fd2cd46a74b007d700c59b",
+      "9d1429374fd94160f10427c8",
+      "96550b961d06df9629400389",
+      "6808f6a37d760a8d71b1d92e",
+      "9e2bb9abd33854eaacdf2e95",
+      "e2ce1cc0414de11bf4265f77",
+      "3b4fd2b85751c2f45d2b79a7"
+    ],
+    "test": []
+  },
+  "confirmatory_counts": {
+    "valid": 64,
+    "test": 30
+  },
+  "analysis_description": {
+    "valid": "inherited64 validation cases without previously identified overlap",
+    "test": "new synthetic compositional30, authored by relatedAI; not field/independent validation"
+  },
+  "test_llm_outputs_observed": false,
+  "test_exclusions_after_generation_forbidden": true
+}

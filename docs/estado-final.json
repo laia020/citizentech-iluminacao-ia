@@ -1,0 +1,39 @@
+{
+  "saved_at": "2026-11-12T06:06:13.759144-03:00",
+  "local_implementation": "complete",
+  "experiments": "complete",
+  "software_tests_passed": 25,
+  "dependency_check": "97 packages compatible",
+  "notebooks_executed": 4,
+  "final_generations": 360,
+  "real_api_cases_http_200": 5,
+  "semantic_acceptance": "pending; observed content errors",
+  "quality_targets": {
+    "recall_at_3": 0.825,
+    "recall_target": 0.9,
+    "schema_rate_C": 0.9333333333333333,
+    "schema_target": 0.95,
+    "met": false
+  },
+  "external_pending": [
+    "revisão humana independente",
+    "integração real do grupo",
+    "integrantes/RMs e território",
+    "vídeo e publicação autorizada"
+  ],
+  "browser_visual_check": "permission denied; no bypass; pending",
+  "active_project_jobs": 0,
+  "obsidian": {
+    "updated_at": "2026-11-12T06:04:30.078649-03:00",
+    "backup": "/Users/lucasmanentti/.codex/backups/citizentech-obsidian-20261112-060430",
+    "notes": [
+      "/Users/lucasmanentti/Documents/Developer Workspace/02 - Desenvolvimento/CitizenTech Iluminação IA.md",
+      "/Users/lucasmanentti/Documents/Developer Workspace/02 - Desenvolvimento/Projetos existentes.md"
+    ],
+    "history": "/Users/lucasmanentti/Documents/Developer Workspace/04 - Histórico/CitizenTech - implementação local - 20261112-060430.md"
+  },
+  "initial_backup": "/Users/lucasmanentti/.codex/backups/citizentech-implementacao-20261112-010234",
+  "documentary_backup": "/Users/lucasmanentti/.codex/backups/citizentech-finalizacao-20261112-040000",
+  "global_rules_symlink": "/Users/lucasmanentti/Documents/Developer Workspace/03 - Codex/AGENTS.md",
+  "next_authorized_action": "liberar prevenção temporária de repouso desta execução e solicitar repouso do macOS; não afirmar verificação independente do Mac dormindo"
+}

@@ -1,0 +1,15 @@
+{
+  "system_sha": "808582bf516f6c66e08356d966457351c99bc61f2e2d4f0100e17b2f974d3971",
+  "files": {
+    "base/chunks.jsonl": "462c86b3c5ba4a50f124934c63fe8cc0bb97448e166f02799453496cae0f079d",
+    "base/PROCEDENCIA.md": "d0d3e50cc58f943b5b66cc3e8eb2c7973f0bdcfd623fdcc580d645f4503bba02",
+    "dados/desenvolvimento.jsonl": "5dbe86824d1da5f1b798e5d9945886bf21cfd99d653fd7f49dda50fc6c2729a1",
+    "avaliacao/adicional.jsonl": "ca9d20f72ba96f8a91a684b80579d4bd02c9a4e7ef0d072aefad702e07b00770",
+    "configs/protocol.json": "4799be797fbde95a91fa6efc408cbc45410b1041eff295075be78e228941bec5"
+  },
+  "source_code_sha": {
+    "src/citizentech_ia/v6/service.py": "07a8e735fdb194983bb8bf58a6eb393ef49fdbf3565547a5893e45ab23adf273",
+    "src/citizentech_ia/v6/__init__.py": "b2d8606cb854afdc751e22034c169defa395ecd85106682f2e2c8a5c3d9c8538",
+    "src/citizentech_ia/v6/inference.py": "5fe01c3f87b8e825b03e85bd158e0e560d1db5f21b933e47d4ea0e85228cfd1c"
+  }
+}

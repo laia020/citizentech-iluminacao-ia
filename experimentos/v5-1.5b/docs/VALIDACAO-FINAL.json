@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-17",
+  "model": {
+    "modelo": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revisao_modelo": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "adaptador": "c905fee58cb4c0c44baeb9ac14dd9e9b7e412f280b3024c825441d018d573dce"
+  },
+  "data_and_prompt_frozen": true,
+  "v2_data_freeze_preserved": true,
+  "frozen_prediction_sources_unchanged": true,
+  "ui_asset_updated_after_training": true,
+  "ui_original_sha": "4023ba741c0f53ecc8b580334c009f057b00cb544f63b51ab226ba5e79b91276",
+  "ui_current_sha": "fe4fcb32eb8f31527160407670a62043d11403900030218d8f06cfa5acd50053",
+  "prompts_checked_without_control_ids": 90,
+  "B_C_inputs_contexts_identical": true,
+  "base_weight_sha": "3cc432d5b2553e19b59fb9736b226a103eb4a0cd30be242e9819b51d601ba725",
+  "selected_evaluated_served_adapter_sha": "c905fee58cb4c0c44baeb9ac14dd9e9b7e412f280b3024c825441d018d573dce",
+  "technical_ai_reviews": 90,
+  "independent_human_review": false,
+  "notebook_executed_without_errors": true,
+  "portable_exports_identical": true,
+  "poc_http_statuses": [
+    200,
+    200,
+    200,
+    200,
+    200,
+    200
+  ],
+  "public_deploy": false,
+  "group_integration": false,
+  "visual_browser_review": "pending; prior refusal not bypassed"
+}

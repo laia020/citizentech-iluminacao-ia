@@ -1,0 +1,44 @@
+{
+  "real_inference": true,
+  "synthetic_input": {
+    "ocorrencia_id": "TESTE-FRONT-AKONA",
+    "pergunta": "Qual é o custo exato do reparo?",
+    "relato": "Uma luminária na via pública está oscilando. Nenhum orçamento foi fornecido.",
+    "simulada": true
+  },
+  "http_status": 200,
+  "response": {
+    "request_id": "7d9aa3bd-5cd9-4f4c-8351-d8e625168561",
+    "ocorrencia_id": "TESTE-FRONT-AKONA",
+    "analise": {
+      "status": "informacao_insuficiente",
+      "resumo": "O dado solicitado não consta nos documentos e observações disponíveis.",
+      "hipoteses": [],
+      "informacoes_faltantes": [
+        "Documento verificável com o dado solicitado."
+      ],
+      "encaminhamento": "Solicitar as informações pertinentes e verificação humana antes de concluir, sem instruir reparo.",
+      "fontes": [
+        "lacuna:1"
+      ]
+    },
+    "referencias": [
+      {
+        "chunk_id": "lacuna:1",
+        "document_id": "lacuna",
+        "title": "Informação não consta",
+        "url": null
+      }
+    ],
+    "execucao": {
+      "modo": "rag_finetuning",
+      "modelo": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revisao_modelo": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "adaptador": "c905fee58cb4c0c44baeb9ac14dd9e9b7e412f280b3024c825441d018d573dce",
+      "versao_base": "4856214170a80a63567108e8e33d5240a6e7de42968f903164c028c9e72bf2f5",
+      "duracao_ms": 1559
+    }
+  },
+  "visual_browser_test": false,
+  "changes": "presentation_only"
+}

@@ -1,0 +1,11 @@
+{
+  "parameters": 1543714304,
+  "file_bytes": 3087466667,
+  "dtypes": [
+    "F16"
+  ],
+  "trainable_lora_parameters_estimated": 1245184,
+  "training_measured": false,
+  "throughput_measured": false,
+  "note": "No model inference or training performed; parameter count from safetensors header only."
+}

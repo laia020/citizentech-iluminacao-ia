@@ -1,0 +1,16 @@
+{
+  "candidate": "v6b_retrieval_only",
+  "prompt": "exactly_original_v5",
+  "model_adapter": "exactly_v5_r1",
+  "threshold": 0.11,
+  "context": 2048,
+  "max_output": 512,
+  "temperature": 0,
+  "postprocessing": false,
+  "training": false,
+  "dev": "same6 known development cases; no further revisions after new additional outputs",
+  "test": "new12 cases, synthetically authored after v6 attempt; not independent author or field validation",
+  "activation_rule": "improved grounded semantic accuracy vs original with no decrease in schema/refusal and no new definite hallucination on new12; additionally known d1 citation correction must be correct",
+  "old_benchmark_unchanged": true,
+  "source_improvement_scope": "operational missing-data author procedure, terms; not universal semantic citation verification"
+}

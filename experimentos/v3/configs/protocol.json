@@ -1,0 +1,68 @@
+{
+  "version": "v3",
+  "scope": "revisão de dados, respostas, causas de erro e comparação controlada",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "quantization": "4bit-group64-fp16",
+  "runtime": "MLX-LM existente; sem instalação/upgrade",
+  "dataset_counts": {
+    "train": 400,
+    "valid": 80,
+    "test": 120
+  },
+  "declared_families": {
+    "train": 50,
+    "valid": 20,
+    "test": 30
+  },
+  "synthetic_variants_are_not_independent_field_cases": true,
+  "generation": {
+    "temperature": 0,
+    "max_output_tokens": 512,
+    "context_limit": 2048,
+    "top_k": 3,
+    "hidden_retry": false,
+    "json_repair": false
+  },
+  "retrieval_calibration": "somente validação; relevância dos trechos, precisão com recall macro mínimo 0.95; não classificar respondibilidade por score",
+  "training": {
+    "first_candidate": {
+      "lr": 1e-05,
+      "microsteps": 800,
+      "updates": 200
+    },
+    "conditional_second_candidate": {
+      "lr": 5e-05,
+      "microsteps": 800,
+      "updates": 200
+    },
+    "second_candidate_condition": "esquema <0.95 ou status puro <0.90 na validação, ou revisão técnica da validação identifica problema; nunca usar teste para decidir",
+    "checkpoint": "melhor loss em contexto realmente recuperado; zero oracle insertions",
+    "candidate_selection": "status puro e validade estrutural na validação; revisão semântica técnica registrada separadamente; nenhum teste na seleção"
+  },
+  "evaluation": {
+    "modes": [
+      "base_sem_contexto",
+      "rag_simples",
+      "rag_finetuning"
+    ],
+    "test_opened_only_after_selection": true,
+    "v2_is_historical_regression_not_unseen_test": true,
+    "semantic_correct": "responde à pergunta, status adequado e fatos obrigatórios atendidos sem fato proibido; significado, sem exigir texto idêntico ao alvo",
+    "hallucination": "ao menos uma afirmação factual sem apoio ou contradita pela entrada, instruções ou documentos disponíveis; erro de formato não implica alucinação",
+    "refusal_adequacy": "recusar/analisar conforme evidência e pergunta; não premiar recusa universal",
+    "integral_accuracy": "esquema válido, significado correto, fundamentação pertinente, recusa adequada e ausência de alucinação",
+    "reviewer_kind": "ai_assisted_technical_review",
+    "independent_human_review": false,
+    "review_support": "verificações determinísticas de formato, fontes, fatos numéricos e consistência apoiam revisão técnica por caso; não são juiz semântico único",
+    "review_blinding": "identificadores aleatórios de revisão, sem rótulo A/B/C durante anotação",
+    "comparison": "pareada nas mesmas perguntas; proporções globais e por categoria; denominadores e recusas explícitos",
+    "uncertainty": "bootstrap pareado por família e estratificado por categoria, 5000 réplicas, seed42; não é intervalo de generalização para campo",
+    "conclusion_rule": "só afirmar acerta mais e alucina menos se ambas as taxas medidas tiverem direção favorável; distinguir evidência técnica por IA e confirmação humana pendente"
+  },
+  "sources_reviewed": [
+    "https://prefeitura.sp.gov.br/web/spregula/w/iluminacao_publica/perguntas_frequentes/4613",
+    "https://www.cpfl.com.br/reparos-de-iluminacao-publica"
+  ],
+  "copyright": "não redistribuir páginas integrais; procedimentos próprios identificados; decisão de publicação do titular pendente"
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-17",
+  "authorization": "user explicitly authorized starting training in current chat",
+  "python": "/Users/lucasmanentti/Projects/citizentech-iluminacao-ia/.venv/bin/python",
+  "version": "3.12.16",
+  "versions": {
+    "mlx": "0.32.4",
+    "mlx-lm": "0.32.2",
+    "numpy": "2.5.4",
+    "transformers": "5.22.2"
+  },
+  "power": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=23658595)\t75%; charging; 1:13 remaining present: true",
+  "available_memory_gb": 39.081771008,
+  "swap_used_gb": 0.0,
+  "disk_free_gb": 874.3187456,
+  "source_snapshot_preserved": true,
+  "data_prompt_freeze_preserved": true,
+  "training_model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "protocol_changed": false
+}

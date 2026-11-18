@@ -1,0 +1,47 @@
+{
+  "version": "v3",
+  "counts": {
+    "train": 400,
+    "valid": 80,
+    "test": 120
+  },
+  "families": 100,
+  "families_per_split": {
+    "train": 50,
+    "valid": 20,
+    "test": 30
+  },
+  "reviewer_kind": "ai_assisted_technical_review",
+  "independent_human_review": false,
+  "changes": [
+    "pergunta específica separada de observação",
+    "cinco meta-descrições ambíguas do treino antigo não reutilizadas",
+    "exemplos estruturados de sensores e observações",
+    "alvos pertinentes ao pedido e sem certeza física",
+    "novo teste; v2 somente como regressão histórica"
+  ],
+  "limitations": [
+    "600 variantes sintéticas de 100 famílias declaradas, não 600 casos de campo independentes",
+    "autoria e revisão técnica por IA; revisão humana independente pendente",
+    "famílias diferentes podem compartilhar conceitos e regras de domínio"
+  ],
+  "hashes": {
+    "dados/train.jsonl": "e024523512b7b090b6f6cf913b4a95ebe96db76fc7a42ef770b216db365b658b",
+    "dados/valid.jsonl": "64aa22cf77b68b126358205e827a820517d1842fc3c9e0112f1c94b7026e88b8",
+    "avaliacao/test.jsonl": "ba5e0b38fa2d4f529dda42e8d716c2ebfb898b694e965c7c1d535c0faac0a225",
+    "base/chunks.jsonl": "c082886334e6c11746ef5f130a866cf84d299c2604ddb715665632dd24e34084",
+    "base/catalogo.jsonl": "f23160cf14e8048c954792676a408931e6543fbaad43d1fb04bbaf14eebf4a09",
+    "base/documentos/dados.md": "cd6b934d5b120b74d83fb54fd563a33dffbf7ada3fc52d200f5229113b7bfa4f",
+    "base/documentos/lacuna.md": "487c63ac5e41a9a7dbf26534dec265b768bc0c5728ccaef4d9c0aa06a9d6e59d",
+    "base/documentos/escopo.md": "f41d9f96dcf3a6e69625d593bdefd3658046f9517999f05a7353256f2b8260c8",
+    "base/documentos/conflito.md": "bc4584a19cd3bddb79cc6eaaa609d706fc5dd28be8c706d7ae5b64bd952cb2b5",
+    "base/documentos/calibracao.md": "68e2a47b5ab377e76c7906850271f6fbfe91522e212612bfc116b5c4be87f9ae",
+    "base/documentos/cpfl-reparos.md": "9d89b953dba3dd8f158e5052ba9e597a6b7131037c65a60a20047baff5cc06d4",
+    "base/documentos/sp-faq.md": "753adcc7b0bc475ab66a2b7c9193e3e31c5d9beac5c13b0700e9ef7b89069626",
+    "base/documentos/contexto.md": "63bbb817eb1250312e37116d6231041a24ed32c7e99b5bcb6b69402a10350273",
+    "base/documentos/evidencia.md": "e597314593fed4eff7673339b8ecfdc47734e1237d51831b513d8b3d0fcb2450",
+    "base/documentos/registro.md": "41e9f62e3e265017774c06ee903fceb7f6881ddf928d586c5715d0eac0a660b0",
+    "base/documentos/ldr.md": "567fd3e6540e1e9574ace0adce3995aa1358facbcd0bc64b4490b5b09af19c93",
+    "base/documentos/municipio.md": "63fbc55e0a53f905e9118d9d4db16b307ea7414928ddd299b508e0f44081a629"
+  }
+}

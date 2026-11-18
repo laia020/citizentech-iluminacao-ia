@@ -1,0 +1,15 @@
+{
+  "kind": "deterministic runtime citation guard, not model improvement or semantic entailment verifier",
+  "model_prompt_retrieval_adapter": "original_v5 unchanged",
+  "scope": "generic CPFL/SP-Regula documents cannot support technical assignment,order identifiers,contractual specifics or exact repair cost; only checked when those are explicitly requested",
+  "action": "reject200 and return502 with explicit fonte_incompativel; no removal,rewriting,retry or recorded fallback",
+  "evaluation": "unit and ASGI contract tests and known API cases; not new holdout/quality estimate",
+  "old_hallucination_evidence": "preserved unchanged per user instruction",
+  "limitations": [
+    "does not catch every irrelevant source",
+    "does not ensure all other accepted claims are true",
+    "returns more errors instead of inventing correction",
+    "other new documents require revisiting policy"
+  ],
+  "prior_candidates": "v6 andv6b rejected due new schema failures; never activated"
+}

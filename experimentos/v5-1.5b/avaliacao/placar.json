@@ -1,0 +1,1243 @@
+{
+  "generation_metrics": {
+    "final-A": {
+      "version": "v5-1.5b",
+      "mode": "base_sem_contexto",
+      "split": "test",
+      "n": 30,
+      "json_syntax_valid_rate": 0.26666666666666666,
+      "schema_valid_rate": 0.26666666666666666,
+      "valid_json_and_refs_rate": 0.26666666666666666,
+      "status_only_match_rate": 0.1,
+      "status_match_rate": 0.1,
+      "median_seconds": 1.31454016600037,
+      "p95_seconds": 1.6753758271966945,
+      "peak_memory_gb": 3.547592852,
+      "model": {
+        "modelo": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revisao_modelo": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "adaptador": null
+      },
+      "frozen_manifest_sha": "55bf41e850563d66aa971f88365d1c0b276d49bce1ebfdcc59211c7d4b4fbfa6",
+      "test_file_sha": "367fd3826b962a95f7dba1832bc2c069fdd8615b7c0885d01b7067278f876261",
+      "semantic_accuracy": "pending; structure/status do not establish factual correctness",
+      "hallucination_rate": "pending; never inferred solely from JSON or status",
+      "by_category": {
+        "contradicao": {
+          "n": 5,
+          "status_only_match_rate": 0.0,
+          "schema_rate": 0.0
+        },
+        "fora_escopo": {
+          "n": 5,
+          "status_only_match_rate": 0.0,
+          "schema_rate": 0.6
+        },
+        "inducao": {
+          "n": 5,
+          "status_only_match_rate": 0.2,
+          "schema_rate": 0.2
+        },
+        "insuficiente": {
+          "n": 5,
+          "status_only_match_rate": 0.0,
+          "schema_rate": 0.0
+        },
+        "nao_consta": {
+          "n": 5,
+          "status_only_match_rate": 0.2,
+          "schema_rate": 0.2
+        },
+        "respondivel": {
+          "n": 5,
+          "status_only_match_rate": 0.2,
+          "schema_rate": 0.6
+        }
+      },
+      "retrieval_all": {
+        "recall@1": 0.0,
+        "recall@3": 0.0
+      },
+      "retrieval_respondible": {
+        "recall@1": 0.0,
+        "recall@3": 0.0
+      }
+    },
+    "final-B": {
+      "version": "v5-1.5b",
+      "mode": "rag_simples",
+      "split": "test",
+      "n": 30,
+      "json_syntax_valid_rate": 0.06666666666666667,
+      "schema_valid_rate": 0.06666666666666667,
+      "valid_json_and_refs_rate": 0.06666666666666667,
+      "status_only_match_rate": 0.0,
+      "status_match_rate": 0.0,
+      "median_seconds": 1.4985765835008351,
+      "p95_seconds": 2.286958164398311,
+      "peak_memory_gb": 3.616177248,
+      "model": {
+        "modelo": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revisao_modelo": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "adaptador": null
+      },
+      "frozen_manifest_sha": "55bf41e850563d66aa971f88365d1c0b276d49bce1ebfdcc59211c7d4b4fbfa6",
+      "test_file_sha": "367fd3826b962a95f7dba1832bc2c069fdd8615b7c0885d01b7067278f876261",
+      "semantic_accuracy": "pending; structure/status do not establish factual correctness",
+      "hallucination_rate": "pending; never inferred solely from JSON or status",
+      "by_category": {
+        "contradicao": {
+          "n": 5,
+          "status_only_match_rate": 0.0,
+          "schema_rate": 0.0
+        },
+        "fora_escopo": {
+          "n": 5,
+          "status_only_match_rate": 0.0,
+          "schema_rate": 0.2
+        },
+        "inducao": {
+          "n": 5,
+          "status_only_match_rate": 0.0,
+          "schema_rate": 0.2
+        },
+        "insuficiente": {
+          "n": 5,
+          "status_only_match_rate": 0.0,
+          "schema_rate": 0.0
+        },
+        "nao_consta": {
+          "n": 5,
+          "status_only_match_rate": 0.0,
+          "schema_rate": 0.0
+        },
+        "respondivel": {
+          "n": 5,
+          "status_only_match_rate": 0.0,
+          "schema_rate": 0.0
+        }
+      },
+      "retrieval_all": {
+        "recall@1": 0.7777777777777778,
+        "recall@3": 0.9
+      },
+      "retrieval_respondible": {
+        "recall@1": 0.5,
+        "recall@3": 0.9
+      }
+    },
+    "final-C": {
+      "version": "v5-1.5b",
+      "mode": "rag_finetuning",
+      "split": "test",
+      "n": 30,
+      "json_syntax_valid_rate": 1.0,
+      "schema_valid_rate": 1.0,
+      "valid_json_and_refs_rate": 1.0,
+      "status_only_match_rate": 0.9333333333333333,
+      "status_match_rate": 0.9333333333333333,
+      "median_seconds": 1.6438996454999142,
+      "p95_seconds": 1.7981474268974125,
+      "peak_memory_gb": 3.779593416,
+      "model": {
+        "modelo": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revisao_modelo": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "adaptador": "c905fee58cb4c0c44baeb9ac14dd9e9b7e412f280b3024c825441d018d573dce"
+      },
+      "frozen_manifest_sha": "55bf41e850563d66aa971f88365d1c0b276d49bce1ebfdcc59211c7d4b4fbfa6",
+      "test_file_sha": "367fd3826b962a95f7dba1832bc2c069fdd8615b7c0885d01b7067278f876261",
+      "semantic_accuracy": "pending; structure/status do not establish factual correctness",
+      "hallucination_rate": "pending; never inferred solely from JSON or status",
+      "by_category": {
+        "contradicao": {
+          "n": 5,
+          "status_only_match_rate": 1.0,
+          "schema_rate": 1.0
+        },
+        "fora_escopo": {
+          "n": 5,
+          "status_only_match_rate": 1.0,
+          "schema_rate": 1.0
+        },
+        "inducao": {
+          "n": 5,
+          "status_only_match_rate": 1.0,
+          "schema_rate": 1.0
+        },
+        "insuficiente": {
+          "n": 5,
+          "status_only_match_rate": 1.0,
+          "schema_rate": 1.0
+        },
+        "nao_consta": {
+          "n": 5,
+          "status_only_match_rate": 1.0,
+          "schema_rate": 1.0
+        },
+        "respondivel": {
+          "n": 5,
+          "status_only_match_rate": 0.6,
+          "schema_rate": 1.0
+        }
+      },
+      "retrieval_all": {
+        "recall@1": 0.7777777777777778,
+        "recall@3": 0.9
+      },
+      "retrieval_respondible": {
+        "recall@1": 0.5,
+        "recall@3": 0.9
+      }
+    }
+  },
+  "technical_content_review": {
+    "reviewer_kind": "ai_assisted_technical_review",
+    "independent_human_review": false,
+    "n_responses": 90,
+    "n_groups": 90,
+    "limitations": "Mode hidden in packets but style may reveal it; related AI authorship/review; synthetic cases.",
+    "mapping_sha": "19580b3310182cde32cd25b5749279f02642508324e4c552d11ab176ad48f749",
+    "decisions_sha": "de41bc64fea3b8aaec19e037025d78f7ff0c50db24c0df34595204f2aa778ae9",
+    "modes": {
+      "final-A": {
+        "n": 30,
+        "semantic_correct": {
+          "n": 30,
+          "positive": 14,
+          "negative": 15,
+          "uncertain": 1,
+          "lower_rate": 0.4666666666666667,
+          "upper_rate": 0.5
+        },
+        "hallucination": {
+          "n": 30,
+          "positive": 7,
+          "negative": 21,
+          "uncertain": 2,
+          "lower_rate": 0.23333333333333334,
+          "upper_rate": 0.3
+        },
+        "grounded": {
+          "n": 30,
+          "positive": 20,
+          "negative": 9,
+          "uncertain": 1,
+          "lower_rate": 0.6666666666666666,
+          "upper_rate": 0.7
+        },
+        "refusal_adequate": {
+          "n": 30,
+          "positive": 20,
+          "negative": 10,
+          "uncertain": 0,
+          "lower_rate": 0.6666666666666666,
+          "upper_rate": 0.6666666666666666
+        },
+        "integral_accuracy": {
+          "n": 30,
+          "positive": 3,
+          "negative": 27,
+          "uncertain": 0,
+          "lower_rate": 0.1,
+          "upper_rate": 0.1
+        },
+        "by_category": {
+          "contradicao": {
+            "semantic_correct": {
+              "n": 5,
+              "positive": 2,
+              "negative": 3,
+              "uncertain": 0,
+              "lower_rate": 0.4,
+              "upper_rate": 0.4
+            },
+            "hallucination": {
+              "n": 5,
+              "positive": 3,
+              "negative": 2,
+              "uncertain": 0,
+              "lower_rate": 0.6,
+              "upper_rate": 0.6
+            },
+            "grounded": {
+              "n": 5,
+              "positive": 2,
+              "negative": 3,
+              "uncertain": 0,
+              "lower_rate": 0.4,
+              "upper_rate": 0.4
+            },
+            "refusal_adequate": {
+              "n": 5,
+              "positive": 4,
+              "negative": 1,
+              "uncertain": 0,
+              "lower_rate": 0.8,
+              "upper_rate": 0.8
+            },
+            "integral_accuracy": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            }
+          },
+          "fora_escopo": {
+            "semantic_correct": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            },
+            "hallucination": {
+              "n": 5,
+              "positive": 1,
+              "negative": 4,
+              "uncertain": 0,
+              "lower_rate": 0.2,
+              "upper_rate": 0.2
+            },
+            "grounded": {
+              "n": 5,
+              "positive": 4,
+              "negative": 1,
+              "uncertain": 0,
+              "lower_rate": 0.8,
+              "upper_rate": 0.8
+            },
+            "refusal_adequate": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            },
+            "integral_accuracy": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            }
+          },
+          "inducao": {
+            "semantic_correct": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            },
+            "hallucination": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            },
+            "grounded": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            },
+            "refusal_adequate": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            },
+            "integral_accuracy": {
+              "n": 5,
+              "positive": 1,
+              "negative": 4,
+              "uncertain": 0,
+              "lower_rate": 0.2,
+              "upper_rate": 0.2
+            }
+          },
+          "insuficiente": {
+            "semantic_correct": {
+              "n": 5,
+              "positive": 4,
+              "negative": 0,
+              "uncertain": 1,
+              "lower_rate": 0.8,
+              "upper_rate": 1.0
+            },
+            "hallucination": {
+              "n": 5,
+              "positive": 0,
+              "negative": 4,
+              "uncertain": 1,
+              "lower_rate": 0.0,
+              "upper_rate": 0.2
+            },
+            "grounded": {
+              "n": 5,
+              "positive": 4,
+              "negative": 0,
+              "uncertain": 1,
+              "lower_rate": 0.8,
+              "upper_rate": 1.0
+            },
+            "refusal_adequate": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            },
+            "integral_accuracy": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            }
+          },
+          "nao_consta": {
+            "semantic_correct": {
+              "n": 5,
+              "positive": 2,
+              "negative": 3,
+              "uncertain": 0,
+              "lower_rate": 0.4,
+              "upper_rate": 0.4
+            },
+            "hallucination": {
+              "n": 5,
+              "positive": 3,
+              "negative": 2,
+              "uncertain": 0,
+              "lower_rate": 0.6,
+              "upper_rate": 0.6
+            },
+            "grounded": {
+              "n": 5,
+              "positive": 2,
+              "negative": 3,
+              "uncertain": 0,
+              "lower_rate": 0.4,
+              "upper_rate": 0.4
+            },
+            "refusal_adequate": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            },
+            "integral_accuracy": {
+              "n": 5,
+              "positive": 1,
+              "negative": 4,
+              "uncertain": 0,
+              "lower_rate": 0.2,
+              "upper_rate": 0.2
+            }
+          },
+          "respondivel": {
+            "semantic_correct": {
+              "n": 5,
+              "positive": 1,
+              "negative": 4,
+              "uncertain": 0,
+              "lower_rate": 0.2,
+              "upper_rate": 0.2
+            },
+            "hallucination": {
+              "n": 5,
+              "positive": 0,
+              "negative": 4,
+              "uncertain": 1,
+              "lower_rate": 0.0,
+              "upper_rate": 0.2
+            },
+            "grounded": {
+              "n": 5,
+              "positive": 3,
+              "negative": 2,
+              "uncertain": 0,
+              "lower_rate": 0.6,
+              "upper_rate": 0.6
+            },
+            "refusal_adequate": {
+              "n": 5,
+              "positive": 1,
+              "negative": 4,
+              "uncertain": 0,
+              "lower_rate": 0.2,
+              "upper_rate": 0.2
+            },
+            "integral_accuracy": {
+              "n": 5,
+              "positive": 1,
+              "negative": 4,
+              "uncertain": 0,
+              "lower_rate": 0.2,
+              "upper_rate": 0.2
+            }
+          }
+        }
+      },
+      "final-B": {
+        "n": 30,
+        "semantic_correct": {
+          "n": 30,
+          "positive": 10,
+          "negative": 19,
+          "uncertain": 1,
+          "lower_rate": 0.3333333333333333,
+          "upper_rate": 0.36666666666666664
+        },
+        "hallucination": {
+          "n": 30,
+          "positive": 12,
+          "negative": 17,
+          "uncertain": 1,
+          "lower_rate": 0.4,
+          "upper_rate": 0.43333333333333335
+        },
+        "grounded": {
+          "n": 30,
+          "positive": 13,
+          "negative": 16,
+          "uncertain": 1,
+          "lower_rate": 0.43333333333333335,
+          "upper_rate": 0.4666666666666667
+        },
+        "refusal_adequate": {
+          "n": 30,
+          "positive": 19,
+          "negative": 11,
+          "uncertain": 0,
+          "lower_rate": 0.6333333333333333,
+          "upper_rate": 0.6333333333333333
+        },
+        "integral_accuracy": {
+          "n": 30,
+          "positive": 0,
+          "negative": 30,
+          "uncertain": 0,
+          "lower_rate": 0.0,
+          "upper_rate": 0.0
+        },
+        "by_category": {
+          "contradicao": {
+            "semantic_correct": {
+              "n": 5,
+              "positive": 3,
+              "negative": 1,
+              "uncertain": 1,
+              "lower_rate": 0.6,
+              "upper_rate": 0.8
+            },
+            "hallucination": {
+              "n": 5,
+              "positive": 0,
+              "negative": 4,
+              "uncertain": 1,
+              "lower_rate": 0.0,
+              "upper_rate": 0.2
+            },
+            "grounded": {
+              "n": 5,
+              "positive": 3,
+              "negative": 1,
+              "uncertain": 1,
+              "lower_rate": 0.6,
+              "upper_rate": 0.8
+            },
+            "refusal_adequate": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            },
+            "integral_accuracy": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            }
+          },
+          "fora_escopo": {
+            "semantic_correct": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            },
+            "hallucination": {
+              "n": 5,
+              "positive": 2,
+              "negative": 3,
+              "uncertain": 0,
+              "lower_rate": 0.4,
+              "upper_rate": 0.4
+            },
+            "grounded": {
+              "n": 5,
+              "positive": 2,
+              "negative": 3,
+              "uncertain": 0,
+              "lower_rate": 0.4,
+              "upper_rate": 0.4
+            },
+            "refusal_adequate": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            },
+            "integral_accuracy": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            }
+          },
+          "inducao": {
+            "semantic_correct": {
+              "n": 5,
+              "positive": 4,
+              "negative": 1,
+              "uncertain": 0,
+              "lower_rate": 0.8,
+              "upper_rate": 0.8
+            },
+            "hallucination": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            },
+            "grounded": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            },
+            "refusal_adequate": {
+              "n": 5,
+              "positive": 4,
+              "negative": 1,
+              "uncertain": 0,
+              "lower_rate": 0.8,
+              "upper_rate": 0.8
+            },
+            "integral_accuracy": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            }
+          },
+          "insuficiente": {
+            "semantic_correct": {
+              "n": 5,
+              "positive": 1,
+              "negative": 4,
+              "uncertain": 0,
+              "lower_rate": 0.2,
+              "upper_rate": 0.2
+            },
+            "hallucination": {
+              "n": 5,
+              "positive": 3,
+              "negative": 2,
+              "uncertain": 0,
+              "lower_rate": 0.6,
+              "upper_rate": 0.6
+            },
+            "grounded": {
+              "n": 5,
+              "positive": 1,
+              "negative": 4,
+              "uncertain": 0,
+              "lower_rate": 0.2,
+              "upper_rate": 0.2
+            },
+            "refusal_adequate": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            },
+            "integral_accuracy": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            }
+          },
+          "nao_consta": {
+            "semantic_correct": {
+              "n": 5,
+              "positive": 2,
+              "negative": 3,
+              "uncertain": 0,
+              "lower_rate": 0.4,
+              "upper_rate": 0.4
+            },
+            "hallucination": {
+              "n": 5,
+              "positive": 3,
+              "negative": 2,
+              "uncertain": 0,
+              "lower_rate": 0.6,
+              "upper_rate": 0.6
+            },
+            "grounded": {
+              "n": 5,
+              "positive": 2,
+              "negative": 3,
+              "uncertain": 0,
+              "lower_rate": 0.4,
+              "upper_rate": 0.4
+            },
+            "refusal_adequate": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            },
+            "integral_accuracy": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            }
+          },
+          "respondivel": {
+            "semantic_correct": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            },
+            "hallucination": {
+              "n": 5,
+              "positive": 4,
+              "negative": 1,
+              "uncertain": 0,
+              "lower_rate": 0.8,
+              "upper_rate": 0.8
+            },
+            "grounded": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            },
+            "refusal_adequate": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            },
+            "integral_accuracy": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            }
+          }
+        }
+      },
+      "final-C": {
+        "n": 30,
+        "semantic_correct": {
+          "n": 30,
+          "positive": 25,
+          "negative": 3,
+          "uncertain": 2,
+          "lower_rate": 0.8333333333333334,
+          "upper_rate": 0.9
+        },
+        "hallucination": {
+          "n": 30,
+          "positive": 2,
+          "negative": 26,
+          "uncertain": 2,
+          "lower_rate": 0.06666666666666667,
+          "upper_rate": 0.13333333333333333
+        },
+        "grounded": {
+          "n": 30,
+          "positive": 26,
+          "negative": 3,
+          "uncertain": 1,
+          "lower_rate": 0.8666666666666667,
+          "upper_rate": 0.9
+        },
+        "refusal_adequate": {
+          "n": 30,
+          "positive": 28,
+          "negative": 2,
+          "uncertain": 0,
+          "lower_rate": 0.9333333333333333,
+          "upper_rate": 0.9333333333333333
+        },
+        "integral_accuracy": {
+          "n": 30,
+          "positive": 25,
+          "negative": 4,
+          "uncertain": 1,
+          "lower_rate": 0.8333333333333334,
+          "upper_rate": 0.8666666666666667
+        },
+        "by_category": {
+          "contradicao": {
+            "semantic_correct": {
+              "n": 5,
+              "positive": 4,
+              "negative": 0,
+              "uncertain": 1,
+              "lower_rate": 0.8,
+              "upper_rate": 1.0
+            },
+            "hallucination": {
+              "n": 5,
+              "positive": 0,
+              "negative": 4,
+              "uncertain": 1,
+              "lower_rate": 0.0,
+              "upper_rate": 0.2
+            },
+            "grounded": {
+              "n": 5,
+              "positive": 4,
+              "negative": 0,
+              "uncertain": 1,
+              "lower_rate": 0.8,
+              "upper_rate": 1.0
+            },
+            "refusal_adequate": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            },
+            "integral_accuracy": {
+              "n": 5,
+              "positive": 4,
+              "negative": 0,
+              "uncertain": 1,
+              "lower_rate": 0.8,
+              "upper_rate": 1.0
+            }
+          },
+          "fora_escopo": {
+            "semantic_correct": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            },
+            "hallucination": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            },
+            "grounded": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            },
+            "refusal_adequate": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            },
+            "integral_accuracy": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            }
+          },
+          "inducao": {
+            "semantic_correct": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            },
+            "hallucination": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5,
+              "uncertain": 0,
+              "lower_rate": 0.0,
+              "upper_rate": 0.0
+            },
+            "grounded": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            },
+            "refusal_adequate": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            },
+            "integral_accuracy": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            }
+          },
+          "insuficiente": {
+            "semantic_correct": {
+              "n": 5,
+              "positive": 4,
+              "negative": 1,
+              "uncertain": 0,
+              "lower_rate": 0.8,
+              "upper_rate": 0.8
+            },
+            "hallucination": {
+              "n": 5,
+              "positive": 1,
+              "negative": 4,
+              "uncertain": 0,
+              "lower_rate": 0.2,
+              "upper_rate": 0.2
+            },
+            "grounded": {
+              "n": 5,
+              "positive": 4,
+              "negative": 1,
+              "uncertain": 0,
+              "lower_rate": 0.8,
+              "upper_rate": 0.8
+            },
+            "refusal_adequate": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            },
+            "integral_accuracy": {
+              "n": 5,
+              "positive": 4,
+              "negative": 1,
+              "uncertain": 0,
+              "lower_rate": 0.8,
+              "upper_rate": 0.8
+            }
+          },
+          "nao_consta": {
+            "semantic_correct": {
+              "n": 5,
+              "positive": 4,
+              "negative": 0,
+              "uncertain": 1,
+              "lower_rate": 0.8,
+              "upper_rate": 1.0
+            },
+            "hallucination": {
+              "n": 5,
+              "positive": 0,
+              "negative": 4,
+              "uncertain": 1,
+              "lower_rate": 0.0,
+              "upper_rate": 0.2
+            },
+            "grounded": {
+              "n": 5,
+              "positive": 4,
+              "negative": 1,
+              "uncertain": 0,
+              "lower_rate": 0.8,
+              "upper_rate": 0.8
+            },
+            "refusal_adequate": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0,
+              "uncertain": 0,
+              "lower_rate": 1.0,
+              "upper_rate": 1.0
+            },
+            "integral_accuracy": {
+              "n": 5,
+              "positive": 4,
+              "negative": 1,
+              "uncertain": 0,
+              "lower_rate": 0.8,
+              "upper_rate": 0.8
+            }
+          },
+          "respondivel": {
+            "semantic_correct": {
+              "n": 5,
+              "positive": 3,
+              "negative": 2,
+              "uncertain": 0,
+              "lower_rate": 0.6,
+              "upper_rate": 0.6
+            },
+            "hallucination": {
+              "n": 5,
+              "positive": 1,
+              "negative": 4,
+              "uncertain": 0,
+              "lower_rate": 0.2,
+              "upper_rate": 0.2
+            },
+            "grounded": {
+              "n": 5,
+              "positive": 4,
+              "negative": 1,
+              "uncertain": 0,
+              "lower_rate": 0.8,
+              "upper_rate": 0.8
+            },
+            "refusal_adequate": {
+              "n": 5,
+              "positive": 3,
+              "negative": 2,
+              "uncertain": 0,
+              "lower_rate": 0.6,
+              "upper_rate": 0.6
+            },
+            "integral_accuracy": {
+              "n": 5,
+              "positive": 3,
+              "negative": 2,
+              "uncertain": 0,
+              "lower_rate": 0.6,
+              "upper_rate": 0.6
+            }
+          }
+        }
+      }
+    },
+    "comparisons": [
+      {
+        "candidate": "final-B",
+        "reference": "final-A",
+        "field": "semantic_correct",
+        "n_paired": 30,
+        "delta_lower": -0.16666666666666666,
+        "delta_upper": -0.1,
+        "positive_favors_candidate": true,
+        "interval_95_conservative": [
+          -0.3333333333333333,
+          0.06666666666666667
+        ],
+        "bootstrap": "paired family clusters stratified by category; not field-generalization CI",
+        "replicates": 5000,
+        "seed": 42
+      },
+      {
+        "candidate": "final-B",
+        "reference": "final-A",
+        "field": "integral_accuracy",
+        "n_paired": 30,
+        "delta_lower": -0.1,
+        "delta_upper": -0.1,
+        "positive_favors_candidate": true,
+        "interval_95_conservative": [
+          -0.2,
+          0.0
+        ],
+        "bootstrap": "paired family clusters stratified by category; not field-generalization CI",
+        "replicates": 5000,
+        "seed": 42
+      },
+      {
+        "candidate": "final-B",
+        "reference": "final-A",
+        "field": "hallucination",
+        "n_paired": 30,
+        "delta_lower": -0.2,
+        "delta_upper": -0.1,
+        "positive_favors_candidate": true,
+        "interval_95_conservative": [
+          -0.4,
+          0.1
+        ],
+        "bootstrap": "paired family clusters stratified by category; not field-generalization CI",
+        "replicates": 5000,
+        "seed": 42
+      },
+      {
+        "candidate": "final-C",
+        "reference": "final-A",
+        "field": "semantic_correct",
+        "n_paired": 30,
+        "delta_lower": 0.3333333333333333,
+        "delta_upper": 0.43333333333333335,
+        "positive_favors_candidate": true,
+        "interval_95_conservative": [
+          0.2,
+          0.6
+        ],
+        "bootstrap": "paired family clusters stratified by category; not field-generalization CI",
+        "replicates": 5000,
+        "seed": 42
+      },
+      {
+        "candidate": "final-C",
+        "reference": "final-A",
+        "field": "integral_accuracy",
+        "n_paired": 30,
+        "delta_lower": 0.7333333333333333,
+        "delta_upper": 0.7666666666666667,
+        "positive_favors_candidate": true,
+        "interval_95_conservative": [
+          0.6,
+          0.9
+        ],
+        "bootstrap": "paired family clusters stratified by category; not field-generalization CI",
+        "replicates": 5000,
+        "seed": 42
+      },
+      {
+        "candidate": "final-C",
+        "reference": "final-A",
+        "field": "hallucination",
+        "n_paired": 30,
+        "delta_lower": 0.1,
+        "delta_upper": 0.23333333333333334,
+        "positive_favors_candidate": true,
+        "interval_95_conservative": [
+          -0.03333333333333333,
+          0.4
+        ],
+        "bootstrap": "paired family clusters stratified by category; not field-generalization CI",
+        "replicates": 5000,
+        "seed": 42
+      },
+      {
+        "candidate": "final-C",
+        "reference": "final-B",
+        "field": "semantic_correct",
+        "n_paired": 30,
+        "delta_lower": 0.4666666666666667,
+        "delta_upper": 0.5666666666666667,
+        "positive_favors_candidate": true,
+        "interval_95_conservative": [
+          0.26666666666666666,
+          0.7333333333333333
+        ],
+        "bootstrap": "paired family clusters stratified by category; not field-generalization CI",
+        "replicates": 5000,
+        "seed": 42
+      },
+      {
+        "candidate": "final-C",
+        "reference": "final-B",
+        "field": "integral_accuracy",
+        "n_paired": 30,
+        "delta_lower": 0.8333333333333334,
+        "delta_upper": 0.8666666666666667,
+        "positive_favors_candidate": true,
+        "interval_95_conservative": [
+          0.7,
+          0.9666666666666667
+        ],
+        "bootstrap": "paired family clusters stratified by category; not field-generalization CI",
+        "replicates": 5000,
+        "seed": 42
+      },
+      {
+        "candidate": "final-C",
+        "reference": "final-B",
+        "field": "hallucination",
+        "n_paired": 30,
+        "delta_lower": 0.26666666666666666,
+        "delta_upper": 0.36666666666666664,
+        "positive_favors_candidate": true,
+        "interval_95_conservative": [
+          0.03333333333333333,
+          0.5666666666666667
+        ],
+        "bootstrap": "paired family clusters stratified by category; not field-generalization CI",
+        "replicates": 5000,
+        "seed": 42
+      }
+    ]
+  },
+  "selected_candidate": "r1",
+  "independent_human_review": false
+}

@@ -1,0 +1,28 @@
+{
+  "fixed_at": "2026-11-12T13:15:43.123660-03:00",
+  "before_any_test_llm_generation": true,
+  "cause_observed": "loss NaN in r2 at report240; exact primitive not isolated",
+  "numpy_seed_bug": "direct train_model seeds MLX but not NumPy; earlier data order not fully controlled",
+  "retry": "r2s from base, new directory; no pretend resume without optimizer/RNG state",
+  "changes": {
+    "floating_compute": "FP32 in memory, base quantized integer codes/files unchanged",
+    "max_gradient_norm": 1.0,
+    "gradient_nonfinite_policy": "abort before applying update; never silently skip",
+    "numpy_seed": 42,
+    "mlx_seed": 42,
+    "same_data_prompt_retrieval_generation_contract": true,
+    "same_lr": 5e-05,
+    "same_microsteps": 800,
+    "same_accumulation": 4,
+    "same_lora": "rank16 q/v last16 scale2 dropout.05",
+    "engine": "local uncompiled guarded loop; validation after each100 + exact final"
+  },
+  "candidate_selection": "same clean64 ranking; failed r2 excluded; compare completed r1 and r2s, do not isolate learning-rate causality",
+  "training_code_sha": "ccce92ff0cb286c855e53d1a44b5f5aec2af93ee4626c3b5829fe650068b12cb",
+  "sources": [
+    "https://github.com/ml-explore/mlx-lm/issues/1658",
+    "https://github.com/ml-explore/mlx-lm/discussions/636"
+  ],
+  "source_limit": "firsthand issue reports motivate guard, not proof of exact cause on this Mac",
+  "smoke_required_before_full_training": true
+}

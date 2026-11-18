@@ -1,0 +1,155 @@
+[
+  {
+    "mode": "base_sem_contexto",
+    "split": "test",
+    "n": 120,
+    "json_syntax_valid_rate": 1.0,
+    "schema_valid_rate": 0.4583333333333333,
+    "valid_json_and_refs_rate": 0.4583333333333333,
+    "status_match_rate": 0.23333333333333334,
+    "median_seconds": 2.5442166660013754,
+    "p95_seconds": 3.5870213607500774,
+    "peak_memory_gb": 4.837290888,
+    "semantic_correctness": "PENDENTE: status_match não é acerto semântico ou fundamentação.",
+    "model": {
+      "modelo": "Qwen/Qwen2.5-7B-Instruct",
+      "revisao_modelo": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "adaptador": null
+    },
+    "base_sha": "293f559b96abd075ae50158d866a94e05f6a882a51cb5910544273449212916f",
+    "test_sha": "093b78cf197f11285dab613bbe10cff159c2605f946021f110b59b75f0747b1f",
+    "retrieval_config_sha": "8e5ac603ec5b3ad036f12b85ef27b0dda1924e3a8e000e80411b1bddfcbb2d65",
+    "by_category": {
+      "respondivel": {
+        "n": 40,
+        "status_match_rate": 0.2
+      },
+      "nao_consta": {
+        "n": 20,
+        "status_match_rate": 0.05
+      },
+      "insuficiente": {
+        "n": 20,
+        "status_match_rate": 0.35
+      },
+      "inducao": {
+        "n": 10,
+        "status_match_rate": 0.1
+      },
+      "contradicao": {
+        "n": 15,
+        "status_match_rate": 0.6
+      },
+      "fora_escopo": {
+        "n": 15,
+        "status_match_rate": 0.13333333333333333
+      }
+    },
+    "retrieval_respondible": {
+      "recall@1": 0.0,
+      "recall@3": 0.0
+    }
+  },
+  {
+    "mode": "rag_simples",
+    "split": "test",
+    "n": 120,
+    "json_syntax_valid_rate": 1.0,
+    "schema_valid_rate": 0.7666666666666667,
+    "valid_json_and_refs_rate": 0.7416666666666667,
+    "status_match_rate": 0.49166666666666664,
+    "median_seconds": 3.0074570835004124,
+    "p95_seconds": 4.0999155961511855,
+    "peak_memory_gb": 4.933662164,
+    "semantic_correctness": "PENDENTE: status_match não é acerto semântico ou fundamentação.",
+    "model": {
+      "modelo": "Qwen/Qwen2.5-7B-Instruct",
+      "revisao_modelo": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "adaptador": null
+    },
+    "base_sha": "293f559b96abd075ae50158d866a94e05f6a882a51cb5910544273449212916f",
+    "test_sha": "093b78cf197f11285dab613bbe10cff159c2605f946021f110b59b75f0747b1f",
+    "retrieval_config_sha": "8e5ac603ec5b3ad036f12b85ef27b0dda1924e3a8e000e80411b1bddfcbb2d65",
+    "by_category": {
+      "contradicao": {
+        "n": 15,
+        "status_match_rate": 0.7333333333333333
+      },
+      "nao_consta": {
+        "n": 20,
+        "status_match_rate": 0.1
+      },
+      "insuficiente": {
+        "n": 20,
+        "status_match_rate": 0.65
+      },
+      "fora_escopo": {
+        "n": 15,
+        "status_match_rate": 0.4
+      },
+      "inducao": {
+        "n": 10,
+        "status_match_rate": 0.7
+      },
+      "respondivel": {
+        "n": 40,
+        "status_match_rate": 0.5
+      }
+    },
+    "retrieval_respondible": {
+      "recall@1": 0.725,
+      "recall@3": 0.825
+    }
+  },
+  {
+    "mode": "rag_finetuning",
+    "split": "test",
+    "n": 120,
+    "json_syntax_valid_rate": 0.9833333333333333,
+    "schema_valid_rate": 0.9333333333333333,
+    "valid_json_and_refs_rate": 0.9333333333333333,
+    "status_match_rate": 0.65,
+    "median_seconds": 2.466634229500414,
+    "p95_seconds": 2.7873066652007763,
+    "peak_memory_gb": 5.072205,
+    "semantic_correctness": "PENDENTE: status_match não é acerto semântico ou fundamentação.",
+    "model": {
+      "modelo": "Qwen/Qwen2.5-7B-Instruct",
+      "revisao_modelo": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "adaptador": "066c7d9bc409e2adcd5cae1072ee05f03d73cd17f9008c4f5871ad178c99a38c"
+    },
+    "base_sha": "293f559b96abd075ae50158d866a94e05f6a882a51cb5910544273449212916f",
+    "test_sha": "093b78cf197f11285dab613bbe10cff159c2605f946021f110b59b75f0747b1f",
+    "retrieval_config_sha": "8e5ac603ec5b3ad036f12b85ef27b0dda1924e3a8e000e80411b1bddfcbb2d65",
+    "by_category": {
+      "fora_escopo": {
+        "n": 15,
+        "status_match_rate": 0.6
+      },
+      "inducao": {
+        "n": 10,
+        "status_match_rate": 0.5
+      },
+      "insuficiente": {
+        "n": 20,
+        "status_match_rate": 0.95
+      },
+      "respondivel": {
+        "n": 40,
+        "status_match_rate": 0.75
+      },
+      "contradicao": {
+        "n": 15,
+        "status_match_rate": 0.4666666666666667
+      },
+      "nao_consta": {
+        "n": 20,
+        "status_match_rate": 0.4
+      }
+    },
+    "retrieval_respondible": {
+      "recall@1": 0.725,
+      "recall@3": 0.825
+    }
+  }
+]

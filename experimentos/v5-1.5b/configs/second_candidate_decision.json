@@ -1,0 +1,14 @@
+{
+  "candidate": "r2",
+  "condition": "substantive technical problem in retained validation64",
+  "evidence_review_id": "e8da4d741913",
+  "case_ids": [
+    "364ece2c0229f632f2c8bd56"
+  ],
+  "schema_valid_rate_r1_clean": 1.0,
+  "status_rate_r1_clean": 0.984375,
+  "reason": "cost question incorrectly rejected as out of scope",
+  "test_used": false,
+  "r2_microsteps": 800,
+  "independent_fresh_base_candidate": true
+}

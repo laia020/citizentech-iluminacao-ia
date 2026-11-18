@@ -1,0 +1,9 @@
+{
+  "new_demo_asset_http": 200,
+  "legacy_demo_preserved": true,
+  "separate_question_observation_fields": true,
+  "javascript_syntax_check": "passed",
+  "real_browser_visual_validation": false,
+  "browser_origin_approval": "previously denied; not bypassed",
+  "does_not_establish_form_behavior_or_layout": true
+}

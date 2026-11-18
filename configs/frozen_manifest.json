@@ -1,0 +1,13 @@
+{
+  "artifacts": {
+    "dados/manifest.json": "519f1502dd0e84ad5775352a63fbefee7dd88228d1d8d97f2dc0dcbbe9b3244d",
+    "dados/mlx/train.jsonl": "cc2326a27d1d8fcfc4e8f3a5a4c5109c2c513e834719ad0c186821ae616b9f0a",
+    "dados/mlx/valid.jsonl": "5fc43e05278439dbf8f0cb4755bde591a09b5ce3fd80a1a82eb673392ab9ed85",
+    "avaliacao/test.jsonl": "093b78cf197f11285dab613bbe10cff159c2605f946021f110b59b75f0747b1f",
+    "base/chunks.jsonl": "293f559b96abd075ae50158d866a94e05f6a882a51cb5910544273449212916f",
+    "configs/retrieval.json": "8e5ac603ec5b3ad036f12b85ef27b0dda1924e3a8e000e80411b1bddfcbb2d65"
+  },
+  "prompt_version": "v2-no-identifiers",
+  "system_sha": "64ec00e7c4ee9215a8a345a076b81efa5c966155185d4c8750a4435df4a506a5",
+  "notes": "V2 exclui identificador de ocorrência do prompt. V1 invalidada antes de qualquer teste final."
+}
