@@ -134,7 +134,7 @@ A ferramenta prepara `models/qwen-1.5b-original/`, `models/qwen-1.5b-fp16/`, o v
 
 `check` é somente leitura: não carrega a LLM, treina, baixa ou converte. Confira `archive_verified`, `base_sha_matches_original`, `model_link_correct` e `adapter_present_and_verified`. Um campo `false` exige investigação; imprimir o relatório não garante prontidão. O SHA canônico da base está no manifesto. Uma conversão diferente não é equivalente bit a bit sem análise da procedência.
 
-Depois, inicie a POC conforme a seção de execução. A restauração do pacote real foi testada em pasta temporária isolada, inclusive repetição idêntica e vínculo relativo. A base existente foi conferida por SHA. **Instalação completa em outro Mac ou clone público limpo ainda não foi executada**; não se afirma essa validação externa.
+Depois, inicie a POC conforme a seção de execução. A restauração do pacote real foi testada em pasta temporária isolada, inclusive repetição idêntica e vínculo relativo. A base existente foi conferida por SHA. Após a publicação, um clone público sem credenciais foi baixado: o adaptador foi restaurado a partir do ZIP publicado e os 47 testes passaram no código clonado, usando o ambiente Python já existente. **Instalação completa em outro Mac ainda não foi executada**; não houve novo download da base, conversão ou inferência nessa conferência. [Registro da publicação](experimentos/v5-1.5b/docs/validacao-publicacao.json).
 
 ## Usar e integrar a API
 
@@ -320,5 +320,9 @@ O modelo-base é Apache-2.0, com cópia da licença no pacote. Isso não licenci
 ## Histórico e restauração documental
 
 Esta revisão completou o README, incluiu os integrantes e preparou/verificou o pacote de reprodução. Na sequência, o usuário autorizou explicitamente publicar o repositório público `laia020/citizentech-iluminacao-ia`, incluindo os commits e o envio necessários. Essa publicação não inclui hospedagem da API nem comprova integração externa. Sem novo treinamento, alteração do placar original ou instalação de bibliotecas.
+
+O repositório foi publicado em 17/11/2026 e conferido por clone público sem credenciais e leitura HTTP do README. Pastas de modelos, adaptadores de execução, ambientes, caches e vínculos locais ficaram fora do Git; o adaptador selecionado acompanha o código no pacote verificado. A revisão de padrões comuns de credenciais não encontrou correspondências, sem constituir garantia absoluta. [Revisão anterior ao envio](experimentos/v5-1.5b/docs/revisao-pre-publicacao.json).
+
+Backup imediatamente anterior à publicação: `/Users/lucasmanentti/.codex/backups/citizentech-publicacao-20261117-234336`, com manifesto de documentação/configuração e nota temática. Restaurar documentos por comparação e cópia do arquivo desejado ao caminho original; isso não desfaz a publicação remota. Não apagar dados ou pesos e não reescrever o histórico remoto para restaurar uma nota.
 
 Backup anterior: `/Users/lucasmanentti/.codex/backups/citizentech-readme-20261117-232208`, com manifesto dos caminhos originais do README e da nota temática do Obsidian. Para restaurar, comparar backup e documento atual e copiar somente o arquivo desejado ao destino do manifesto, preservando mudanças posteriores. Não apagar ambientes, dados ou pesos para restaurar documentação. Regras globais do Codex preservadas.

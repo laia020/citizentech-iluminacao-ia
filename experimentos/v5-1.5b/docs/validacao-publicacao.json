@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/laia020/citizentech-iluminacao-ia",
+  "public_clone_without_credentials": true,
+  "verified_initial_commit": "7d8d3ffff8796bc3732d80e59b2f029726ab0666",
+  "public_readme_http": 200,
+  "public_readme_matches_git": true,
+  "adapter_archive_sha": "a0904e71413aec7475dbfa62b18937cae1dafd833fdd782ed3b376b8014470b9",
+  "adapter_restored_from_published_zip": "imported_verified",
+  "adapter_sha_matches_selected": true,
+  "model_link_relative": "../../models",
+  "software_tests_in_cloned_source": "...............................................                          [100%]\n47 passed in 1.25s",
+  "dependencies": "existing project Python environment reused; no new installation",
+  "fresh_machine_full_runtime": "not executed; base not downloaded and no model inference/training during publication verification",
+  "deployment": "not performed"
+}
