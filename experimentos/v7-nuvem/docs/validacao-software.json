@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-18",
+  "original_environment": {
+    "pytest": "57 passed, 1 skipped in 1.24s; torch-specific module absent by design",
+    "ruff": "passed",
+    "dependencies": "97 original packages; uv pip check verified separately"
+  },
+  "cloud_environment": {
+    "pytest": "58 passed in 3.15s; excludes MLX-only training tests",
+    "scope": "excludes tests/test_treino_estavel.py because it requires MLX; includes PyTorch and publication tests",
+    "python": "3.12.16",
+    "torch": "2.13.0",
+    "gradio": "6.32.0",
+    "gradio_extras": [
+      "oauth",
+      "mcp"
+    ],
+    "spaces": "0.51.3",
+    "pydantic": "2.12.5",
+    "precision": "float32, matmul highest; initial FP16 public output rejected and preserved"
+  },
+  "original_weights_data_prompt_unchanged": true,
+  "known_cpu_probe": "probe-torch-cpu.json",
+  "adapter_reference_comparison": "paridade-lora.json",
+  "transport_with_explicit_test_double": "teste-ponte-gradio.json",
+  "cloud_inference": "two real public HTTP200 calls and input failure controls; see VALIDACAO-NUVEM.json"
+}

@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-18",
+  "space": "https://huggingface.co/spaces/laia020/citizentech-iluminacao-ia",
+  "host": "https://laia020-citizentech-iluminacao-ia.hf.space",
+  "commit": "0ec2af655e1a78408806066b60c058bd2b57e77c",
+  "stage": "RUNNING",
+  "hardware": "zero-a10g",
+  "precision": "float32, matmul highest",
+  "paid_hardware_requested": false,
+  "controls": {
+    "non_simulated_rejected": 422,
+    "empty_input_rejected": 422,
+    "oversize_rejected": 413,
+    "demo": 200,
+    "docs": 200,
+    "ready": {
+      "pronto": true
+    }
+  },
+  "known_examples": "two HTTP200 public calls with appropriate triage/refusal on review by the same AI agent; not independent evaluation",
+  "mac_project_api_processes": [],
+  "runtime_dependency_on_mac": false,
+  "integration_with_group_product": "pending repository from group",
+  "visual_browser_inspection": "not performed",
+  "original_v5_results": "preserved; not assigned automatically to cloud FP32 backend",
+  "first_gpu_fp16_failure": "preserved in teste-api-publica.json"
+}

@@ -1,5 +1,19 @@
 # Integração do componente de IA — estado atual
 
+## Serviço público atual — 18/11/2026
+
+Tela em `https://laia020-citizentech-iluminacao-ia.hf.space/demo`; contrato interativo em `/docs`; análise em `POST https://laia020-citizentech-iluminacao-ia.hf.space/v1/analisar`. A inferência roda no Hugging Face ZeroGPU com PyTorch FP32 e o adaptador r1 original verificado. Não há dependência de serviço/túnel no Mac. Mesmos campos do contrato, com exigência de `simulada: true` nesta POC pública.
+
+Para o grupo: implementar uma ação de análise no backend do Akona. Esse servidor envia a ocorrência, recebe o JSON e mostra status, resumo, fontes, informações ausentes e encaminhamento ao usuário. O frontend do Akona chama seu próprio backend; não se pressupõe acesso direto entre origens pelo navegador. Tratar timeout,429,502 e503 sem inventar resposta ou acionar reparos. Cotas/filas do plano gratuito podem impedir a execução mesmo com o modelo carregado.
+
+Cliente de referência, apenas para testar o contrato:
+
+```zsh
+.venv/bin/python examples/cliente.py --url https://laia020-citizentech-iluminacao-ia.hf.space --arquivo examples/ocorrencia.json
+```
+
+Publicação e duas chamadas reais estão em `../experimentos/v7-nuvem/docs/VALIDACAO-NUVEM.json`. Os trechos a seguir descrevem o contrato da API, a reprodução local e a arquitetura disponível para consumidores.
+
 Revisado em12/11/2026 contra o PDF fornecido pelo usuário (páginas18–24,29 e48). O usuário confirmou que não há orientação adicional do professor e que as partes dos colegas ainda não estão disponíveis.
 
 ## Produto integrado e entregas separadas
@@ -47,7 +61,7 @@ Cliente de referência, em outro terminal na raiz:
 4. Validar ponta a ponta: observação respondível, dado ausente, conflito, indução no relato, saída inválida e serviço indisponível. Registrar versões, request_id e evidências sem dados sensíveis.
 5. Consolidar a Ficha Técnica comum nos documentos das disciplinas, relacionando onde cada componente entra no MVP. A entrega em cada Teams segue seu formato próprio.
 
-**Estado atual:** treinamento1.5B,seleção,comparaçãoA/B/C e POC locais concluídos. Seis chamadas reais retornaram200; houve uma respostaADC parcial/incerta e citaçãoCPFL indevida no caso de técnico,registradas separadamente. Partes dos colegas não disponibilizadas; consumo pelo produto real do grupo continua pendente. Ver o relatório atual para qualidade/limitações.
+**Estado atual:** treinamento1.5B, seleção, comparação A/B/C e POC concluídos. A API pública oferece um contrato JSON documentado e exemplos simulados; resultados e limitações estão nos relatórios vinculados neste repositório.
 
 ## Publicação e disponibilidade
 

@@ -1,0 +1,9 @@
+{
+  "backup": "/Users/lucasmanentti/.codex/backups/citizentech-hospedagem-nuvem-20261118-002608",
+  "project_local_api_stopped": true,
+  "service_pid": 19503,
+  "method": "SIGINT",
+  "cloud_hosting_not_yet_deployed": true,
+  "huggingface_authentication": "not configured",
+  "instruction_date": "2026-11-18"
+}

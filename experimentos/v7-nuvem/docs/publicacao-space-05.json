@@ -1,0 +1,8 @@
+{
+  "space": "https://huggingface.co/spaces/laia020/citizentech-iluminacao-ia",
+  "commit": "0ec2af655e1a78408806066b60c058bd2b57e77c",
+  "stage": "RUNNING_BUILDING",
+  "hardware": "zero-a10g",
+  "requested_hardware": "zero-a10g",
+  "paid_hardware_requested": false
+}

@@ -1,0 +1,24 @@
+{
+  "scope": "two known fictional POC scenarios via public cloud API, not unseen evaluation or hallucination benchmark",
+  "host": "https://laia020-citizentech-iluminacao-ia.hf.space",
+  "ready_http": 200,
+  "demo_http": 200,
+  "no_mac_server_or_tunnel_used": true,
+  "cases": [
+    {
+      "input": {
+        "ocorrencia_id": "CLOUD-PUBLIC-001",
+        "pergunta": "O que pode ser registrado e encaminhado sem determinar a causa?",
+        "relato": "Uma luminária pública foi observada apagada à noite. A causa não foi inspecionada.",
+        "simulada": true
+      },
+      "http_status": 502,
+      "elapsed_seconds": 12.447769833001075,
+      "response": {
+        "request_id": "1f062672-c623-4216-98e0-a404d07c6a4b",
+        "codigo": "geracao_invalida",
+        "mensagem": "O modelo não produziu uma análise estruturalmente válida."
+      }
+    }
+  ]
+}

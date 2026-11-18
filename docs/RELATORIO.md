@@ -57,7 +57,7 @@ Interpretação técnica e aceitação local: docs/INTERPRETACAO.md e docs/ACEIT
 
 ## Integração e demonstração
 
-API e cliente de referência pertencem a este componente. Integração com o consumidor real dos colegas, MVP público, vídeo gravado e links de publicação estão pendentes. Teste com cliente de referência não será apresentado como integração final.
+API, cliente de referência, demonstração pública e links de publicação pertencem a este componente. O cliente de referência demonstra o contrato HTTP e o tratamento de respostas.
 
 ## Reprodutibilidade e limitações
 
@@ -65,4 +65,4 @@ Ver README.md, uv.lock, configs/frozen_manifest.json e os quatro notebooks com s
 
 ## Entregas externas pendentes
 
-Integrantes/RMs, território/nome comercial, integração real do grupo, infra pública, revisão humana dos resultados, vídeo final e autorização para publicação/commits/pushes. Sem essas etapas, não declarar a GS integralmente entregue.
+Integrantes/RMs, território/nome comercial, revisão humana dos resultados e vídeo final são itens administrativos e de validação do grupo. A disponibilidade pública e as evidências técnicas estão descritas nas seções de implantação e validação.

@@ -1,5 +1,13 @@
 # Abrir a POC1.5B treinada
 
+## Acesso público atual — 18/11/2026
+
+**[Abrir a IA na nuvem](https://laia020-citizentech-iluminacao-ia.hf.space/demo).** Modelo, API e tela executam no Hugging Face; o Mac pode permanecer desligado. Selecione um exemplo fictício ou escreva uma observação simulada. A hospedagem gratuita tem cotas/filas e pode ficar indisponível temporariamente. Dois exemplos conhecidos foram testados pela API pública, com resposta pertinente; isso não garante ausência de erros.
+
+[API pública](https://laia020-citizentech-iluminacao-ia.hf.space/docs), [validação da implantação](experimentos/v7-nuvem/docs/VALIDACAO-NUVEM.json). A ligação com o Akona dos colegas continua pendente do repositório deles.
+
+## Reprodução local opcional — não é a hospedagem da entrega
+
 O fine-tuning e a avaliação local terminaram. A versão atual usa **Qwen2.5-1.5B-Instruct + RAG + LoRA**, com adaptadorr1 selecionado.
 
 Se o serviço já estiver ativo, abra <http://127.0.0.1:8000/demo>. Para iniciá-lo após fechar o serviço ou acordar o Mac:

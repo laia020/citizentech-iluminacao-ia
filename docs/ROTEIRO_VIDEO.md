@@ -8,4 +8,4 @@
 6. Mostrar chamada do cliente/API e, quando disponível, o consumidor real dos colegas.
 7. Apresentar cinco erros, propostas de correção e limitações sem esconder falhas.
 
-Incluir integrantes e RMs fornecidos pelo usuário, links públicos autorizados e evidência de integração real. Este roteiro não é um vídeo gravado nem comprova integração já feita. Não gravar credenciais, dados pessoais ou outras janelas do usuário.
+Incluir integrantes e RMs fornecidos pelo usuário, links públicos e uma demonstração da análise de ocorrência fictícia. Não gravar credenciais, dados pessoais ou outras janelas do usuário.

@@ -6,7 +6,7 @@ Backup inicial: `/Users/lucasmanentti/.codex/backups/citizentech-implementacao-2
 
 ## Resultado local — 2026-11-12T06:06:13.759144-03:00
 
-Implementação e experimentos locais concluídos. 25 testes aprovados, 97 pacotes compatíveis, quatro notebooks executados e 360 gerações finais. API real exercitada em cinco casos, todos HTTP 200; conteúdo ainda apresenta falhas documentadas. Ver ACEITACAO.md, INTERPRETACAO.md e estado-final.json. Metas de recall e esquema não foram atingidas; revisão humana e integração externa permanecem pendentes.
+Implementação e experimentos locais concluídos. 25 testes aprovados, 97 pacotes compatíveis, quatro notebooks executados e 360 gerações finais. API real exercitada em cinco casos, todos HTTP 200; conteúdo ainda apresenta falhas documentadas. Ver ACEITACAO.md, INTERPRETACAO.md e estado-final.json. Metas de recall e esquema não foram atingidas; consulte as limitações antes de uso.
 
 Backup inicial: `/Users/lucasmanentti/.codex/backups/citizentech-implementacao-20261112-010234`. Backup documental intermediário: `/Users/lucasmanentti/.codex/backups/citizentech-finalizacao-20261112-040000`. Backup das notas do Obsidian imediatamente antes da atualização: `/Users/lucasmanentti/.codex/backups/citizentech-obsidian-20261112-060430`.
 

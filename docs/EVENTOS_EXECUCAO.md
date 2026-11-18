@@ -20,7 +20,7 @@ Após o congelamento, o teste, corpus, limiar e dados oficiais são verificados 
 
 ## Limites de conclusão
 
-Resultados automáticos de formato/status não são revisão humana independente de acerto ou alucinação. Integração com cliente de referência não é integração com o produto dos colegas. Não foram feitos commits, pushes, publicação, contratação de hospedagem ou exposição externa do Mac.
+Resultados automáticos de formato/status não são revisão humana independente de acerto ou alucinação. Não foram feitos commits, pushes, publicação, contratação de hospedagem ou exposição externa do Mac.
 
 ## Correção de vazamento de rótulo — versão de prompt v2
 

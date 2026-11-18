@@ -1,5 +1,7 @@
 # CitizenTech — treinamento e avaliação1.5B
 
+> Implantação posterior, 18/11/2026: [demonstração pública](https://laia020-citizentech-iluminacao-ia.hf.space/demo), executada no Hugging Face ZeroGPU com o mesmo adaptador r1 e backend PyTorch FP32, independente do Mac. [Validação da nuvem](../../v7-nuvem/docs/VALIDACAO-NUVEM.json): duas chamadas conhecidas adequadas na revisão pelo mesmo agente, com falha FP16 inicial preservada. Isso não reestima o placar MLX abaixo nem comprova generalização/integração. A ligação com os colegas e o link do vídeo do grupo permanecem pendentes. A Ficha Técnica comum atualizada abre o README principal.
+
 ## Ficha técnica e integrantes
 
 | Campo | Descrição |
@@ -29,7 +31,7 @@
 
 O fine-tuning local foi concluído e o adaptador **r1** foi selecionado pelos critérios de validação fixados antes das respostas de teste. Na revisão técnica por IA dos30 casos fictícios novos, C teve25 acertos semânticos,3 erros e2 incertos; a baseA teve14 acertos,15 erros e1 incerto. Houve menos alucinações observadas emC, mas o intervalo da redução frente aA inclui zero. Não declarar redução conclusiva ou ausência de alucinação. A POC executa a LLM treinada real, com erros e limitações preservados.
 
-Esta é a parte GenAI local do projeto; não representa entrega integrada de todas as disciplinas. A equipe está identificada acima e a publicação do repositório foi autorizada pelo usuário. Link do vídeo do grupo, disponibilidade pública da API e integração real com os componentes dos colegas continuam pendentes.
+Esta é a parte GenAI local do projeto; não representa entrega integrada de todas as disciplinas. A equipe está identificada acima e a publicação do repositório foi autorizada pelo usuário. A implantação posterior da API está no adendo acima; link do vídeo do grupo e integração real com os componentes dos colegas continuam pendentes.
 
 ## Modelo, ambiente e arquitetura
 
@@ -128,6 +130,7 @@ O PDF aceita dados simulados documentados e não fixa mínimo de parâmetros ou 
 O adaptador r1 melhorou o acerto na amostra sintética frente à base sem contexto e ao RAG simples. Houve menos alucinações observadas, com intervalo que inclui ausência de redução; não se conclui redução estatística de alucinação. JSON e referências válidos não bastam para garantir fundamentação. A guarda adicional limita uma incompatibilidade conhecida sem alterar esse placar original. Generalização e integração de campo permanecem não demonstradas.
 
 - Repositório: [https://github.com/laia020/citizentech-iluminacao-ia](https://github.com/laia020/citizentech-iluminacao-ia).
+- Demonstração hospedada: [abrir a IA](https://laia020-citizentech-iluminacao-ia.hf.space/demo), independente do Mac.
 - Vídeo: será utilizado o vídeo do grupo; **URL pendente de fornecimento**.
 - Reprodução: [README principal](../../../README.md), com base oficial fixada e pacote do adaptador já treinado.
 

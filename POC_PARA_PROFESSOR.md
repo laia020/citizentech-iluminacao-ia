@@ -1,5 +1,9 @@
 # POC1.5B para o professor
 
+**Versão pública atual — 18/11/2026:** abrir [a tela na nuvem](https://laia020-citizentech-iluminacao-ia.hf.space/demo). A execução usa o mesmo adaptador r1 original em backend PyTorch FP32 e independe do Mac. Há quotas/filas no hardware gratuito. A tentativa FP16 inválida foi preservada; duas chamadas conhecidas da versão FP32 passaram, sem equivaler a novo benchmark ou revisão humana. [Evidências da implantação](experimentos/v7-nuvem/docs/VALIDACAO-NUVEM.json).
+
+As instruções locais abaixo ficam para reprodução e desenvolvimento. Equipe/RMs e território demonstrativo constam no README e relatório; o vídeo do grupo poderá ser referenciado na apresentação da demonstração pública.
+
 **Modelo realmente treinado localmente; cenários fictícios.** A tela permite escolher cinco exemplos ou escrever pergunta/observações livres. Fluxo real:tela→API→busca→Qwen1.5B+LoRA→JSON/referências→tela. Não há sensor físico,sistema municipal ou componentes dos colegas conectados; os registros da tela são marcados como simulados. Não existem respostas prontas de reserva.
 
 Abrir <http://127.0.0.1:8000/demo> com o serviço ativo. Para iniciar na raiz do projeto:`.venv/bin/python scripts/servir_poc_validada.py`. Funciona apenas neste Mac acordado; publicação/URL externa é etapa distinta.
@@ -18,9 +22,7 @@ R1/400 passos eR2/800 foram treinados em8min36s e15min56s. R1 foi escolhido pela
 
 Os seis exemplos de API/POC retornaram200 com o modelo real. Quatro respostas foram plenamente adequadas nesta revisão; uma respostaADC/defeito ficou incompleta/ambígua e a pergunta de técnico teve citaçãoCPFL indevida, embora reconhecesse corretamente a ausência de documento. Não usar esses exemplos como taxa de qualidade geral nem esconder casos ruins. Evidências em `experimentos/v5-1.5b/docs/teste-poc-real.json` e `revisao-poc-conteudo.json`.
 
-A inspeção visual/interação em navegador continua pendente, após recusa anterior de aprovação automática sem contorno. A interface teve sintaxe/ASGI conferidos e as chamadas de API usaram a LLM real.39 testes de software e notebook executado não substituem avaliação factual.
-
-O PDF permite protótipo navegável/dados simulados documentados, mas mantém os artefatos de cada disciplina e produto comum/integrado. Integrantes/RMs/território,partes dos colegas,integração real,publicação e vídeo continuam pendentes. [Relatório atual](experimentos/v5-1.5b/docs/RELATORIO-1_5B.md).
+O projeto oferece uma demonstração pública com dados fictícios e uma API hospedada no Hugging Face ZeroGPU, sem dependência do Mac. A demonstração permite observar a resposta da LLM real, suas fontes e encaminhamentos. [Demonstração](https://laia020-citizentech-iluminacao-ia.hf.space/demo), [repositório](https://github.com/laia020/citizentech-iluminacao-ia) e [relatório atual](experimentos/v5-1.5b/docs/RELATORIO-1_5B.md).
 
 ## Visual Akona Energy
 

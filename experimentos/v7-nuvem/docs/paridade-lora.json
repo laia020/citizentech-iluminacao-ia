@@ -1,0 +1,140 @@
+{
+  "scope": "all 32 original selected LoRA modules; independent MLX LoRALinear reference vs PyTorch portable layer, zero base weights, fixed F16 inputs; not full model or end-to-end GPU equivalence",
+  "adapter_sha": "c905fee58cb4c0c44baeb9ac14dd9e9b7e412f280b3024c825441d018d573dce",
+  "modules": 32,
+  "all_close": true,
+  "tolerance": {
+    "rtol": 0.002,
+    "atol": 0.0001
+  },
+  "records": [
+    {
+      "module": "model.layers.12.self_attn.q_proj",
+      "max_absolute_error": 3.0517578125e-05
+    },
+    {
+      "module": "model.layers.12.self_attn.v_proj",
+      "max_absolute_error": 3.0517578125e-05
+    },
+    {
+      "module": "model.layers.13.self_attn.q_proj",
+      "max_absolute_error": 3.0517578125e-05
+    },
+    {
+      "module": "model.layers.13.self_attn.v_proj",
+      "max_absolute_error": 4.76837158203125e-07
+    },
+    {
+      "module": "model.layers.14.self_attn.q_proj",
+      "max_absolute_error": 3.0517578125e-05
+    },
+    {
+      "module": "model.layers.14.self_attn.v_proj",
+      "max_absolute_error": 0.0
+    },
+    {
+      "module": "model.layers.15.self_attn.q_proj",
+      "max_absolute_error": 3.0517578125e-05
+    },
+    {
+      "module": "model.layers.15.self_attn.v_proj",
+      "max_absolute_error": 7.62939453125e-06
+    },
+    {
+      "module": "model.layers.16.self_attn.q_proj",
+      "max_absolute_error": 1.52587890625e-05
+    },
+    {
+      "module": "model.layers.16.self_attn.v_proj",
+      "max_absolute_error": 7.62939453125e-06
+    },
+    {
+      "module": "model.layers.17.self_attn.q_proj",
+      "max_absolute_error": 3.0517578125e-05
+    },
+    {
+      "module": "model.layers.17.self_attn.v_proj",
+      "max_absolute_error": 0.0
+    },
+    {
+      "module": "model.layers.18.self_attn.q_proj",
+      "max_absolute_error": 3.0517578125e-05
+    },
+    {
+      "module": "model.layers.18.self_attn.v_proj",
+      "max_absolute_error": 7.62939453125e-06
+    },
+    {
+      "module": "model.layers.19.self_attn.q_proj",
+      "max_absolute_error": 3.0517578125e-05
+    },
+    {
+      "module": "model.layers.19.self_attn.v_proj",
+      "max_absolute_error": 1.52587890625e-05
+    },
+    {
+      "module": "model.layers.20.self_attn.q_proj",
+      "max_absolute_error": 0.0001220703125
+    },
+    {
+      "module": "model.layers.20.self_attn.v_proj",
+      "max_absolute_error": 5.960464477539063e-08
+    },
+    {
+      "module": "model.layers.21.self_attn.q_proj",
+      "max_absolute_error": 3.0517578125e-05
+    },
+    {
+      "module": "model.layers.21.self_attn.v_proj",
+      "max_absolute_error": 9.5367431640625e-07
+    },
+    {
+      "module": "model.layers.22.self_attn.q_proj",
+      "max_absolute_error": 1.52587890625e-05
+    },
+    {
+      "module": "model.layers.22.self_attn.v_proj",
+      "max_absolute_error": 9.5367431640625e-07
+    },
+    {
+      "module": "model.layers.23.self_attn.q_proj",
+      "max_absolute_error": 3.0517578125e-05
+    },
+    {
+      "module": "model.layers.23.self_attn.v_proj",
+      "max_absolute_error": 1.9073486328125e-06
+    },
+    {
+      "module": "model.layers.24.self_attn.q_proj",
+      "max_absolute_error": 6.103515625e-05
+    },
+    {
+      "module": "model.layers.24.self_attn.v_proj",
+      "max_absolute_error": 3.0517578125e-05
+    },
+    {
+      "module": "model.layers.25.self_attn.q_proj",
+      "max_absolute_error": 1.52587890625e-05
+    },
+    {
+      "module": "model.layers.25.self_attn.v_proj",
+      "max_absolute_error": 1.52587890625e-05
+    },
+    {
+      "module": "model.layers.26.self_attn.q_proj",
+      "max_absolute_error": 7.62939453125e-06
+    },
+    {
+      "module": "model.layers.26.self_attn.v_proj",
+      "max_absolute_error": 1.9073486328125e-06
+    },
+    {
+      "module": "model.layers.27.self_attn.q_proj",
+      "max_absolute_error": 7.62939453125e-06
+    },
+    {
+      "module": "model.layers.27.self_attn.v_proj",
+      "max_absolute_error": 3.814697265625e-06
+    }
+  ]
+}

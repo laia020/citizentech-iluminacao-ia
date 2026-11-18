@@ -4,7 +4,7 @@ Salvo em 2026-11-12T06:06:13.759144-03:00.
 
 Código, dados, modelos, adaptadores, relatórios e quatro notebooks foram salvos. Os experimentos terminaram e a procedência foi conferida por hash. Não há tarefas pesadas ou servidor deste projeto em andamento.
 
-**O componente local está implementado; a qualidade ainda requer novo ciclo e revisão.** As metas de recall@3 (82,5% frente a 90%) e esquema (93,3% frente a 95%) não foram atingidas. HTTP 200 nos cinco casos da API não prova acerto de conteúdo. Integração real do grupo, revisão humana, integrantes/RMs, vídeo e publicação estão pendentes.
+**O componente local está implementado; a qualidade requer revisão cuidadosa.** As metas de recall@3 (82,5% frente a 90%) e esquema (93,3% frente a 95%) não foram atingidas. HTTP 200 nos cinco casos da API não prova acerto de conteúdo. A aplicação oferece interface web, API pública e exemplos fictícios.
 
 Abra COMECAR_AQUI.md na raiz para usar a demonstração após acordar o Mac. O serviço local fica indisponível durante o repouso.
 

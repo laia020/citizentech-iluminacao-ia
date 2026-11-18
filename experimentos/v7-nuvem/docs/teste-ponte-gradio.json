@@ -1,0 +1,29 @@
+{
+  "scope": "temporary development transport test with explicit synthetic test double; no real LLM and no public tunnel",
+  "http_status": 200,
+  "response": {
+    "request_id": "8fa17a35-9b19-469e-bb04-a637ee37eef9",
+    "ocorrencia_id": "fixture",
+    "analise": {
+      "status": "informacao_insuficiente",
+      "resumo": "Teste de transporte, não inferência.",
+      "hipoteses": [],
+      "informacoes_faltantes": [
+        "Dados fictícios."
+      ],
+      "encaminhamento": "Revisão humana.",
+      "fontes": []
+    },
+    "referencias": [],
+    "execucao": {
+      "modo": "rag_finetuning",
+      "modelo": "synthetic-test-double",
+      "revisao_modelo": "fixture",
+      "adaptador": "fixture",
+      "versao_base": "fixture",
+      "duracao_ms": 0
+    }
+  },
+  "demo_http": 200,
+  "temporary_server_stopped": true
+}

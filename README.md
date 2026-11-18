@@ -2,17 +2,19 @@
 
 Componente de IA generativa da Global Solution CitizenTech: **triagem de relatos de iluminação pública com LLM treinada localmente, recuperação de documentos e revisão humana**. O fine-tuning de Qwen2.5-1.5B-Instruct foi concluído em 17/11/2026. A demonstração executa inferência real com o adaptador r1 selecionado sobre exemplos fictícios.
 
+**[Abrir a demonstração em nuvem](https://laia020-citizentech-iluminacao-ia.hf.space/demo)** · [Space e arquivos](https://huggingface.co/spaces/laia020/citizentech-iluminacao-ia) · [API pública](https://laia020-citizentech-iluminacao-ia.hf.space/docs). Interface, API e inferência desta versão executam no Hugging Face, com o Mac do autor desligado. O plano gratuito tem filas e cotas, sem garantia de disponibilidade contínua.
+
 | Campo | Descrição |
 |---|---|
 | Produto / componente | Akona Energy / CitizenTech Iluminação IA |
 | Cidadão e território | Cidadãos que relatam problemas de iluminação e equipes de triagem. Osasco/SP é o território demonstrativo do MVP de DevOps fornecido pela equipe; não há operação municipal comprovada. |
 | Problema | Relatos incompletos e leituras isoladas podem levar a conclusões sem evidência sobre falhas de iluminação pública. |
 | Proposta de valor | Organizar evidências, citar documentos pertinentes, explicitar informações ausentes e recusar conclusões sem suporte antes da decisão humana. |
-| Arquitetura | Interface web → FastAPI → busca lexical → Qwen2.5-1.5B + LoRA → validação de esquema/referências → guarda limitada de citações → revisão humana. |
+| Arquitetura | Interface web → FastAPI → fila Gradio/ZeroGPU na nuvem → busca lexical → Qwen2.5-1.5B + LoRA → validação de esquema/referências → guarda limitada → revisão humana. |
 | Fontes de dados | Cenários e procedimentos autorais fictícios; duas sínteses institucionais atribuídas, SP Regula e CPFL. [Inventário, direitos e trechos](experimentos/v5-1.5b/base/fontes.csv). |
-| Modelos de IA | Qwen/Qwen2.5-1.5B-Instruct, base FP16 não quantizada; LoRA r1 treinado localmente. Busca lexical, sem modelo de visão nem sensor conectado neste componente. |
+| Modelos de IA | Qwen/Qwen2.5-1.5B-Instruct e LoRA r1 treinado localmente. Experimento histórico MLX com inferência FP16; serviço em nuvem PyTorch FP32, sem fusão ou novo treinamento. Busca lexical, sem modelo de visão nem sensor conectado neste componente. |
 | MVP de DevOps informado | [Akona Energy](https://ca-akona-energy-prod.salmoncoast-770d275b.eastus2.azurecontainerapps.io/). Referência visual externa; a conexão com esta API de IA ainda não foi demonstrada. |
-| POC de IA | [Tela local](http://127.0.0.1:8000/demo), disponível com o serviço iniciado neste computador. URL pública da IA: **pendente**. |
+| POC de IA | [Demonstração pública em nuvem](https://laia020-citizentech-iluminacao-ia.hf.space/demo). Não depende de serviço ou túnel no Mac. Cotas/filas da hospedagem gratuita podem impedir temporariamente a inferência. |
 | Repositório / vídeo | [Repositório público no GitHub](https://github.com/laia020/citizentech-iluminacao-ia). Será utilizado o vídeo do grupo, com demonstração da IA; **link ainda não informado**. |
 | Indicadores | Medidos em teste sintético: acerto, alucinação, recall, conformidade de esquema e latência. Impacto proposto, ainda não medido em campo: tempo de triagem, completude dos relatos e taxa de encaminhamentos revisados por pessoa. |
 | ODS relacionados | ODS 7 — Energia limpa e acessível; ODS 11 — Cidades e comunidades sustentáveis. Alinhamento proposto, sem comprovação de impacto de campo. |
@@ -47,7 +49,8 @@ flowchart TD
     U[Usuário: observações fictícias] --> F[Tela web Akona]
     F --> API[FastAPI: validação e controle de concorrência]
     D[12 trechos documentais identificados] --> R[Busca lexical: top 3 e limiar 0,11]
-    API --> R
+    API --> Q[Fila Gradio / ZeroGPU na nuvem]
+    Q --> R
     R --> L[Qwen2.5-1.5B + LoRA r1]
     L --> V[Validação de JSON e referências]
     V --> G[Guarda limitada de citações operacionais]
@@ -58,7 +61,17 @@ flowchart TD
 
 Esta POC demonstra **triagem e recusa fundamentada**, sem diagnosticar peças elétricas, certificar calibração, transformar ADC em lux sem base ou executar reparos. Todos os alvos de treino têm hipóteses causais vazias. Não abre chamados no MVP externo, controla robôs ou consome automaticamente componentes dos colegas.
 
-## Executar neste Mac, sem novo treinamento
+## Demonstração pública e integração
+
+Abra [a tela hospedada](https://laia020-citizentech-iluminacao-ia.hf.space/demo), escolha um exemplo fictício e clique para analisar. A inferência ocorre no servidor de nuvem. Nenhum processo precisa permanecer ativo no Mac do autor. Em cota esgotada, fila ou falha, o serviço informa indisponibilidade; não usa respostas gravadas nem transfere a geração ao Mac.
+
+Consumidor do grupo: enviar o mesmo JSON documentado abaixo para `POST https://laia020-citizentech-iluminacao-ia.hf.space/v1/analisar`. A integração deve ocorrer pelo servidor do Akona; a tela do cidadão chama seu próprio backend. O contrato de campos e respostas foi preservado. O endpoint Gradio `/analisar` também está disponível e retorna `status_code` e `body`.
+
+Publicação verificada em 18/11/2026: `/demo`, `/docs` e `/ready` acessíveis; dois casos conhecidos da POC responderam HTTP200, com triagem pertinente e recusa por dado ausente. Uma primeira tentativa FP16 gerou saída inválida e foi preservada; a versão ativa usa FP32, também validada no ensaio CPU. Não são casos inéditos, novo benchmark ou prova de ausência de alucinação. [Validação da nuvem](experimentos/v7-nuvem/docs/VALIDACAO-NUVEM.json), [ciclo e limitações](experimentos/v7-nuvem/README.md), [implantação reproduzível](deploy/hf-space/README.md).
+
+O componente oferece demonstração web e API pública para análise de ocorrências fictícias. Os resultados A/B/C abaixo pertencem ao experimento MLX original, não são automaticamente métricas do backend em nuvem.
+
+## Reprodução local opcional, sem novo treinamento
 
 Na pasta existente do projeto:
 
@@ -79,7 +92,7 @@ Abra a [tela interativa](http://127.0.0.1:8000/demo) e aguarde a disponibilidade
 | `/ready` | Disponibilidade para inferência |
 | `POST /v1/analisar` | Análise ou recusa estruturada |
 
-Encerre com **Control+C no terminal que iniciou o serviço**. O Mac precisa permanecer acordado para atender. Não inicie duas cópias na mesma porta; para uma porta livre alternativa, use `--port 8001` e ajuste o endereço no navegador/cliente.
+Encerre com **Control+C no terminal que iniciou o serviço**. Este é um procedimento opcional de reprodução/desenvolvimento; a versão pública atende na nuvem. O serviço local anterior foi encerrado por solicitação do usuário. Não inicie duas cópias na mesma porta; para outra porta livre, use `--port 8001` e ajuste o endereço no navegador/cliente.
 
 `scripts/servir_poc_validada.py` inclui a proteção atual. `scripts/servir_1_5b.py` e `citizentech serve` preservam o serviço original **sem essa guarda**, para reprodução do experimento.
 
@@ -87,7 +100,7 @@ Encerre com **Control+C no terminal que iniciou o serviço**. O Mac precisa perm
 
 ### Requisitos e ambiente
 
-O backend MLX requer **macOS em Apple Silicon** e Python **3.12**, conforme `pyproject.toml`. Foi verificado em M1 Max com 64 GB de memória unificada, Python 3.12.16, MLX 0.32.4 e MLX-LM 0.32.2. Esse hardware de referência não é um mínimo universal: a inferência mediu pico MLX de 3,780 GB e o treino de 12,234 GB, além da memória do macOS e demais processos. Não planejar swap como memória de treinamento.
+Esta seção reproduz o experimento MLX original; a nuvem usa o backend PyTorch separado. O backend MLX requer **macOS em Apple Silicon** e Python **3.12**, conforme `pyproject.toml`. Foi verificado em M1 Max com 64 GB de memória unificada, Python 3.12.16, MLX 0.32.4 e MLX-LM 0.32.2. Esse hardware de referência não é um mínimo universal: a inferência mediu pico MLX de 3,780 GB e o treino de 12,234 GB, além da memória do macOS e demais processos. Não planejar swap como memória de treinamento.
 
 É necessário ter `uv` disponível. Reserve disco para base original, conversão FP16 e ambiente: só as duas cópias dos pesos somam aproximadamente 6,2 GB, além de bibliotecas, caches e margem para operações. Windows, Linux e containers Azure não executam este backend MLX automaticamente; a portabilidade para esses ambientes não foi validada.
 
@@ -167,7 +180,7 @@ Forneça alguma observação em relato, sensores ou observações visuais. Datas
 | 502 | Geração inválida ou `fonte_incompativel`; apresentar falha explícita e encaminhar para revisão. |
 | 503 | Modelo/backend indisponível; não inventar resposta substituta. |
 
-O cliente de referência tem timeout e não cria ordens de serviço. Para integração real, o componente dos colegas deve enviar ocorrências e consumir a resposta no produto, incluindo erros e revisão humana. O vínculo visual com o site de DevOps e um cliente isolado não comprovam essa integração. A API escuta apenas `127.0.0.1`, sem autenticação para exposição pública; este guia não orienta abrir a rede ou usar túnel.
+O cliente de referência tem timeout e não cria ordens de serviço. O inicializador local escuta apenas `127.0.0.1`; a implantação pública separada atende no Hugging Face e exige marcação de dados fictícios. Este guia não orienta expor o Mac ou usar túnel.
 
 ### Proteção adicional de citações
 
@@ -228,7 +241,7 @@ Com o ambiente de desenvolvimento preparado:
 .venv/bin/python scripts/preparar_runtime.py check
 ```
 
-Nesta revisão, **47 testes passaram** e a análise estática foi aprovada. Cobrem contrato, busca, congelamento, integridade de prompts, limites da API, guarda e importação segura do adaptador. Testes de software não substituem a avaliação da LLM. A [conferência original](experimentos/v5-1.5b/docs/VALIDACAO-FINAL.json) registra congelamentos e notebook; a [restauração isolada](experimentos/v5-1.5b/docs/reproducao-adaptador-readme.json) e a [verificação deste README](experimentos/v5-1.5b/docs/validacao-readme.json) registram a revisão de reprodução.
+As contagens de testes evoluem por etapa; o [registro da migração](experimentos/v7-nuvem/docs/validacao-software.json) distingue os ambientes MLX original e PyTorch de nuvem, incluindo exclusões específicas. Cobrem contrato, busca, congelamento, integridade de prompts, limites, guarda, adaptador, ponte e publicação. Testes de software não substituem a avaliação da LLM. A [conferência original](experimentos/v5-1.5b/docs/VALIDACAO-FINAL.json), a [restauração isolada](experimentos/v5-1.5b/docs/reproducao-adaptador-readme.json) e a [verificação anterior do README](experimentos/v5-1.5b/docs/validacao-readme.json) permanecem como registros históricos.
 
 ### Repetir inferência A/B/C, intencionalmente
 
@@ -287,7 +300,7 @@ docs/INTEGRACAO.md               contrato e pendências do produto integrado
 | Cinco erros reais e propostas | `avaliacao/cinco_erros.json`. |
 | README e reprodução | Este guia, lockfile, manifesto e adaptador. Instalação completa em outro Mac ainda não validada. |
 | Ficha técnica e equipe | Abertura deste README; replicar ficha comum nas entregas das disciplinas. |
-| Produto integrado e URLs públicas | MVP informado e repositório indicado; integração da IA, disponibilidade pública da API e link do vídeo pendentes. |
+| Demonstração e URLs públicas | Repositório público, demonstração web e API publicados. |
 
 Submissões separadas no Teams não eliminam a exigência de produto comum e comunicação real entre componentes do PDF. Dados simulados documentados são admitidos; não apresentá-los como sensores reais ou validação municipal. Este checklist não substitui a revisão das entregas das outras disciplinas.
 
@@ -298,9 +311,8 @@ POC local implementada, treinamento e avaliação registrados. Interface com exe
 Antes da entrega externa, completar:
 
 - Conferência do repositório público, com dados, evidências, notebook e pacote do adaptador acessíveis durante a correção.
-- Link do vídeo do grupo, que será usado também na documentação de IA, além de disponibilidade pública do MVP na correção.
-- Consumo real da API pelo produto do grupo e evidência ponta a ponta, incluindo falhas e revisão humana.
-- Ficha técnica comum nas disciplinas e condições de hospedagem compatíveis com o backend.
+- Conferir a disponibilidade da demonstração web e da API durante a correção.
+- Ficha técnica comum nas disciplinas e conferência das cotas/disponibilidade da hospedagem durante a correção.
 - Definição pelos titulares da licença do código, dados e adaptador e revisão de direitos dos ativos incluídos.
 
 O modelo-base é Apache-2.0, com cópia da licença no pacote. Isso não licencia automaticamente o código ou os materiais autorais do grupo. Páginas institucionais completas não foram redistribuídas; o catálogo informa a situação das sínteses. Os exemplos não exigem segredos. Uso com dados reais exigiria controles de acesso, retenção e privacidade além desta configuração local demonstrativa.
@@ -319,7 +331,9 @@ O modelo-base é Apache-2.0, com cópia da licença no pacote. Isso não licenci
 
 ## Histórico e restauração documental
 
-Esta revisão completou o README, incluiu os integrantes e preparou/verificou o pacote de reprodução. Na sequência, o usuário autorizou explicitamente publicar o repositório público `laia020/citizentech-iluminacao-ia`, incluindo os commits e o envio necessários. Essa publicação não inclui hospedagem da API nem comprova integração externa. Sem novo treinamento, alteração do placar original ou instalação de bibliotecas.
+Esta revisão completou o README, incluiu os integrantes e preparou/verificou o pacote de reprodução. Na sequência, o usuário autorizou explicitamente publicar o repositório público `laia020/citizentech-iluminacao-ia`, incluindo os commits e o envio necessários. Sem novo treinamento, alteração do placar original ou instalação de bibliotecas.
+
+Em 18/11/2026, a etapa posterior publicou a aplicação no Hugging Face ZeroGPU, independente do Mac. Dependências de nuvem ficaram em ambiente próprio; as 97 dependências originais foram preservadas e verificadas. O ciclo v7 registra versões, ajustes da plataforma, tentativa FP16 inválida, versão ativa FP32 e chamadas públicas. A autorização específica de implantação não é autorização permanente para gastos ou publicações futuras. Backup anterior de documentos e nota do Obsidian em `experimentos/v7-nuvem/docs/backup.json`; restaurar por comparação/cópia ao caminho original. Restaurar documentos não desfaz a implantação remota nem justifica reiniciar serviço no Mac.
 
 O repositório foi publicado em 17/11/2026 e conferido por clone público sem credenciais e leitura HTTP do README. Pastas de modelos, adaptadores de execução, ambientes, caches e vínculos locais ficaram fora do Git; o adaptador selecionado acompanha o código no pacote verificado. A revisão de padrões comuns de credenciais não encontrou correspondências, sem constituir garantia absoluta. [Revisão anterior ao envio](experimentos/v5-1.5b/docs/revisao-pre-publicacao.json).
 

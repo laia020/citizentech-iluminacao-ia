@@ -1,6 +1,6 @@
 # Estado de aceitação local — 12/11/2026
 
-**Implementação e experimentos locais concluídos. Metas de qualidade ainda não atingidas; revisão e integração externa pendentes.** Este registro não declara a GS integralmente entregue nem o modelo pronto para decisões autônomas.
+**Implementação e experimentos locais concluídos. Metas de qualidade ainda não atingidas; interpretar resultados conforme limitações documentadas.** Este registro resume os experimentos locais de 12/11/2026; a implantação pública está descrita no README e nos registros da nuvem.
 
 | Requisito | Evidência real | Estado / limite |
 |---|---|---|
@@ -12,8 +12,8 @@
 | AC-06 — comparação | avaliacao/placar.json, respostas/, notebook 04, INTERPRETACAO.md | A/B/C completos nos mesmos 120 casos; ganhos globais e regressões por categoria documentados |
 | AC-07 — cinco erros | avaliacao/cinco_erros.json e docs/CINCO_ERROS.md | Cinco falhas reais de famílias diferentes; seleção concentrada em respondíveis, sem representar todos os tipos de erro |
 | AC-08 — reprodução | README, uv.lock, scripts, quatro notebooks com saídas | Validado neste Mac; testes não baixam modelos; pesos locais preservados e não publicados |
-| AC-09 — API | OpenAPI, cliente, demo, docs/validacao-api-real.json | 5 casos ASGI com modelo real, health/ready e HTTP 200; integração real do grupo pendente; verificação visual bloqueada por permissão |
-| AC-10 — relatório e publicação | Relatório, roteiro e notebooks | Integrantes/RMs, vídeo gravado, revisão final, repo/MVP público e autorizações de publicação pendentes |
+| AC-09 — API | OpenAPI, cliente, demo, docs/validacao-api-real.json | 5 casos ASGI com modelo real, health/ready e HTTP 200; verificação visual bloqueada por permissão |
+| AC-10 — relatório e publicação | Relatório, roteiro e notebooks | Integrantes/RMs informados; repositório e MVP públicos; vídeo do grupo destinado à apresentação |
 
 ## Software e execução real
 

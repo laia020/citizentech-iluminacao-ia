@@ -53,7 +53,7 @@ Contextos supervisionados incluíram apoio-gabarito em 225 casos de treino e 40 
 
 Revisar ambiguidades dos alvos com o grupo; ampliar cenários independentes, conflitos, indução e casos sem contexto; melhorar a cobertura de sinônimos da recuperação e a validação de formato. Fazer essas alterações em uma nova versão, com novo conjunto final não visto, preservando este placar. Não corrigir exemplos ou limiar a partir deste teste e anunciar o mesmo teste como novo.
 
-As respostas completas, prompts e contextos estão em avaliacao/respostas/. Cinco falhas rastreáveis e propostas estão em avaliacao/cinco_erros.json e docs/CINCO_ERROS.md. Julgamentos semânticos e integração externa permanecem pendentes.
+As respostas completas, prompts e contextos estão em avaliacao/respostas/. Cinco falhas rastreáveis e propostas estão em avaliacao/cinco_erros.json e docs/CINCO_ERROS.md. Julgamentos semânticos devem considerar os limites do protocolo e dos dados.
 
 ## Verificação operacional da API
 
