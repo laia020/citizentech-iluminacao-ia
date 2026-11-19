@@ -15,7 +15,7 @@ def publish(bundle, repo_id, expected_revision=None):
         path = bundle / name
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
             raise ValueError("Pacote alterado após preparação; preparar novo pacote.")
-    actual_files = {str(p.relative_to(bundle)) for p in bundle.rglob("*") if p.is_file()}
+    actual_files = {p.relative_to(bundle).as_posix() for p in bundle.rglob("*") if p.is_file()}
     if actual_files != set(manifest) | {"bundle-manifest.json"}:
         raise ValueError("Pacote contém arquivos não verificados.")
     api = HfApi()

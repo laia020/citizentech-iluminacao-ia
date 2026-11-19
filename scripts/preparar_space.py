@@ -33,17 +33,17 @@ def build_bundle(root, destination):
         shutil.copytree(root / "experimentos/v5-1.5b" / name, experiment / name)
     (experiment / "avaliacao").mkdir()
     shutil.copy2(root / "experimentos/v5-1.5b/avaliacao/test.jsonl", experiment / "avaliacao/test.jsonl")
-    page = (root / "src/citizentech_ia/v5/demo.html").read_text()
+    page = (root / "src/citizentech_ia/v5/demo.html").read_text(encoding="utf-8")
     page = page.replace("serviço local", "serviço em nuvem").replace("modelo local", "modelo em nuvem")
     page = page.replace("IA local", "IA em nuvem").replace("API local", "API em nuvem")
     page = page.replace("Modelo local", "Modelo em nuvem").replace("tela local", "tela de demonstração")
     page = page.replace("Somente neste Mac", "Execução na nuvem")
-    (destination / "cloud-demo.html").write_text(page)
+    (destination / "cloud-demo.html").write_text(page, encoding="utf-8")
     hashes = {}
     for p in sorted(destination.rglob("*")):
         if p.is_file():
             with p.open("rb") as stream:
-                hashes[str(p.relative_to(destination))] = hashlib.file_digest(stream, "sha256").hexdigest()
+                hashes[p.relative_to(destination).as_posix()] = hashlib.file_digest(stream, "sha256").hexdigest()
     (destination / "bundle-manifest.json").write_text(json.dumps(hashes, indent=2))
     return {"path": str(destination), "files": len(hashes), "sha256": hashes,
             "adapter_sha": load_adapter(destination)[2]["adapter_sha"]}

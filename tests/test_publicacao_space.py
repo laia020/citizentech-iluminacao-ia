@@ -11,8 +11,11 @@ from scripts.publicar_space import publish
 
 def bundle(tmp_path):
     (tmp_path / "app.py").write_text("# fixture")
-    digest = hashlib.sha256((tmp_path / "app.py").read_bytes()).hexdigest()
-    (tmp_path / "bundle-manifest.json").write_text(json.dumps({"app.py": digest}))
+    (tmp_path / "src").mkdir()
+    (tmp_path / "src/rpa.html").write_text("<h1>RPA</h1>", encoding="utf-8")
+    manifest = {name: hashlib.sha256((tmp_path / name).read_bytes()).hexdigest()
+                for name in ["app.py", "src/rpa.html"]}
+    (tmp_path / "bundle-manifest.json").write_text(json.dumps(manifest))
     return tmp_path
 
 

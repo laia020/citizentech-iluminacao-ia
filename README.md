@@ -33,6 +33,7 @@ Integrantes informados pelo grupo para esta entrega:
 
 ## Navegação e entrega
 
+- [Página de RPA: evidências e roteiro de apresentação](docs/PAGINA-RPA.md). A nova rota `/rpa` está preparada no código; sua disponibilidade pública depende da publicação do pacote atualizado no Space.
 - [Começar a demonstração](COMECAR_AQUI.md) e [roteiro para o professor](POC_PARA_PROFESSOR.md).
 - [Relatório técnico atual](experimentos/v5-1.5b/docs/RELATORIO-1_5B.md) e [notebook executado](experimentos/v5-1.5b/notebooks/06_treinamento_e_avaliacao_1_5b.ipynb).
 - [Placar A/B/C](experimentos/v5-1.5b/avaliacao/placar.json), [respostas brutas](experimentos/v5-1.5b/avaliacao/evidencias/) e [cinco erros com propostas](experimentos/v5-1.5b/avaliacao/cinco_erros.json).

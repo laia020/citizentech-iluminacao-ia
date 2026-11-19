@@ -11,6 +11,7 @@ from fastapi.responses import HTMLResponse, JSONResponse
 from starlette.concurrency import run_in_threadpool
 
 from .inference import ContextOverflow, InvalidGeneration
+from .rpa import router as rpa_router
 from .schemas import AnalysisResponse, ErrorResponse, Occurrence
 
 logger = logging.getLogger("citizentech.api")
@@ -27,6 +28,7 @@ def create_app(analyzer=None, demo_path=None):
                 await run_in_threadpool(current.close)
 
     app = FastAPI(title="CitizenTech Iluminação IA", version="1.0.0", lifespan=lifespan)
+    app.include_router(rpa_router)
     app.state.analyzer = analyzer
     app.state.busy = False
 

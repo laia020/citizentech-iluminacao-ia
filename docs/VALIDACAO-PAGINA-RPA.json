@@ -1,0 +1,88 @@
+{
+  "verificado_em": "2026-11-19T04:59:48.885745+00:00",
+  "estado": "implementacao_local_validada_publicacao_pendente",
+  "rota": "GET /rpa",
+  "navegacao": "/demo -> /rpa -> /demo",
+  "origem_rpa": {
+    "revisao": "68c69091d9b74afc365573fc3577428f077900de",
+    "run_id": 44327757282,
+    "arquivos_existentes_preservados": true
+  },
+  "testes": {
+    "comando": "python -X utf8 -m pytest --ignore=tests/test_treino_estavel.py -q",
+    "aprovados": 60,
+    "pulados": 1,
+    "motivo_pulado": "test_nuvem_torch.py: PyTorch ausente no ambiente de interface",
+    "modulos_excluidos": [
+      "tests/test_treino_estavel.py"
+    ],
+    "motivo_exclusao": "MLX exige macOS; ambiente atual Windows, sem treinamento ou alteracao do modelo."
+  },
+  "conferencias": [
+    "Contagens e IDs de cada linha comparados com resumo.json e resultados.json originais.",
+    "Acesso sem prontidao do modelo e com fila ocupada; inferencia simulada nao chamada.",
+    "Rota disponivel na aplicacao de desenvolvimento e no proxy de nuvem.",
+    "Referencias HTML/ARIA e links fixados em revisao.",
+    "Pacote real: adaptador original e congelamento verificados; hashes POSIX conferidos."
+  ],
+  "navegador": {
+    "revisao_visual_concluida": false,
+    "motivo": "Computer Use interrompeu o controle do Brave por nao conseguir confirmar a URL com seguranca.",
+    "desktop_visual_pendente": true,
+    "celular_visual_pendente": true
+  },
+  "links_publicos": [
+    {
+      "url": "https://github.com/laia020/citizentech-rpa",
+      "http_status": 200
+    },
+    {
+      "url": "https://github.com/laia020/citizentech-rpa/actions/runs/44327757282",
+      "http_status": 200
+    },
+    {
+      "url": "https://github.com/laia020/citizentech-rpa/blob/68c69091d9b74afc365573fc3577428f077900de/docs/evidencias/nuvem-real/auditoria.jsonl",
+      "http_status": 200
+    },
+    {
+      "url": "https://github.com/laia020/citizentech-rpa/blob/68c69091d9b74afc365573fc3577428f077900de/docs/evidencias/nuvem-real/github-run.json",
+      "http_status": 200
+    },
+    {
+      "url": "https://github.com/laia020/citizentech-rpa/blob/68c69091d9b74afc365573fc3577428f077900de/docs/evidencias/nuvem-real/pendencias.json",
+      "http_status": 200
+    },
+    {
+      "url": "https://github.com/laia020/citizentech-rpa/blob/68c69091d9b74afc365573fc3577428f077900de/docs/evidencias/nuvem-real/resultados.json",
+      "http_status": 200
+    },
+    {
+      "url": "https://github.com/laia020/citizentech-rpa/blob/68c69091d9b74afc365573fc3577428f077900de/docs/evidencias/nuvem-real/resumo.json",
+      "http_status": 200
+    },
+    {
+      "url": "https://github.com/laia020/citizentech-rpa/blob/68c69091d9b74afc365573fc3577428f077900de/docs/evidencias/real-indisponibilidade/auditoria.jsonl",
+      "http_status": 200
+    },
+    {
+      "url": "https://github.com/laia020/citizentech-rpa/blob/68c69091d9b74afc365573fc3577428f077900de/docs/evidencias/real-indisponibilidade/resumo.json",
+      "http_status": 200
+    },
+    {
+      "url": "https://github.com/laia020/citizentech-rpa/blob/68c69091d9b74afc365573fc3577428f077900de/output/pdf/relatorio-tecnico-rpa.pdf",
+      "http_status": 200
+    }
+  ],
+  "pacote": {
+    "diretorio": "runs/pagina-rpa-20261119-015944/space",
+    "arquivos": 89,
+    "manifesto_sha256": "c109ce2c697a274521f78d2a370ee6b19973187b0ee197d979a0a63d9c6d6b0a",
+    "zip": "runs/pagina-rpa-20261119-015944/space-rpa-verificado.zip",
+    "zip_sha256": "849c90a3477def4f3bf16d93b1960d5c2bd3305d7a04939f5f213a975af3ee1d",
+    "adaptador_sha256": "c905fee58cb4c0c44baeb9ac14dd9e9b7e412f280b3024c825441d018d573dce"
+  },
+  "novas_chamadas_a_ia_publica": 0,
+  "commit_realizado": false,
+  "push_realizado": false,
+  "space_atualizado": false
+}

@@ -9,6 +9,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from starlette.concurrency import run_in_threadpool
 
+from ..rpa import router as rpa_router
 from ..schemas import AnalysisResponse, ErrorResponse, Occurrence
 
 logger = logging.getLogger("citizentech.cloud")
@@ -16,6 +17,7 @@ logger = logging.getLogger("citizentech.cloud")
 
 def create_proxy_app(predict, ready, page):
     app = FastAPI(title="CitizenTech Iluminação IA — nuvem", version="1.0.0")
+    app.include_router(rpa_router)
     app.state.busy = False
 
     def error(request, status, code, message, headers=None):
@@ -46,7 +48,7 @@ def create_proxy_app(predict, ready, page):
 
     @app.get("/demo", response_class=HTMLResponse)
     def demo():
-        return Path(page).read_text()
+        return Path(page).read_text(encoding="utf-8")
 
     @app.get("/health")
     def health():
