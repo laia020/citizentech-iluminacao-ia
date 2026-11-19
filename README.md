@@ -33,7 +33,7 @@ Integrantes informados pelo grupo para esta entrega:
 
 ## Navegação e entrega
 
-- [Abrir a página pública de RPA](https://laia020-citizentech-iluminacao-ia.hf.space/rpa): fluxo, resultados e evidências históricas, sem executar outro lote. [Roteiro de apresentação](docs/PAGINA-RPA.md) e [publicação verificada](docs/PUBLICACAO-PAGINA-RPA.json).
+- [Abrir a página pública de RPA](https://laia020-citizentech-iluminacao-ia.hf.space/rpa): fluxo, resultados e evidências históricas, sem executar outro lote. [Apresentação guiada](https://laia020-citizentech-iluminacao-ia.hf.space/rpa#apresentacao), [roteiro de apresentação](docs/PAGINA-RPA.md), [publicação inicial](docs/PUBLICACAO-PAGINA-RPA.json) e [validação do modo guiado](docs/APRESENTACAO-GUIADA-RPA.json).
 - [Começar a demonstração](COMECAR_AQUI.md) e [roteiro para o professor](POC_PARA_PROFESSOR.md).
 - [Relatório técnico atual](experimentos/v5-1.5b/docs/RELATORIO-1_5B.md) e [notebook executado](experimentos/v5-1.5b/notebooks/06_treinamento_e_avaliacao_1_5b.ipynb).
 - [Placar A/B/C](experimentos/v5-1.5b/avaliacao/placar.json), [respostas brutas](experimentos/v5-1.5b/avaliacao/evidencias/) e [cinco erros com propostas](experimentos/v5-1.5b/avaliacao/cinco_erros.json).

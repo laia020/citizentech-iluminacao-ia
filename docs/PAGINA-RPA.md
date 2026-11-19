@@ -2,6 +2,14 @@
 
 A rota `GET /rpa` apresenta a execução histórica do RPA com dados fictícios, no mesmo site da demonstração de IA. O menu de `/demo` permite abrir a página e há navegação de retorno. Esta alteração não executa lotes, inicia inferência, altera pesos ou modifica o contrato de `POST /v1/analisar`.
 
+## Usar a apresentação guiada
+
+Abra `/rpa#apresentacao` e clique em **Iniciar apresentação**. Os controles **Anterior**, **Próxima etapa** e os nomes das etapas permitem percorrer entrada, validação, integração, resultados, falha anterior e auditoria. O indicador informa a posição na sequência. O avanço é manual, sem temporizador.
+
+Cada etapa destaca seus registros na página e abre os detalhes correspondentes. Os links do cartão levam ao trecho destacado; **Voltar às etapas** retorna aos controles. **Recomeçar apresentação** volta à primeira etapa. **Encerrar apresentação** remove os destaques, restaura o estado anterior dos detalhes e devolve o foco ao botão inicial.
+
+A identificação **Reprodução da execução registrada** permanece visível. A falha HTTP 503 é apresentada como execução anterior, separada das contagens do lote bem-sucedido. Não há chamadas de rede, execução do robô, armazenamento no navegador ou respostas geradas por essa navegação. Sem JavaScript, o modo guiado fica indisponível e a página original continua com resultados, detalhes nativos e evidências acessíveis.
+
 ## Origem do conteúdo
 
 - Repositório: <https://github.com/laia020/citizentech-rpa>.
@@ -26,9 +34,11 @@ Os tempos são um planejamento, não duração medida. O vídeo ainda precisa se
 
 ## Implementação e verificação
 
-A página é HTML estático, sem JavaScript, formulário, polling ou dependências novas em produção. Um único roteador lê `src/citizentech_ia/v5/rpa.html` em UTF-8 e é incluído na aplicação em nuvem e na aplicação de desenvolvimento, evitando que o menu compartilhado aponte para uma rota inexistente. O acesso independe da prontidão/fila de inferência. O preparador existente copia toda a pasta `src`, incluindo a página e suas fontes incorporadas, e registra seu hash no manifesto do pacote. Preparador e publicador usam caminhos POSIX no manifesto, permitindo verificar no Windows o pacote destinado ao Linux; a tela de IA também é lida e gravada explicitamente em UTF-8.
+A página usa HTML e um controlador JavaScript local para a apresentação, sem formulário, polling ou dependências novas em produção. Um único roteador lê `src/citizentech_ia/v5/rpa.html` em UTF-8 e é incluído na aplicação em nuvem e na aplicação de desenvolvimento, evitando que o menu compartilhado aponte para uma rota inexistente. O acesso independe da prontidão/fila de inferência. O preparador existente copia toda a pasta `src`, incluindo a página e suas fontes incorporadas, e registra seu hash no manifesto do pacote. Preparador e publicador usam caminhos POSIX no manifesto, permitindo verificar no Windows o pacote destinado ao Linux; a tela de IA também é lida e gravada explicitamente em UTF-8.
 
 Testes principais em `tests/test_pagina_rpa.py`: acesso com modelo indisponível e fila ocupada, preservação das contagens/identificadores, navegação, referências de acessibilidade e empacotamento. A suíte usa componentes simulados e não baixa pesos-base nem executa inferência.
+
+O controlador real da apresentação é verificado por `tests/rpa_apresentacao.test.cjs`, usando Node e um DOM isolado sem bibliotecas adicionais. Os quatro cenários cobrem início manual, avanços/retornos, seleção direta, limites, reinício, destaque dos registros, abertura/restauração de detalhes e retorno de foco. Chamadas de rede e temporizadores falham os testes. O pytest integra essa execução quando Node está disponível. Esses testes não equivalem a revisão visual no navegador.
 
 Nesta cópia Windows foi criado ambiente `.venv` separado com Python 3.12 e dependências fixadas pelo lockfile raiz, sem o extra de treinamento MLX. Para verificar o pacote e os testes existentes da nuvem, foram acrescentados somente nesse ambiente `safetensors==0.8.0` e `huggingface-hub==2.4.0`, conforme as versões de implantação. Nenhum lockfile ou ambiente global foi alterado. Executar os testes em modo UTF-8 no Windows:
 
@@ -48,4 +58,6 @@ Antes das alterações, foram salvos backups datados de `README.md`, da tela ori
 
 A primeira atualização do Space falhou no build por conflito entre o novo `spaces==0.52.1` imposto pela plataforma e o pin `0.51.3` do projeto. A dependência e o lockfile próprios da nuvem foram ajustados; somente a versão de `spaces` mudou. Os logs e o pacote anterior foram preservados em `runs/publicacao-rpa-20261119-100015/`. Restaurar apenas o pacote antigo não resolve esse conflito atual do provedor: uma reversão da interface também precisa do pin compatível da hospedagem.
 
-**Publicação concluída em 19/11/2026:** [abrir `/rpa`](https://laia020-citizentech-iluminacao-ia.hf.space/rpa). O Space está em `RUNNING`, revisão `b5a91e54acaa281593222de88ea93a2ba76fca47`, com hardware solicitado e ativo `zero-a10g`, sem contratação paga. `/rpa`, `/demo`, `/ready`, `/health`, `/docs` e `/openapi.json` responderam HTTP 200; a prontidão retornou `true`. A página pública de RPA corresponde ao arquivo local, a demonstração de IA contém o link de navegação e o contrato de análise foi comparado com a versão original e preservado. Não houve nova chamada de inferência. Evidências e limites: [PUBLICACAO-PAGINA-RPA.json](PUBLICACAO-PAGINA-RPA.json). A gravação do vídeo e a revisão visual continuam pendentes.
+**Publicação inicial concluída em 19/11/2026:** [abrir `/rpa`](https://laia020-citizentech-iluminacao-ia.hf.space/rpa). O Space foi validado em `RUNNING`, revisão `b5a91e54acaa281593222de88ea93a2ba76fca47`, com hardware solicitado e ativo `zero-a10g`, sem contratação paga. `/rpa`, `/demo`, `/ready`, `/health`, `/docs` e `/openapi.json` responderam HTTP 200; a prontidão retornou `true`. A página pública de RPA correspondia ao arquivo dessa versão, a demonstração de IA continha o link de navegação e o contrato de análise foi comparado com a versão original e preservado. Não houve nova chamada de inferência. Evidências e limites dessa publicação: [PUBLICACAO-PAGINA-RPA.json](PUBLICACAO-PAGINA-RPA.json). A gravação do vídeo e a revisão visual continuaram pendentes.
+
+O registro específico da apresentação guiada, com testes e estado da atualização posterior, está em [APRESENTACAO-GUIADA-RPA.json](APRESENTACAO-GUIADA-RPA.json). Essa atualização foi solicitada pelo usuário para facilitar a apresentação no vídeo e preserva as evidências existentes.

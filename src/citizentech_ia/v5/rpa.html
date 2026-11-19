@@ -38,6 +38,12 @@
     @media(max-width:680px){.wrap{padding-inline:18px}.topo-interno{gap:12px}.menu{gap:20px}.rpa-hero-grid{grid-template-columns:1fr;padding-block:36px;gap:28px}.rpa-hero h1{font-size:2.25rem}.rpa-actions .rpa-button{width:100%}.rpa-metric-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 12px}.rpa-metric-grid div{padding-left:12px}.rpa-metric-grid dd{font-size:1.875rem}.rpa-section{padding-block:36px}.rpa-flow{grid-template-columns:1fr;gap:24px}.rpa-flow li{padding-top:16px}.rpa-flow svg{float:left;margin:0 16px 30px 0}.rpa-flow h3,.rpa-flow p{margin-left:44px}.rpa-evidence-grid{grid-template-columns:1fr}.rpa-card{padding:22px}.rpa-card svg{margin-bottom:14px}.rpa-table,.rpa-table tbody,.rpa-table tr,.rpa-table td,.rpa-table th[scope=row]{display:block;width:100%}.rpa-table{border:0;background:transparent;overflow:visible}.rpa-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.rpa-table caption{display:block}.rpa-table tbody tr{margin-bottom:16px;border:1px solid var(--borda);border-radius:8px;background:white;overflow:hidden}.rpa-table tbody tr:last-child{margin-bottom:0}.rpa-table th[scope=row]{background:#eaf0ec;padding:12px 18px}.rpa-table td{padding:14px 18px;border:0}.rpa-table td::before{content:attr(data-label);display:block;font-size:.875rem;font-weight:650;color:var(--cinza);margin-bottom:6px}.rpa-table td:last-child{padding-bottom:20px}.rpa-table th:first-child{width:100%}.rpa-files ul{display:grid;gap:12px}.rpa-files{padding:20px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
     .rpa-history{margin-top:20px;padding:22px 24px;border:1px solid var(--borda);border-radius:8px}.rpa-history summary{font-weight:650;color:var(--verde-alvor);cursor:pointer}.rpa-history p{font-size:.875rem;color:var(--cinza);margin:16px 0 0}.rpa-history a{display:inline-block;margin:14px 22px 0 0;font-size:.875rem}
+    [hidden]{display:none!important}
+    .rpa-guide{background:#f8fbf9;border-bottom:1px solid var(--borda)}.rpa-guide-head{display:flex;justify-content:space-between;gap:24px;align-items:flex-start}.rpa-guide-head .rpa-section-head{margin-bottom:18px}.rpa-guide-label{display:inline-block;font-size:.875rem;font-weight:600;color:var(--verde-alvor);border-left:3px solid var(--verde-sinal);padding-left:12px;margin-bottom:24px}.rpa-guide-button{background:var(--verde-alvor);color:white;font-family:inherit;cursor:pointer}.rpa-guide-button:hover{background:var(--verde-profundo);color:white}.rpa-guide-secondary{background:white;color:var(--verde-profundo);border-color:#afc4b7;font-family:inherit;cursor:pointer}.rpa-guide-secondary:hover{background:#eaf3ed}.rpa-guide-button:disabled,.rpa-guide-secondary:disabled{opacity:.5;cursor:not-allowed}
+    .rpa-guide-status{font-weight:650;color:var(--verde-profundo);margin-bottom:8px}.rpa-guide-progress{display:block;width:100%;height:8px;accent-color:var(--verde-alvor);margin:0 0 22px;border:0;border-radius:8px;overflow:hidden}.rpa-guide-progress::-webkit-progress-bar{background:var(--borda)}.rpa-guide-progress::-webkit-progress-value{background:var(--verde-alvor)}
+    .rpa-guide-tabs{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0 0 22px;padding:0}.rpa-guide-tabs button{min-height:44px;padding:8px 12px;border:1px solid var(--borda);border-radius:6px;background:white;color:var(--verde-profundo);font:500 .875rem/1.4 Inter,system-ui,sans-serif;cursor:pointer}.rpa-guide-tabs button[aria-current=step]{border-color:var(--verde-alvor);background:var(--verde-profundo);color:white}.rpa-guide-card{padding:26px;border:1px solid #bfd6c7;border-radius:8px;background:white;min-height:225px}.rpa-guide-card h3{font-size:1.5rem}.rpa-guide-card p{max-width:850px}.rpa-guide-card p:last-child{margin-bottom:0}.rpa-guide-card ul{padding-left:22px}.rpa-guide-card a{display:inline-block;font-size:.875rem;font-weight:600;margin-top:6px}.rpa-guide-context{font-size:.875rem;font-weight:650;color:var(--verde-alvor);margin-bottom:12px}.rpa-guide-controls{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px}.rpa-guide-direction{display:flex;gap:10px;flex-wrap:wrap}
+    .rpa-highlight{outline:3px solid var(--verde-sinal);outline-offset:4px}.rpa-table tr.rpa-highlight{outline:0}.rpa-table tr.rpa-highlight>th,.rpa-table tr.rpa-highlight>td{background:#e9f5ee;box-shadow:inset 0 3px 0 var(--verde-sinal)}.rpa-guide-return{position:fixed;bottom:18px;right:18px;z-index:5;background:var(--verde-profundo);color:white;border:1px solid #709f83;box-shadow:0 3px 14px #0f3d2e26;max-width:calc(100% - 36px)}.rpa-guide-return:hover{background:var(--verde-alvor);color:white}
+    @media(max-width:680px){.rpa-guide-head{display:block}.rpa-guide-head>button{margin-bottom:18px}.rpa-guide-card{padding:20px;min-height:0}.rpa-guide-card h3{font-size:1.25rem}.rpa-guide-controls{display:block}.rpa-guide-direction{display:grid;grid-template-columns:1fr 1fr}.rpa-guide-direction .rpa-button{padding-inline:12px}.rpa-guide-controls>button{width:100%;margin-top:12px}.rpa-guide-return{font-size:.875rem;bottom:12px;right:12px}}
   </style>
 </head>
 <body>
@@ -49,7 +55,7 @@
         <span class="marca-texto"><span class="marca-nome">AKONA</span><span class="marca-sub">ENERGY</span></span>
       </a>
       <nav class="menu" aria-label="Principal">
-        <a href="/demo">Triagem com IA</a><a href="/rpa" aria-current="page">RPA</a><a href="#evidencias">Evidências</a>
+        <a href="/demo">Triagem com IA</a><a href="/rpa" aria-current="page">RPA</a><a href="#apresentacao">Apresentação</a><a href="#evidencias">Evidências</a>
       </nav>
     </div>
   </header>
@@ -72,7 +78,7 @@
         </aside>
       </div>
     </section>
-    <section class="rpa-metrics" aria-label="Contagens registradas no lote">
+    <section class="rpa-metrics" id="resumo-lote" aria-label="Contagens registradas no lote">
       <dl class="wrap rpa-metric-grid">
         <div data-metrica="entradas" data-valor="4"><dt>Entradas no lote</dt><dd>4</dd></div>
         <div data-metrica="processados" data-valor="2"><dt>Processadas</dt><dd>2</dd></div>
@@ -81,15 +87,66 @@
         <div data-metrica="falhas" data-valor="0"><dt>Falhas de execução</dt><dd>0</dd></div>
       </dl>
     </section>
+    <section class="rpa-section rpa-guide" id="apresentacao" aria-labelledby="apresentacao-titulo">
+      <div class="wrap">
+        <div class="rpa-guide-head">
+          <div class="rpa-section-head"><p class="rpa-eyebrow">Apresentação guiada</p><h2 id="apresentacao-titulo">Percorra o processo, uma etapa por vez.</h2><p>Use os controles para acompanhar a entrada, as decisões e as evidências. Os trechos correspondentes ficam destacados na página.</p></div>
+          <button type="button" id="guide-start" class="rpa-button rpa-guide-button" aria-controls="guide-viewer" hidden>Iniciar apresentação</button>
+          <button type="button" id="guide-close" class="rpa-button rpa-guide-secondary" aria-controls="guide-viewer" hidden>Encerrar apresentação</button>
+        </div>
+        <p class="rpa-guide-label">Reprodução da execução registrada · 18/11/2026 · dados fictícios. Estes controles não executam o robô nem fazem novas chamadas à IA.</p>
+        <noscript><p>Ative JavaScript para usar a apresentação guiada. Todos os resultados, detalhes e links de evidências continuam disponíveis abaixo.</p></noscript>
+        <div id="guide-viewer" hidden>
+          <p class="rpa-guide-status" id="guide-status" role="status" aria-live="polite" aria-atomic="true"></p>
+          <progress class="rpa-guide-progress" id="guide-progress" max="6" value="1" aria-label="Progresso da apresentação"></progress>
+          <ol class="rpa-guide-tabs" aria-label="Escolher etapa da apresentação">
+            <li><button type="button" data-guide-go="0" aria-controls="guide-entrada">Entrada</button></li>
+            <li><button type="button" data-guide-go="1" aria-controls="guide-decisao">Validação</button></li>
+            <li><button type="button" data-guide-go="2" aria-controls="guide-integracao">Integração</button></li>
+            <li><button type="button" data-guide-go="3" aria-controls="guide-resultados">Resultados</button></li>
+            <li><button type="button" data-guide-go="4" aria-controls="guide-falha">Falha anterior</button></li>
+            <li><button type="button" data-guide-go="5" aria-controls="guide-auditoria">Auditoria</button></li>
+          </ol>
+          <article class="rpa-guide-card" id="guide-entrada" data-guide-step data-highlight="#resumo-lote,#fluxo-entrada" hidden>
+            <p class="rpa-guide-context">O que entrou no processo</p><h3 tabindex="-1">Um lote com quatro entradas</h3>
+            <p>O lote contém um relato de luminária apagada, uma repetição desse relato, uma leitura ADC sem calibração e um registro sem observação.</p><p>O objetivo do RPA é organizar esses registros, evitar consultas repetidas e separar o que precisa de correção antes da análise.</p><a href="#resumo-lote">Ver o resumo destacado</a>
+          </article>
+          <article class="rpa-guide-card" id="guide-decisao" data-guide-step data-highlight="#fluxo-validacao,#linha-2,#linha-4" data-reveal="#linha-2 details,#linha-4 details" hidden>
+            <p class="rpa-guide-context">Duas regras de decisão</p><h3 tabindex="-1">Validar antes de consultar</h3>
+            <ul><li><strong>Linha 2:</strong> a ocorrência já processada reutilizou a resposta da linha 1, sem outra chamada.</li><li><strong>Linha 4:</strong> a ausência de observação gerou uma pendência, sem envio à IA.</li></ul><p>Os detalhes dessas duas linhas ficam abertos para conferência.</p><a href="#linha-2">Ver a duplicata e a pendência destacadas</a>
+          </article>
+          <article class="rpa-guide-card" id="guide-integracao" data-guide-step data-highlight="#fluxo-integracao,#linha-1,#linha-3" data-reveal="#linha-1 details,#linha-3 details" hidden>
+            <p class="rpa-guide-context">RPA e IA, por API</p><h3 tabindex="-1">Duas consultas reais, duas respostas HTTP 200</h3>
+            <p>As linhas 1 e 3 foram validadas e enviadas à API de IA. Cada resposta preserva o identificador da ocorrência e um request ID que permite localizar os eventos de auditoria.</p><p>Essas chamadas ocorreram na execução de 18/11/2026. Avançar nesta apresentação apenas consulta as evidências preservadas.</p><a href="#linha-1">Conferir os identificadores das respostas</a>
+          </article>
+          <article class="rpa-guide-card" id="guide-resultados" data-guide-step data-highlight="#fluxo-revisao,#linha-1,#linha-3" data-reveal="#linha-1 details,#linha-3 details" hidden>
+            <p class="rpa-guide-context">Resultado operacional e análise da IA</p><h3 tabindex="-1">Processar não significa concluir um diagnóstico</h3>
+            <ul><li><strong>Luminária apagada:</strong> análise preliminar para registro e revisão humana, sem determinar causa elétrica.</li><li><strong>Leitura ADC:</strong> informação insuficiente para converter para lux sem referência de calibração.</li></ul><p>As duas consultas foram processadas. A insuficiência de informação é uma resposta válida da IA, não uma falha de execução.</p><a href="#resultados">Ver os resultados e encaminhamentos</a>
+          </article>
+          <article class="rpa-guide-card" id="guide-falha" data-guide-step data-highlight="#falha-historica" data-reveal="#falha-historica" hidden>
+            <p class="rpa-guide-context">Execução anterior · cenário de falha</p><h3 tabindex="-1">Indisponibilidade também deixa evidências</h3>
+            <p>Uma execução anterior registrou quatro tentativas HTTP 503, duas falhas de processamento e duas pendências. O RPA limitou as tentativas e registrou o erro, sem apresentar uma análise bem-sucedida.</p><p>Esse histórico é separado do lote com duas respostas HTTP 200. As contagens do resumo continuam pertencendo ao lote apresentado.</p><a href="#falha-historica">Abrir o registro histórico da falha</a>
+          </article>
+          <article class="rpa-guide-card" id="guide-auditoria" data-guide-step data-highlight="#fluxo-auditoria,#arquivos-evidencias" hidden>
+            <p class="rpa-guide-context">Como conferir a demonstração</p><h3 tabindex="-1">Da resposta ao registro original</h3>
+            <p>Confira os request IDs nos resultados e na auditoria. O GitHub Actions registra o processamento; o relatório PDF explica o fluxo, as regras e os limites.</p><p>Os links apontam para evidências preservadas. Os dados são fictícios e os resultados exigem revisão humana; não houve abertura de chamados no backend do Akona.</p><a href="#evidencias">Consultar a execução, a auditoria e o relatório</a>
+          </article>
+        </div>
+        <div class="rpa-guide-controls" id="guide-controls" hidden>
+          <div class="rpa-guide-direction"><button type="button" class="rpa-button rpa-guide-secondary" id="guide-previous" aria-controls="guide-viewer" disabled>Anterior</button><button type="button" class="rpa-button rpa-guide-button" id="guide-next" aria-controls="guide-viewer">Próxima etapa</button></div>
+          <button type="button" class="rpa-button rpa-guide-secondary" id="guide-restart" aria-controls="guide-viewer">Recomeçar apresentação</button>
+        </div>
+      </div>
+    </section>
     <section class="rpa-section" aria-labelledby="fluxo-titulo">
       <div class="wrap">
         <div class="rpa-section-head"><p class="rpa-eyebrow">O processo</p><h2 id="fluxo-titulo">Do lote à revisão humana</h2><p>A automação separa o que pode ser analisado, o que já foi processado e o que precisa de informação adicional.</p></div>
         <ol class="rpa-flow">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 3h11l5 5v13H4zM14 3v6h6M7 13h10M7 17h7"/></svg><h3>Receber o lote</h3><p>Importar os relatos fictícios em formato estruturado.</p></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16M4 12h10M4 19h7M16 17l3 3 4-5"/></svg><h3>Validar e deduplicar</h3><p>Separar registros incompletos e reconhecer os já processados.</p></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M9 9h6v6H9zM9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4"/></svg><h3>Consultar a IA</h3><p>Enviar somente os registros válidos e ainda não processados.</p></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 3h14v18H5zM8 7h8M8 11h8M8 15h5"/></svg><h3>Registrar evidências</h3><p>Salvar resultados, pendências e eventos de auditoria correlacionados.</p></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 22v-3a8 8 0 0116 0v3M10 18l2 2 4-4"/></svg><h3>Revisar e encaminhar</h3><p>Conferir a análise ou solicitar os dados que faltam antes da decisão.</p></li>
+          <li id="fluxo-entrada"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 3h11l5 5v13H4zM14 3v6h6M7 13h10M7 17h7"/></svg><h3>Receber o lote</h3><p>Importar os relatos fictícios em formato estruturado.</p></li>
+          <li id="fluxo-validacao"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16M4 12h10M4 19h7M16 17l3 3 4-5"/></svg><h3>Validar e deduplicar</h3><p>Separar registros incompletos e reconhecer os já processados.</p></li>
+          <li id="fluxo-integracao"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M9 9h6v6H9zM9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4"/></svg><h3>Consultar a IA</h3><p>Enviar somente os registros válidos e ainda não processados.</p></li>
+          <li id="fluxo-auditoria"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 3h14v18H5zM8 7h8M8 11h8M8 15h5"/></svg><h3>Registrar evidências</h3><p>Salvar resultados, pendências e eventos de auditoria correlacionados.</p></li>
+          <li id="fluxo-revisao"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 22v-3a8 8 0 0116 0v3M10 18l2 2 4-4"/></svg><h3>Revisar e encaminhar</h3><p>Conferir a análise ou solicitar os dados que faltam antes da decisão.</p></li>
         </ol>
       </div>
     </section>
@@ -103,25 +160,25 @@
           <caption>Lote de 18/11/2026 · resultado histórico com dados fictícios</caption>
           <thead><tr role="row"><th scope="col" role="columnheader">Linha</th><th scope="col" role="columnheader">Entrada</th><th scope="col" role="columnheader">Estado do RPA</th><th scope="col" role="columnheader">Resultado e encaminhamento</th></tr></thead>
           <tbody>
-            <tr data-linha="1" data-status="processado" role="row">
+            <tr data-linha="1" data-status="processado" id="linha-1" role="row">
               <th scope="row" role="rowheader">1</th>
               <td data-label="Entrada" role="cell"><strong>Luminária apagada à noite</strong><p class="rpa-code">RPA-LIVE-20261118-001</p></td>
               <td data-label="Estado do RPA" role="cell"><span class="rpa-status rpa-ok">Processado</span><p>Uma chamada à IA.</p></td>
               <td data-label="Resultado e encaminhamento" role="cell"><strong>Análise preliminar</strong><p>Registrar a observação e encaminhar para revisão humana, sem determinar causa elétrica.</p><details><summary>Conferir resposta e identificador</summary><p>Resumo registrado: “A observação de iluminação pública pode ser registrada, sem determinar causa elétrica.”</p><p>Informação faltante: localização do ponto para o encaminhamento operacional.</p><p>Fontes: <span class="rpa-code">registro:1 · evidencia:1</span></p><p>Estado da IA: <span class="rpa-code">analise_preliminar</span><br>Request ID: <span class="rpa-code">333fecbe-114f-4603-824e-43b7fa8dd2d6</span></p></details></td>
             </tr>
-            <tr data-linha="2" data-status="duplicado" role="row">
+            <tr data-linha="2" data-status="duplicado" id="linha-2" role="row">
               <th scope="row" role="rowheader">2</th>
               <td data-label="Entrada" role="cell"><strong>Repetição da primeira entrada</strong><p class="rpa-code">RPA-LIVE-20261118-001</p></td>
               <td data-label="Estado do RPA" role="cell"><span class="rpa-status rpa-duplicate">Duplicado</span><p>Nenhuma nova chamada.</p></td>
               <td data-label="Resultado e encaminhamento" role="cell"><strong>Resposta anterior reaproveitada</strong><p>O estado persistido evitou analisar novamente a mesma ocorrência.</p><details><summary>Conferir correlação da duplicata</summary><p>Código: <span class="rpa-code">ja_processado</span></p><p>Mesmo request ID da linha 1: <span class="rpa-code">333fecbe-114f-4603-824e-43b7fa8dd2d6</span></p><p>O encaminhamento permanece para revisão humana.</p></details></td>
             </tr>
-            <tr data-linha="3" data-status="processado" role="row">
+            <tr data-linha="3" data-status="processado" id="linha-3" role="row">
               <th scope="row" role="rowheader">3</th>
               <td data-label="Entrada" role="cell"><strong>Leitura ADC sem calibração</strong><p class="rpa-code">RPA-LIVE-20261118-002</p></td>
               <td data-label="Estado do RPA" role="cell"><span class="rpa-status rpa-ok">Processado</span><p>Uma chamada à IA.</p></td>
               <td data-label="Resultado e encaminhamento" role="cell"><strong>Informação insuficiente</strong><p>A IA recusou a conversão para lux sem referência de calibração. É necessário complementar os dados.</p><details><summary>Conferir resposta e identificador</summary><p>Resumo registrado: “Uma leitura ADC sem referência de calibração não permite determinar lux ou conformidade.”</p><p>Informação faltante: curva e condições de calibração verificáveis.</p><p>Fonte: <span class="rpa-code">ldr:1</span></p><p>Estado da IA: <span class="rpa-code">informacao_insuficiente</span><br>Request ID: <span class="rpa-code">5e25fa23-6c84-423e-87f8-9a1fb4e849d3</span></p></details></td>
             </tr>
-            <tr data-linha="4" data-status="pendente" role="row">
+            <tr data-linha="4" data-status="pendente" id="linha-4" role="row">
               <th scope="row" role="rowheader">4</th>
               <td data-label="Entrada" role="cell"><strong>Registro sem observação</strong><p>Identificador: não disponível no resultado preservado.</p></td>
               <td data-label="Estado do RPA" role="cell"><span class="rpa-status rpa-pending">Pendente</span><p>Não enviado à IA.</p></td>
@@ -140,19 +197,106 @@
           <article class="rpa-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 3h10l4 4v14H5zM14 3v5h5M8 12h8M8 16h6"/></svg><h3>Relatório técnico em PDF</h3><p>Processo, BPMN, decisões, integração e limitações documentados para avaliação.</p><a href="https://github.com/laia020/citizentech-rpa/blob/68c69091d9b74afc365573fc3577428f077900de/output/pdf/relatorio-tecnico-rpa.pdf" target="_blank" rel="noopener noreferrer">Abrir relatório</a></article>
           <article class="rpa-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 5L2 12l6 7M16 5l6 7-6 7M14 3l-4 18"/></svg><h3>Código e documentação</h3><p>Implementação do RPA, instruções de reprodução e material completo da entrega.</p><a href="https://github.com/laia020/citizentech-rpa" target="_blank" rel="noopener noreferrer">Acessar repositório</a></article>
         </div>
-        <div class="rpa-files"><h3>Arquivos da execução apresentada</h3><ul>
+        <div class="rpa-files" id="arquivos-evidencias"><h3>Arquivos da execução apresentada</h3><ul>
           <li><a href="https://github.com/laia020/citizentech-rpa/blob/68c69091d9b74afc365573fc3577428f077900de/docs/evidencias/nuvem-real/resumo.json" target="_blank" rel="noopener noreferrer">Resumo do lote · JSON</a></li>
           <li><a href="https://github.com/laia020/citizentech-rpa/blob/68c69091d9b74afc365573fc3577428f077900de/docs/evidencias/nuvem-real/resultados.json" target="_blank" rel="noopener noreferrer">Resultados completos · JSON</a></li>
           <li><a href="https://github.com/laia020/citizentech-rpa/blob/68c69091d9b74afc365573fc3577428f077900de/docs/evidencias/nuvem-real/pendencias.json" target="_blank" rel="noopener noreferrer">Pendências · JSON</a></li>
           <li><a href="https://github.com/laia020/citizentech-rpa/blob/68c69091d9b74afc365573fc3577428f077900de/docs/evidencias/nuvem-real/auditoria.jsonl" target="_blank" rel="noopener noreferrer">Auditoria · JSONL</a></li>
           <li><a href="https://github.com/laia020/citizentech-rpa/blob/68c69091d9b74afc365573fc3577428f077900de/docs/evidencias/nuvem-real/github-run.json" target="_blank" rel="noopener noreferrer">Verificação e correlação · JSON</a></li>
         </ul><p>Os arquivos estão fixados em uma revisão do repositório, preservando a referência mesmo após atualizações. Eles continuam disponíveis independentemente da retenção dos artefatos temporários do GitHub Actions.</p></div>
-        <details class="rpa-history"><summary>Tratamento de falha HTTP 503 em uma execução anterior</summary><p>Antes do lote apresentado, a API esteve indisponível: o registro histórico preserva quatro tentativas HTTP 503, duas falhas de processamento e duas pendências. O RPA limitou as tentativas e registrou o erro, sem apresentar uma análise bem-sucedida. Esses números pertencem à execução anterior e não alteram as contagens do lote acima.</p><p>Execução anterior: <span class="rpa-code">0ec3479a81ff41908c7d6529429ff274</span> · 18/11/2026.</p><a href="https://github.com/laia020/citizentech-rpa/blob/68c69091d9b74afc365573fc3577428f077900de/docs/evidencias/real-indisponibilidade/auditoria.jsonl" target="_blank" rel="noopener noreferrer">Consultar auditoria da falha</a><a href="https://github.com/laia020/citizentech-rpa/blob/68c69091d9b74afc365573fc3577428f077900de/docs/evidencias/real-indisponibilidade/resumo.json" target="_blank" rel="noopener noreferrer">Consultar resumo anterior</a></details>
+        <details class="rpa-history" id="falha-historica"><summary>Tratamento de falha HTTP 503 em uma execução anterior</summary><p>Antes do lote apresentado, a API esteve indisponível: o registro histórico preserva quatro tentativas HTTP 503, duas falhas de processamento e duas pendências. O RPA limitou as tentativas e registrou o erro, sem apresentar uma análise bem-sucedida. Esses números pertencem à execução anterior e não alteram as contagens do lote acima.</p><p>Execução anterior: <span class="rpa-code">0ec3479a81ff41908c7d6529429ff274</span> · 18/11/2026.</p><a href="https://github.com/laia020/citizentech-rpa/blob/68c69091d9b74afc365573fc3577428f077900de/docs/evidencias/real-indisponibilidade/auditoria.jsonl" target="_blank" rel="noopener noreferrer">Consultar auditoria da falha</a><a href="https://github.com/laia020/citizentech-rpa/blob/68c69091d9b74afc365573fc3577428f077900de/docs/evidencias/real-indisponibilidade/resumo.json" target="_blank" rel="noopener noreferrer">Consultar resumo anterior</a></details>
         <p class="rpa-provenance">Execução RPA: <span class="rpa-code">dd5f0bb6ea1f4cd6bd39db4fa78b0385</span><br>Revisão das evidências: <span class="rpa-code">68c69091d9b74afc365573fc3577428f077900de</span><br>Modelo informado na resposta: Qwen2.5-1.5B-Instruct · RAG + fine-tuning · adaptador r1.</p>
       </div>
     </section>
     <section class="rpa-limits" aria-labelledby="limites-titulo"><div class="wrap"><h2 id="limites-titulo">Contexto da demonstração</h2><p>A execução comprova o consumo da API de IA pelo RPA com dados fictícios. Não houve abertura de chamados no backend do Akona. Os resultados exigem revisão humana e não comprovam diagnóstico elétrico ou impacto municipal.</p><p><strong>Vídeo de RPA:</strong> gravação pendente. Esta página reúne o fluxo, os resultados e as evidências para a apresentação.</p></div></section>
   </main>
   <footer class="rpa-footer"><div class="wrap rpa-footer-inner"><p>Akona Energy · CitizenTech · Automação e IA</p><a href="/demo">Voltar à demonstração de IA</a></div></footer>
+  <a href="#apresentacao" id="guide-return" class="rpa-button rpa-guide-return" hidden>Voltar às etapas</a>
+  <script id="rpa-guide-script">
+  (() => {
+    'use strict';
+    const byId = id => document.getElementById(id);
+    const panel = byId('apresentacao');
+    const viewer = byId('guide-viewer');
+    const controls = byId('guide-controls');
+    const start = byId('guide-start');
+    const close = byId('guide-close');
+    const previous = byId('guide-previous');
+    const next = byId('guide-next');
+    const restart = byId('guide-restart');
+    const status = byId('guide-status');
+    const progress = byId('guide-progress');
+    const returnLink = byId('guide-return');
+    const steps = Array.from(document.querySelectorAll('[data-guide-step]'));
+    const stepButtons = Array.from(document.querySelectorAll('[data-guide-go]'));
+    const details = Array.from(document.querySelectorAll('details'));
+    const originalDetails = new Map();
+    let active = false;
+    let current = 0;
+
+    function clearHighlights() {
+      for (const element of document.querySelectorAll('.rpa-highlight')) element.classList.remove('rpa-highlight');
+    }
+
+    function restoreDetails() {
+      for (const element of details) element.open = originalDetails.get(element);
+    }
+
+    function render(index) {
+      if (!active) return;
+      current = Math.max(0, Math.min(steps.length - 1, index));
+      for (const [position, step] of steps.entries()) step.hidden = position !== current;
+      for (const [position, button] of stepButtons.entries()) {
+        if (position === current) button.setAttribute('aria-current', 'step');
+        else button.removeAttribute('aria-current');
+      }
+      previous.disabled = current === 0;
+      next.disabled = current === steps.length - 1;
+      progress.value = current + 1;
+      const step = steps[current];
+      status.textContent = `Etapa ${current + 1} de ${steps.length} · ${step.querySelector('h3').textContent}`;
+      clearHighlights();
+      restoreDetails();
+      for (const element of document.querySelectorAll(step.dataset.highlight)) element.classList.add('rpa-highlight');
+      if (step.dataset.reveal) {
+        for (const element of document.querySelectorAll(step.dataset.reveal)) element.open = true;
+      }
+      if (document.activeElement === next && next.disabled) restart.focus({ preventScroll: true });
+      if (document.activeElement === previous && previous.disabled) next.focus({ preventScroll: true });
+    }
+
+    start.addEventListener('click', () => {
+      if (active) return;
+      for (const element of details) originalDetails.set(element, element.open);
+      active = true;
+      start.hidden = true;
+      close.hidden = false;
+      viewer.hidden = false;
+      controls.hidden = false;
+      returnLink.hidden = false;
+      render(0);
+      panel.scrollIntoView({ block: 'start' });
+      steps[0].querySelector('h3').focus({ preventScroll: true });
+    });
+    previous.addEventListener('click', () => render(current - 1));
+    next.addEventListener('click', () => render(current + 1));
+    restart.addEventListener('click', () => render(0));
+    for (const button of stepButtons) button.addEventListener('click', () => render(Number(button.dataset.guideGo)));
+    close.addEventListener('click', () => {
+      if (!active) return;
+      active = false;
+      clearHighlights();
+      restoreDetails();
+      for (const step of steps) step.hidden = true;
+      viewer.hidden = true;
+      controls.hidden = true;
+      close.hidden = true;
+      returnLink.hidden = true;
+      start.hidden = false;
+      start.focus({ preventScroll: true });
+    });
+    start.hidden = false;
+  })();
+  </script>
 </body>
 </html>

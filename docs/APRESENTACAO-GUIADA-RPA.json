@@ -1,0 +1,56 @@
+{
+  "verificado_em": "2026-11-19T13:34:29.178311+00:00",
+  "estado": "implementado_testado_publicacao_pendente",
+  "url": "https://laia020-citizentech-iluminacao-ia.hf.space/rpa#apresentacao",
+  "etapas": [
+    "Entrada",
+    "Validacao",
+    "Integracao",
+    "Resultados",
+    "Falha anterior",
+    "Auditoria"
+  ],
+  "controles": [
+    "Iniciar",
+    "Anterior",
+    "Proxima etapa",
+    "Selecionar etapa",
+    "Recomecar",
+    "Encerrar",
+    "Voltar as etapas"
+  ],
+  "reproducao_historica_explicita": true,
+  "sem_execucao_de_lote_ou_chamada_de_ia": true,
+  "testes": {
+    "pytest_aprovados": 62,
+    "pytest_pulados": 1,
+    "modulo_excluido": "test_treino_estavel.py (MLX requer macOS)",
+    "motivo_pulado": "PyTorch ausente",
+    "cenarios_javascript": 4,
+    "controlador_real_com_dom_isolado": true,
+    "node": "v24.22.1"
+  },
+  "navegador": {
+    "revisao_visual_concluida": false,
+    "motivo": "Host de acesso ao navegador indisponivel nesta sessao."
+  },
+  "pacote": {
+    "diretorio": "runs/apresentacao-rpa-20261119-102546/space-novo",
+    "arquivos": 89,
+    "arquivos_alterados": [
+      "src/citizentech_ia/v5/rpa.html"
+    ],
+    "pagina_sha256": "fcc6ecdc3d6065fdac09e94a9593468875fd10994982e972f0e6d041de262a16",
+    "manifesto_sha256": "401f217ed8a7ee59656a9548f06fac510964f93e989cd09e44382288b23cfb49"
+  },
+  "restauracao": {
+    "revisao_space": "b5a91e54acaa281593222de88ea93a2ba76fca47",
+    "backup": "runs/apresentacao-rpa-20261119-102546/space-anterior"
+  },
+  "api_modelo_prompt_pesos_dados_preservados": true,
+  "novas_dependencias_producao": false,
+  "novas_inferencias": 0,
+  "publicacao": {
+    "concluida": false
+  }
+}

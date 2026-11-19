@@ -2,6 +2,8 @@
 
 import hashlib
 import json
+import shutil
+import subprocess
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -84,7 +86,7 @@ def test_resultados_preservam_contagens_e_identificadores_publicados():
     assert "Não consta no resultado exportado" in text
 
 
-def test_evidencias_fixas_e_navegacao_sem_operacoes_ou_scripts():
+def test_evidencias_fixas_e_navegacao_sem_operacoes_remotas():
     page = Page((SOURCE / "rpa.html").read_text(encoding="utf-8"))
     links = {link.get("href") for link in page.links}
     assert "/demo" in links
@@ -93,7 +95,10 @@ def test_evidencias_fixas_e_navegacao_sem_operacoes_ou_scripts():
     history = EVIDENCE.replace("nuvem-real/", "real-indisponibilidade/")
     assert {history + name for name in ["resumo.json", "auditoria.jsonl"]} <= links
     assert f"https://github.com/laia020/citizentech-rpa/blob/{REVISION}/output/pdf/relatorio-tecnico-rpa.pdf" in links
-    assert not any(tag in {"script", "form", "iframe"} for tag, _ in page.elements)
+    assert not any(tag in {"form", "iframe"} for tag, _ in page.elements)
+    scripts = [attrs for tag, attrs in page.elements if tag == "script"]
+    assert len(scripts) == 1 and scripts[0].get("id") == "rpa-guide-script"
+    assert "src" not in scripts[0]
     ids = [attrs["id"] for _, attrs in page.elements if "id" in attrs]
     assert len(ids) == len(set(ids))
     for _, attrs in page.elements:
@@ -121,3 +126,27 @@ def test_pacote_preserva_pagina_fontes_e_manifesto(tmp_path):
     assert "situação" in (bundle / "cloud-demo.html").read_text(encoding="utf-8")
     manifest = json.loads((bundle / "bundle-manifest.json").read_text(encoding="utf-8"))
     assert manifest[relative] == hashlib.sha256((bundle / relative).read_bytes()).hexdigest()
+
+
+def test_apresentacao_identifica_reproducao_e_preserva_alvos_de_navegacao():
+    page = Page((SOURCE / "rpa.html").read_text(encoding="utf-8"))
+    steps = [attrs for tag, attrs in page.elements if "data-guide-step" in attrs]
+    assert len(steps) == 6
+    ids = {attrs["id"] for _, attrs in page.elements if "id" in attrs}
+    for step in steps:
+        assert "hidden" in step
+        assert all(selector.strip().removeprefix("#") in ids
+                   for selector in step["data-highlight"].split(","))
+    assert "Reprodução da execução registrada" in " ".join(page.text)
+    assert any(attrs.get("id") == "guide-status" and attrs.get("aria-live") == "polite"
+               for _, attrs in page.elements)
+    assert any(tag == "noscript" for tag, _ in page.elements)
+
+
+def test_comportamento_da_apresentacao_em_javascript():
+    node = shutil.which("node")
+    if node is None:
+        pytest.skip("Node necessário para verificar o controlador JavaScript, sem dependências de produção.")
+    result = subprocess.run([node, "--test", str(ROOT / "tests/rpa_apresentacao.test.cjs")],
+                            capture_output=True, text=True, encoding="utf-8", timeout=20)
+    assert result.returncode == 0, result.stdout + result.stderr
