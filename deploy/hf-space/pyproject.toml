@@ -6,7 +6,8 @@ dependencies = [
   "torch==2.13.0",
   "transformers==5.22.2",
   "gradio[mcp,oauth]==6.32.0",
-  "spaces==0.51.3",
+  "spaces==0.52.1",
+  "requests==2.34.2", # Também instalado pela plataforma; preservar a versão já usada.
   "numpy==2.5.4",
   "scikit-learn==1.9.1",
   "pyyaml==6.0.3",

@@ -67,9 +67,7 @@ fsspec==2026.9.0
     #   huggingface-hub
     #   torch
 gradio==6.32.0
-    # via
-    #   citizentech-cloud
-    #   spaces
+    # via citizentech-cloud
 gradio-client==2.7.2
     # via
     #   gradio
@@ -254,7 +252,7 @@ referencing==0.37.0
 regex==2026.11.18
     # via transformers
 requests==2.34.2
-    # via spaces
+    # via citizentech-cloud
 rich==15.0.0
     # via typer
 rpds-py==2026.9.1
@@ -277,7 +275,7 @@ setuptools==84.2.1
     # via torch
 shellingham==1.5.4
     # via typer
-spaces==0.51.3
+spaces==0.52.1
     # via citizentech-cloud
 sse-starlette==3.7.0
     # via mcp

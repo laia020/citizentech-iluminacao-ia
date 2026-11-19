@@ -169,6 +169,7 @@ dependencies = [
     { name = "httpx" },
     { name = "numpy" },
     { name = "pyyaml" },
+    { name = "requests" },
     { name = "safetensors" },
     { name = "scikit-learn" },
     { name = "spaces" },
@@ -190,9 +191,10 @@ requires-dist = [
     { name = "httpx", specifier = "==0.28.1" },
     { name = "numpy", specifier = "==2.5.4" },
     { name = "pyyaml", specifier = "==6.0.3" },
+    { name = "requests", specifier = "==2.34.2" },
     { name = "safetensors", specifier = "==0.8.0" },
     { name = "scikit-learn", specifier = "==1.9.1" },
-    { name = "spaces", specifier = "==0.51.3" },
+    { name = "spaces", specifier = "==0.52.1" },
     { name = "torch", specifier = "==2.13.0" },
     { name = "transformers", specifier = "==5.22.2" },
     { name = "uvicorn", specifier = "==0.54.0" },
@@ -1458,19 +1460,17 @@ wheels = [
 
 [[package]]
 name = "spaces"
-version = "0.51.3"
+version = "0.52.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "gradio" },
     { name = "httpx" },
     { name = "packaging" },
     { name = "pydantic" },
-    { name = "requests" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ad/9c/8d72b1736fdb27be10bb3596f0bcbd1a6d0ec66e795d3e7ca56160e76ab7/spaces-0.51.3.tar.gz", hash = "sha256:affe3e60a114f9d2cc8394526460f82acaac4351d5982e8741b36dace736f8ae", size = 88743, upload-time = "2026-08-31T13:19:25.768Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d4/ce/dedc9e624ef4c65a05d6f75858278a45f66f7d88199f6dbe883f68484ad3/spaces-0.52.1.tar.gz", hash = "sha256:c5d6644e2a902838be0dd8798966439e448bc507568c39f3bb1c1bd20ffe6a78", size = 92069, upload-time = "2026-11-16T15:13:43.873Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/f5/b3/f6c0dfa766e0fc5ae66466235c13be580e543d8d2d9023f678ba5859adca/spaces-0.51.3-py3-none-any.whl", hash = "sha256:e588ce6b4301c566139d84bafb1c30b555967ce4ee2792be659ee5643f0f7eb1", size = 111776, upload-time = "2026-08-31T13:19:27.829Z" },
+    { url = "https://files.pythonhosted.org/packages/ed/a5/04979811ad79457a9469369acd69703fdd45017ebac6c34a87e3db99492e/spaces-0.52.1-py3-none-any.whl", hash = "sha256:ac9b44091784c8d16dccc83f06ed2ecf8e9cab03580fc0760ed6e38dae6735c4", size = 116584, upload-time = "2026-11-16T15:13:45.088Z" },
 ]
 
 [[package]]

@@ -11,7 +11,9 @@ uv venv --python 3.12 --prompt "venv-citizentech-cloud" deploy/hf-space/.venv
 uv sync --project deploy/hf-space --locked
 ```
 
-Preservar a `.venv` original do projeto. O ambiente separado usa PyTorch 2.13.0, Gradio 6.32.0 e a versão de `spaces` exigida pela plataforma (0.51.3 na implantação de 18/11/2026). Não instalar MLX no servidor Linux ou substituir dependências de outros projetos. O arquivo `requirements.txt` é exportado do lockfile próprio deste ambiente.
+Preservar a `.venv` original do projeto. O ambiente separado usa PyTorch 2.13.0, Gradio 6.32.0 e a versão de `spaces` exigida pela plataforma: 0.51.3 na implantação de 18/11/2026; 0.52.1 na atualização de 19/11/2026. Não instalar MLX no servidor Linux ou substituir dependências de outros projetos. O arquivo `requirements.txt` é exportado do lockfile próprio deste ambiente.
+
+Na publicação da página de RPA em 19/11/2026, o build passou a injetar `spaces==0.52.1`, conflitante com o pin anterior; a primeira tentativa falhou antes da inicialização. O lockfile foi atualizado somente para essa nova versão. `requests==2.34.2`, também injetado pela plataforma, passou a ser dependência direta para preservar a versão já fixada e seus transitivos. A comparação dos dois lockfiles confirmou que nenhuma outra versão de pacote mudou. O wheel oficial de `spaces` 0.52.1 mantém o alias `spaces.zero.startup` usado pelo inicializador. Não houve alteração dos pesos, prompt, dados ou contrato de análise. A disponibilidade efetiva é registrada na validação da publicação, não presumida pela atualização das dependências.
 
 ```zsh
 uv export --project deploy/hf-space --locked --no-dev --no-hashes --no-emit-project --format requirements-txt --output-file deploy/hf-space/requirements.txt --quiet
