@@ -1,0 +1,86 @@
+{
+  "verificado_em": "2026-11-19T13:12:58.931665+00:00",
+  "horario_brasilia": "2026-11-19T10:12:58.931665-03:00",
+  "estado": "publicacao_concluida_validada_por_http",
+  "url": "https://laia020-citizentech-iluminacao-ia.hf.space/rpa",
+  "github": {
+    "repositorio": "https://github.com/laia020/citizentech-iluminacao-ia",
+    "commit_pagina": "533dba1799d94eb5992d363ed4cca97d6ff054ab",
+    "commit_compativel": "8a6d67a72eb1c4d71107bce240918e0f6d9db821",
+    "push_verificado": true
+  },
+  "space": {
+    "url": "https://huggingface.co/spaces/laia020/citizentech-iluminacao-ia",
+    "commit": "b5a91e54acaa281593222de88ea93a2ba76fca47",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "zero-a10g",
+      "requested": "zero-a10g"
+    },
+    "pacote_confere_manifesto_remoto": true,
+    "pacote_local": "runs/publicacao-rpa-20261119-100015/space-corrigido",
+    "adaptador_sha256": "c905fee58cb4c0c44baeb9ac14dd9e9b7e412f280b3024c825441d018d573dce"
+  },
+  "verificacoes_http": {
+    "/rpa": {
+      "http_status": 200,
+      "sha256": "3838a70f99eae3d340da1bf867c18802bf98ff80ff12790e48eac24d8336df1d",
+      "igual_ao_arquivo_local": true
+    },
+    "/demo": {
+      "http_status": 200,
+      "link_rpa": true,
+      "igual_ao_pacote_normalizando_fim_de_linha": true
+    },
+    "/ready": {
+      "http_status": 200,
+      "pronto": true
+    },
+    "/health": {
+      "http_status": 200
+    },
+    "/docs": {
+      "http_status": 200
+    },
+    "/openapi.json": {
+      "http_status": 200,
+      "contrato_analise_preservado": true
+    }
+  },
+  "testes": {
+    "aprovados": 60,
+    "pulados": 1,
+    "excluido": "tests/test_treino_estavel.py (MLX requer macOS)",
+    "motivo_pulado": "PyTorch ausente no ambiente de interface"
+  },
+  "tentativa_anterior": {
+    "commit_space": "0f8a76355a9a8d71dcd9759a28d2a39fb8c7e1f4",
+    "estado": "BUILD_ERROR",
+    "causa": "Plataforma injetou spaces==0.52.1 em conflito com pin 0.51.3.",
+    "log_preservado": "runs/publicacao-rpa-20261119-100015/build-falha.txt"
+  },
+  "compatibilidade": {
+    "spaces": [
+      "0.51.3",
+      "0.52.1"
+    ],
+    "outras_versoes_alteradas": false,
+    "requests_versao_preservada": "2.34.2",
+    "startup_alias_preservado": true,
+    "base_prompt_dados_pesos_preservados": true,
+    "referencias": [
+      "https://pypi.org/project/spaces/0.52.1/",
+      "https://huggingface.co/docs/hub/spaces-zerogpu"
+    ]
+  },
+  "restauracao": {
+    "revisao_space_anterior": "0ec2af655e1a78408806066b60c058bd2b57e77c",
+    "backup": "runs/publicacao-rpa-20261119-100015/space-anterior",
+    "nota": "Restaurar interface anterior exige conservar o pin spaces 0.52.1 atualmente imposto pelo provedor."
+  },
+  "novas_chamadas_de_inferencia": 0,
+  "revisao_visual_navegador_concluida": false,
+  "limite_visual": "Controle do Brave interrompido anteriormente por impossibilidade de confirmar URL.",
+  "gastos_contratados": false,
+  "video_rpa": "pendente_de_gravacao_e_publicacao"
+}
