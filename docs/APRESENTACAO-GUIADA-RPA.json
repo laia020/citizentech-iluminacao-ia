@@ -1,6 +1,6 @@
 {
-  "verificado_em": "2026-11-19T13:34:29.178311+00:00",
-  "estado": "implementado_testado_publicacao_pendente",
+  "verificado_em": "2026-11-19T13:37:07.564189+00:00",
+  "estado": "publicado_validado_por_http_e_testes_do_controlador",
   "url": "https://laia020-citizentech-iluminacao-ia.hf.space/rpa#apresentacao",
   "etapas": [
     "Entrada",
@@ -51,6 +51,25 @@
   "novas_dependencias_producao": false,
   "novas_inferencias": 0,
   "publicacao": {
-    "concluida": false
+    "concluida": true,
+    "github_commit": "b5c5ae554c6c9023348d25e17ba2bbe19c84e7df",
+    "space_commit": "28e0388f230de7739696f575e1dcdf7b8b539b98",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "zero-a10g",
+      "requested": "zero-a10g"
+    },
+    "pagina_publica_igual_ao_arquivo_local": true,
+    "pagina_publica_igual_ao_github": true,
+    "verificacoes_http": {
+      "/rpa": 200,
+      "/demo": 200,
+      "/ready": 200,
+      "/health": 200,
+      "/docs": 200,
+      "/openapi.json": 200
+    },
+    "modelo_pronto": true,
+    "gastos_contratados": false
   }
 }
