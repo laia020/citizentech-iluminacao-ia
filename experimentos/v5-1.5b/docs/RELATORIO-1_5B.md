@@ -1,6 +1,6 @@
 # CitizenTech — treinamento e avaliação1.5B
 
-> Implantação posterior, 18/11/2026: [demonstração pública](https://laia020-citizentech-iluminacao-ia.hf.space/demo), executada no Hugging Face ZeroGPU com o mesmo adaptador r1 e backend PyTorch FP32, independente do Mac. [Validação da nuvem](../../v7-nuvem/docs/VALIDACAO-NUVEM.json): duas chamadas conhecidas adequadas na revisão pelo mesmo agente, com falha FP16 inicial preservada. Isso não reestima o placar MLX abaixo nem comprova generalização/integração. A ligação com os colegas e o link do vídeo do grupo permanecem pendentes. A Ficha Técnica comum atualizada abre o README principal.
+> Implantação posterior, 18/11/2026: [demonstração pública](https://laia020-citizentech-iluminacao-ia.hf.space/demo), executada no Hugging Face ZeroGPU com o mesmo adaptador r1 e backend PyTorch FP32, independente do Mac. [Validação da nuvem](../../v7-nuvem/docs/VALIDACAO-NUVEM.json): duas chamadas conhecidas adequadas na revisão pelo mesmo agente, com falha FP16 inicial preservada. Isso não reestima o placar MLX abaixo nem comprova generalização/integração. Os vídeos da apresentação estão relacionados na Ficha Técnica. A Ficha Técnica comum atualizada abre o README principal.
 
 ## Ficha técnica e integrantes
 
@@ -15,7 +15,8 @@
 | IA | Qwen/Qwen2.5-1.5B-Instruct, base FP16 e adaptador LoRA r1. |
 | MVP de DevOps | [Akona Energy](https://ca-akona-energy-prod.salmoncoast-770d275b.eastus2.azurecontainerapps.io/); integração com a IA ainda não comprovada. |
 | Repositório | [laia020/citizentech-iluminacao-ia](https://github.com/laia020/citizentech-iluminacao-ia) |
-| Vídeo | Será utilizado o vídeo do grupo com a IA demonstrada; link ainda não informado. |
+| Vídeo focado em IA | [Assistir à demonstração da IA no Google Drive](https://drive.google.com/file/d/1aRLiZTX9kAE6g9fWVuiMmpKt-vXvg-n2/view?usp=sharing). |
+| Vídeo geral do grupo | **[INSERIR LINK DO VÍDEO GERAL AQUI]** |
 | Indicadores | Acerto, alucinação, recall, esquema e latência medidos no conjunto sintético. Tempo/completude da triagem são indicadores de impacto propostos, sem medição de campo. |
 | ODS | 7 e 11, como alinhamento proposto. |
 
@@ -31,7 +32,7 @@
 
 O fine-tuning local foi concluído e o adaptador **r1** foi selecionado pelos critérios de validação fixados antes das respostas de teste. Na revisão técnica por IA dos30 casos fictícios novos, C teve25 acertos semânticos,3 erros e2 incertos; a baseA teve14 acertos,15 erros e1 incerto. Houve menos alucinações observadas emC, mas o intervalo da redução frente aA inclui zero. Não declarar redução conclusiva ou ausência de alucinação. A POC executa a LLM treinada real, com erros e limitações preservados.
 
-Esta é a parte GenAI local do projeto; não representa entrega integrada de todas as disciplinas. A equipe está identificada acima e a publicação do repositório foi autorizada pelo usuário. A implantação posterior da API está no adendo acima; link do vídeo do grupo e integração real com os componentes dos colegas continuam pendentes.
+Esta é a parte GenAI local do projeto; não representa entrega integrada de todas as disciplinas. A equipe está identificada acima e a publicação do repositório foi autorizada pelo usuário. A implantação posterior da API está no adendo acima; os vídeos da apresentação estão relacionados na Ficha Técnica.
 
 ## Modelo, ambiente e arquitetura
 
@@ -123,7 +124,7 @@ Seis chamadas com o modelo selecionado real tiveramHTTP200, incluindo os cinco e
 
 Notebook executado:`../notebooks/06_treinamento_e_avaliacao_1_5b.ipynb`. [Placar e revisão](../avaliacao/placar.json),[evidências brutas portáveis](../avaliacao/evidencias/),[seleção](../configs/selected.json),[protocolo](../configs/protocol.json). A conferência final verifica dados,prompt,código preditivo,pesos,IDs fora dos90 prompts,mesmas mensagensB/C,adapterSHA selecionado/avaliado/servido,notebook e exportações. Só o texto da página foi atualizado para estado treinado, preservando sua versão congelada original; não alterou as gerações ou os exemplos usados no teste.
 
-O PDF aceita dados simulados documentados e não fixa mínimo de parâmetros ou número de rodadas; mantém comparação, fontes, recusa, cinco erros, reprodução, produto comum/integrado e publicação. A avaliação pelo professor não é garantida por estes resultados. Equipe/RMs e território demonstrativo estão na Ficha Técnica; falta o link do vídeo do grupo. Revisão humana independente é recomendação de validação, não item explícito de rotulagem integral do benchmark. A publicação autorizada do repositório não substitui disponibilidade do MVP na correção, integração real ou hospedagem da API. Não houve deploy, exposição do Mac ou alteração permanente do sistema. A verificação visual da interface no navegador continua pendente.
+O PDF aceita dados simulados documentados e não fixa mínimo de parâmetros ou número de rodadas; mantém comparação, fontes, recusa, cinco erros, reprodução, produto comum/integrado e publicação. A avaliação pelo professor não é garantida por estes resultados. Equipe/RMs e território demonstrativo estão na Ficha Técnica; os vídeos estão relacionados na Ficha Técnica. Revisão humana independente é recomendação de validação, não item explícito de rotulagem integral do benchmark. A publicação autorizada do repositório não substitui disponibilidade do MVP na correção, integração real ou hospedagem da API. Não houve deploy, exposição do Mac ou alteração permanente do sistema. A verificação visual da interface no navegador continua pendente.
 
 ## Conclusão técnica e links de entrega
 
@@ -131,7 +132,8 @@ O adaptador r1 melhorou o acerto na amostra sintética frente à base sem contex
 
 - Repositório: [https://github.com/laia020/citizentech-iluminacao-ia](https://github.com/laia020/citizentech-iluminacao-ia).
 - Demonstração hospedada: [abrir a IA](https://laia020-citizentech-iluminacao-ia.hf.space/demo), independente do Mac.
-- Vídeo: será utilizado o vídeo do grupo; **URL pendente de fornecimento**.
+- Vídeo focado em IA: [assistir à demonstração no Google Drive](https://drive.google.com/file/d/1aRLiZTX9kAE6g9fWVuiMmpKt-vXvg-n2/view?usp=sharing).
+- Vídeo geral do grupo: **[INSERIR LINK DO VÍDEO GERAL AQUI]**.
 - Reprodução: [README principal](../../../README.md), com base oficial fixada e pacote do adaptador já treinado.
 
 Os artefatos500M foram excluídos por solicitação do usuário; os históricos7B permanecem separados e não foram usados como métricas do1.5B. Regras globais preservadas. [README do ciclo e restauração](../README.md).

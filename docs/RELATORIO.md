@@ -59,6 +59,11 @@ Interpretação técnica e aceitação local: docs/INTERPRETACAO.md e docs/ACEIT
 
 API, cliente de referência, demonstração pública e links de publicação pertencem a este componente. O cliente de referência demonstra o contrato HTTP e o tratamento de respostas.
 
+### Vídeos da apresentação
+
+- Vídeo focado em IA: [assistir à demonstração no Google Drive](https://drive.google.com/file/d/1aRLiZTX9kAE6g9fWVuiMmpKt-vXvg-n2/view?usp=sharing).
+- Vídeo geral do grupo: **[INSERIR LINK DO VÍDEO GERAL AQUI]**.
+
 ## Reprodutibilidade e limitações
 
 Ver README.md, uv.lock, configs/frozen_manifest.json e os quatro notebooks com saídas reais. Testes de software não baixam modelos e não simulam evidência de treinamento. Corpus pequeno, exemplos sintéticos e ausência de revisão humana independente limitam inferências sobre generalização. O serviço não comprova causa elétrica nem conformidade normativa e não determina prazo de reparo.

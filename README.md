@@ -15,7 +15,9 @@ Componente de IA generativa da Global Solution CitizenTech: **triagem de relatos
 | Modelos de IA | Qwen/Qwen2.5-1.5B-Instruct e LoRA r1 treinado localmente. Experimento histórico MLX com inferência FP16; serviço em nuvem PyTorch FP32, sem fusão ou novo treinamento. Busca lexical, sem modelo de visão nem sensor conectado neste componente. |
 | MVP de DevOps informado | [Akona Energy](https://ca-akona-energy-prod.salmoncoast-770d275b.eastus2.azurecontainerapps.io/). Referência visual externa; a conexão com esta API de IA ainda não foi demonstrada. |
 | POC de IA | [Demonstração pública em nuvem](https://laia020-citizentech-iluminacao-ia.hf.space/demo). Não depende de serviço ou túnel no Mac. Cotas/filas da hospedagem gratuita podem impedir temporariamente a inferência. |
-| Repositório / vídeo | [Repositório público no GitHub](https://github.com/laia020/citizentech-iluminacao-ia). Será utilizado o vídeo do grupo, com demonstração da IA; **link ainda não informado**. |
+| Repositório | [Repositório público no GitHub](https://github.com/laia020/citizentech-iluminacao-ia). |
+| Vídeo focado em IA | [Assistir à demonstração da IA no Google Drive](https://drive.google.com/file/d/1aRLiZTX9kAE6g9fWVuiMmpKt-vXvg-n2/view?usp=sharing). |
+| Vídeo geral do grupo | **[INSERIR LINK DO VÍDEO GERAL AQUI]** |
 | Indicadores | Medidos em teste sintético: acerto, alucinação, recall, conformidade de esquema e latência. Impacto proposto, ainda não medido em campo: tempo de triagem, completude dos relatos e taxa de encaminhamentos revisados por pessoa. |
 | ODS relacionados | ODS 7 — Energia limpa e acessível; ODS 11 — Cidades e comunidades sustentáveis. Alinhamento proposto, sem comprovação de impacto de campo. |
 

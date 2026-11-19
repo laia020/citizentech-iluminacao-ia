@@ -2,7 +2,10 @@
 
 **Versão pública atual — 18/11/2026:** abrir [a tela na nuvem](https://laia020-citizentech-iluminacao-ia.hf.space/demo). A execução usa o mesmo adaptador r1 original em backend PyTorch FP32 e independe do Mac. Há quotas/filas no hardware gratuito. A tentativa FP16 inválida foi preservada; duas chamadas conhecidas da versão FP32 passaram, sem equivaler a novo benchmark ou revisão humana. [Evidências da implantação](experimentos/v7-nuvem/docs/VALIDACAO-NUVEM.json).
 
-As instruções locais abaixo ficam para reprodução e desenvolvimento. Equipe/RMs e território demonstrativo constam no README e relatório; o vídeo do grupo poderá ser referenciado na apresentação da demonstração pública.
+As instruções locais abaixo ficam para reprodução e desenvolvimento. Equipe/RMs e território demonstrativo constam no README e relatório.
+
+- Vídeo focado em IA: [assistir à demonstração no Google Drive](https://drive.google.com/file/d/1aRLiZTX9kAE6g9fWVuiMmpKt-vXvg-n2/view?usp=sharing).
+- Vídeo geral do grupo: **[INSERIR LINK DO VÍDEO GERAL AQUI]**.
 
 **Modelo realmente treinado localmente; cenários fictícios.** A tela permite escolher cinco exemplos ou escrever pergunta/observações livres. Fluxo real:tela→API→busca→Qwen1.5B+LoRA→JSON/referências→tela. Não há sensor físico,sistema municipal ou componentes dos colegas conectados; os registros da tela são marcados como simulados. Não existem respostas prontas de reserva.
 
